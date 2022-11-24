@@ -109,6 +109,129 @@
                     </div>
                     @endif
                 </div>
+                {{-- setting section --}}
+                <form method="POST" action="{{ route('home-setting.update', [$setting->id]) }}" enctype="multipart/form-data" class="col-lg-12">
+                    @method('PUT')
+                    @csrf
+                    <div class="card card-primary card-outline">
+                        <div class="card-header">
+                            <h3 class="card-title font-weight-bold"><i class="fas fa-cogs"></i> Setting</h3>
+                            <div class="card-tools">
+                                <button class="btn btn-primary font-weight-bold"><i class="fas fa-save"></i> Save</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Title</label>
+                                        <input type="text" class="form-control" placeholder="Type something" name="title" value="{{ $setting->title }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Subtitle</label>
+                                        <input type="text" class="form-control" placeholder="Type something" name="subtitle" value="{{ $setting->subtitle }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Excerpt</label>
+                                        <textarea id="excerpt" name="excerpt">{{ $setting->excerpt }}</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <textarea id="description" name="description">{{ $setting->description }}</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="image">Image</label>
+                                        <div class="input-group mb-3">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="image" name="image">
+                                                <label class="custom-file-label" for="image">Choose file</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="d-block">Current Image</label>
+                                            <img src="{{ asset($setting->image) }}" style="width: 100%">
+                                            <input type="hidden" name="old_image" value="{{ $setting->image }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="image1">Image 1</label>
+                                        <div class="input-group mb-3">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="image1" name="image1">
+                                                <label class="custom-file-label" for="image1">Choose file</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="d-block">Current Image 1</label>
+                                            <img src="{{ asset($setting->image1) }}" style="width: 100%">
+                                            <input type="hidden" name="old_image1" value="{{ $setting->image1 }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="image2">Image 2</label>
+                                        <div class="input-group mb-3">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="image2" name="image2">
+                                                <label class="custom-file-label" for="image2">Choose file</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="d-block">Current Image 2</label>
+                                            <img src="{{ asset($setting->image2) }}" style="width: 100%">
+                                            <input type="hidden" name="old_image2" value="{{ $setting->image2 }}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="image3">Image 3</label>
+                                        <div class="input-group mb-3">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="image3" name="image3">
+                                                <label class="custom-file-label" for="image3">Choose file</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="d-block">Current Image 3</label>
+                                            <img src="{{ asset($setting->image3) }}" style="width: 100%">
+                                            <input type="hidden" name="old_image3" value="{{ $setting->image3 }}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Title 1</label>
+                                        <input type="text" class="form-control" placeholder="Type something" name="title1" value="{{ $setting->title1 }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Excerpt 1</label>
+                                        <textarea id="excerpt" name="excerpt1">{{ $setting->excerpt1 }}</textarea>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <label>Title 2</label>
+                                        <input type="text" class="form-control" placeholder="Type something" name="title2" value="{{ $setting->title2 }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Excerpt 2</label>
+                                        <textarea id="excerpt" name="excerpt2">{{ $setting->excerpt2 }}</textarea>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <label>Title 3</label>
+                                        <input type="text" class="form-control" placeholder="Type something" name="title3" value="{{ $setting->title3 }}">
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <label>Excerpt 3</label>
+                                        <textarea id="excerpt" name="excerpt3">{{ $setting->excerpt3 }}</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
                 {{-- slider --}}
                 <div class="col-lg-6">
                     <div class="card card-primary card-outline">
@@ -135,12 +258,13 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="image">Image</label>
-                                                    <div class="input-group mb-3">
+                                                    <div class="input-group">
                                                         <div class="custom-file">
                                                             <input type="file" class="custom-file-input" id="image" name="image">
                                                             <label class="custom-file-label" for="image">Choose file</label>
                                                         </div>
                                                     </div>
+                                                    <div class="d-block form-text mb-3" style="margin-top: 0.25rem; font-size: .875em; color: #6c757d;">Image size: 1920 x 1080 pixel</div>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
@@ -235,12 +359,13 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="image">Image</label>
-                                                    <div class="input-group mb-3">
+                                                    <div class="input-group">
                                                         <div class="custom-file">
-                                                            <input type="file" class="custom-file-input" id="image" name="image">
+                                                            <input type="file" class="custom-file-input" id="image" name="image" aria-describedby="imageSize">
                                                             <label class="custom-file-label" for="image">Choose file</label>
                                                         </div>
                                                     </div>
+                                                    <div class="d-block form-text mb-3" style="margin-top: 0.25rem; font-size: .875em; color: #6c757d;">Image size: 455 x 680 pixel</div>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
@@ -267,10 +392,10 @@
                                         <td>{{ $data->title }}</td>
                                         <td><img src="{{ asset($data->image) }}" style="width: 200px"></td>
                                         <td>
-                                            <span data-toggle="tooltip" data-placement="top" title="Delete"><button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal_delete_{{ $data->id }}" data-placement="top" title="Delete"><i class="fas fa-trash"></i></button></span>
+                                            <span data-toggle="tooltip" data-placement="top" title="Delete"><button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal_delete_two_{{ $data->id }}" data-placement="top" title="Delete"><i class="fas fa-trash"></i></button></span>
 
 
-                                            <div class="modal fade" id="modal_delete_{{ $data->id }}">
+                                            <div class="modal fade" id="modal_delete_two_{{ $data->id }}">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header bg-danger">
@@ -309,84 +434,6 @@
                         </div>
                     </div>
                 </div>
-                {{-- setting section --}}
-                <form method="POST" action="{{ route('home-setting.update', [$setting->id]) }}" enctype="multipart/form-data" class="col-lg-12">
-                    @method('PUT')
-                    @csrf
-                    <div class="card card-primary card-outline">
-                        <div class="card-header">
-                            <h3 class="card-title font-weight-bold"><i class="fas fa-cogs"></i> Setting</h3>
-                            <div class="card-tools">
-                                <button class="btn btn-primary font-weight-bold"><i class="fas fa-save"></i> Save</button>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label>Title</label>
-                                        <input type="text" class="form-control" placeholder="Type something" name="title" value="{{ $setting->title }}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Subtitle</label>
-                                        <input type="text" class="form-control" placeholder="Type something" name="subtitle" value="{{ $setting->subtitle }}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Excerpt</label>
-                                        <textarea id="excerpt" name="excerpt">{{ $setting->excerpt }}</textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Description</label>
-                                        <textarea id="description" name="description">{{ $setting->description }}</textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="image">Image</label>
-                                        <div class="input-group mb-3">
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="image" name="image">
-                                                <label class="custom-file-label" for="image">Choose file</label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="d-block">Current Image</label>
-                                            <img src="{{ asset($setting->image) }}" style="width: 100%">
-                                            <input type="hidden" name="old_image" value="{{ $setting->image }}">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label>Title 1</label>
-                                        <input type="text" class="form-control" placeholder="Type something" name="title1" value="{{ $setting->title1 }}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Excerpt 1</label>
-                                        <textarea id="excerpt" name="excerpt1">{{ $setting->excerpt1 }}</textarea>
-                                    </div>
-                                    <hr>
-                                    <div class="form-group">
-                                        <label>Title 2</label>
-                                        <input type="text" class="form-control" placeholder="Type something" name="title2" value="{{ $setting->title2 }}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Excerpt 2</label>
-                                        <textarea id="excerpt" name="excerpt2">{{ $setting->excerpt2 }}</textarea>
-                                    </div>
-                                    <hr>
-                                    <div class="form-group">
-                                        <label>Title 3</label>
-                                        <input type="text" class="form-control" placeholder="Type something" name="title3" value="{{ $setting->title3 }}">
-                                    </div>
-                                    <hr>
-                                    <div class="form-group">
-                                        <label>Excerpt 3</label>
-                                        <textarea id="excerpt" name="excerpt3">{{ $setting->excerpt3 }}</textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
             </div>
         </div>
     </div>

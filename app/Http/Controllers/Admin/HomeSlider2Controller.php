@@ -39,7 +39,7 @@ class HomeSlider2Controller extends Controller
         if (empty($request->file('image'))) {
             $image = null;
         } else {
-            $image = $request->file('image')->store('images/home/slider', 'public');
+            $image = $request->file('image')->store('images/home/slider2', 'public');
         }
 
         HomeSlider2::create([

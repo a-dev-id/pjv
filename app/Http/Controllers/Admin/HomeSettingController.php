@@ -82,6 +82,24 @@ class HomeSettingController extends Controller
             $image = $request->file('image')->store('images/home/setting', 'public');
         }
 
+        if (empty($request->file('image1'))) {
+            $image1 = $request->old_image1;
+        } else {
+            $image1 = $request->file('image1')->store('images/home/setting', 'public');
+        }
+
+        if (empty($request->file('image2'))) {
+            $image2 = $request->old_image2;
+        } else {
+            $image2 = $request->file('image2')->store('images/home/setting', 'public');
+        }
+
+        if (empty($request->file('image3'))) {
+            $image3 = $request->old_image3;
+        } else {
+            $image3 = $request->file('image3')->store('images/home/setting', 'public');
+        }
+
         $data = HomeSetting::find($id);
         $data->title = $request->title;
         $data->subtitle = $request->subtitle;
@@ -89,6 +107,9 @@ class HomeSettingController extends Controller
         $data->excerpt = $request->excerpt;
         $data->description = $request->description;
         $data->image = $image;
+        $data->image1 = $image1;
+        $data->image2 = $image2;
+        $data->image3 = $image3;
         $data->title1 = $request->title1;
         $data->excerpt1 = $request->excerpt1;
         $data->title2 = $request->title2;

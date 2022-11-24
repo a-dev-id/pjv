@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Pjv;
 
 use App\Http\Controllers\Controller;
+use App\Models\HomeSetting;
+use App\Models\HomeSlider;
+use App\Models\HomeSlider2;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,7 +17,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pjv.index');
+        $setting = HomeSetting::where('id', '1')->first();
+        $sliders = HomeSlider::all();
+        $sliders2 = HomeSlider2::all();
+        return view('pjv.index')->with(compact('sliders', 'setting', 'sliders2'));
     }
 
     /**
