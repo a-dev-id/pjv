@@ -42,6 +42,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ route('home-setting.index') }}" class="nav-link @yield('home_active')">
+                                <i class="nav-icon fas fa-laptop-house"></i>
+                                <p>Home</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ route('villa-list.index') }}" class="nav-link @yield('villa_active')">
                                 <i class="nav-icon fas fa-house-user"></i>
                                 <p>Villa</p>

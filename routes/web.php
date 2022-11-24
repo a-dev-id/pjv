@@ -36,6 +36,10 @@ Route::middleware(['auth', 'verified'])->prefix('panel/admin')->group(function (
 
     Route::resource('dashboard', App\Http\Controllers\Admin\DashboardController::class);
 
+    Route::resource('home-setting', App\Http\Controllers\Admin\HomeSettingController::class);
+    Route::resource('home-slider', App\Http\Controllers\Admin\HomeSliderController::class);
+    Route::resource('home-slider2', App\Http\Controllers\Admin\HomeSlider2Controller::class);
+
     Route::resource('villa-list', App\Http\Controllers\Admin\VillaController::class);
     Route::resource('villa-setting', App\Http\Controllers\Admin\VillaSettingController::class);
     Route::resource('villa-feature', App\Http\Controllers\Admin\VillaFeatureController::class);
