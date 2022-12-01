@@ -33,21 +33,7 @@
 <script src="{{ asset('js/tinymce/tinymce.min.js') }}" referrerpolicy="origin"></script>
 <script>
     tinymce.init({
-            selector: 'textarea#excerpt',
-            plugins: 'code table lists',
-            toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
-        });
-</script>
-<script>
-    tinymce.init({
             selector: 'textarea#description',
-            plugins: 'code table lists',
-            toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
-        });
-</script>
-<script>
-    tinymce.init({
-            selector: 'textarea#metadescription',
             plugins: 'code table lists',
             toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
         });
@@ -203,7 +189,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Excerpt</label>
-                                        <textarea id="excerpt" name="excerpt">{{ $setting->excerpt }}</textarea>
+                                        <textarea id="excerpt" name="excerpt" class="form-control">{{ $setting->excerpt }}</textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>Description</label>
@@ -231,7 +217,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Meta Description</label>
-                                        <textarea id="metadescription" name="meta_description">{{ $setting->meta_description }}</textarea>
+                                        <textarea id="metadescription" name="meta_description" class="form-control">{{ $setting->meta_description }}</textarea>
                                     </div>
                                 </div>
                             </div>

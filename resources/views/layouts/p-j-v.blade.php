@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    @yield('meta')
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
@@ -21,15 +21,15 @@
                     <ul class="navbar-nav align-items-center">
                         <li class="nav-item"><a href="{{ route('index') }}" class="nav-link text-white px-2 px-xl-3"><i class="fa fa-home"></i></a></li>
                         <li class="nav-item"><a href="{{ route('accommodation.index') }}" class="nav-link text-white px-2 px-xl-3">Accommodations</a></li>
-                        <li class="nav-item"><a href="{{ route('activities.index') }}" class="nav-link text-white px-2 px-xl-3">Activities</a></li>
+                        {{-- <li class="nav-item"><a href="{{ route('activities.index') }}" class="nav-link text-white px-2 px-xl-3">Activities</a></li> --}}
                         <li class="nav-item"><a href="{{ route('dining.index') }}" class="nav-link text-white px-2 px-xl-3">Dining</a></li>
                     </ul>
                     <a href="" class="navbar-brand mx-2">
                         <img src="https://elevatebali.com/storage/app/uploads/public/635/b7e/636/635b7e636bd05089688966.png" class="navlogo fade-in">
                     </a>
                     <ul class="navbar-nav align-items-center">
-                        <li class="nav-item"><a href="{{ route('spa.index') }}" class="nav-link text-white px-2 px-xl-3">Spa</a></li>
-                        <li class="nav-item"><a href="{{ route('event.index') }}" class="nav-link text-white px-2 px-xl-3">Event</a></li>
+                        {{-- <li class="nav-item"><a href="{{ route('spa.index') }}" class="nav-link text-white px-2 px-xl-3">Spa</a></li> --}}
+                        {{-- <li class="nav-item"><a href="{{ route('event.index') }}" class="nav-link text-white px-2 px-xl-3">Event</a></li> --}}
                         <li class="nav-item"><a href="{{ route('wedding.index') }}" class="nav-link text-white px-2 px-xl-3">Weddings</a></li>
                         <li class="nav-item"><a href="{{ route('gallery.index') }}" class="nav-link text-white px-2 px-xl-3">Gallery</a></li>
                         <li class="nav-item"><a href="{{ route('contact-us.index') }}" class="nav-link text-white px-2 px-xl-3">Contact Us</a></li>
@@ -99,31 +99,7 @@
 
     {{ $slot }}
 
-    <section class="py-90">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 text-center">
-                    <span class="d-block">
-                        Private Jet Villa
-                    </span>
-                    <span class="d-block">
-                        Jl. Pantai Nyang-Nyang, Pecatu, Kec. Kuta Sel., Kabupaten Badung, Bali
-                    </span>
-                </div>
-                <div class="col-6 text-center">
-                    <span class="d-block">
-                        Reservations
-                    </span>
-                    <span class="d-block">
-                        Reservations Direct: +62 811 3800 988
-                    </span>
-                    <span class="d-block">
-                        Email: reservations@privatejetvilla.com
-                    </span>
-                </div>
-            </div>
-        </div>
-    </section>
+    @yield('home_address')
 
     <footer class="py-90 bg-light">
         <div class="container">
@@ -143,16 +119,15 @@
                             </ul>
                         </div>
                         <div class="col-4">
-                            <h3>about</h3>
+                            <h3>others</h3>
                             <ul class="p-0">
-                                <li>story</li>
-                                <li>awards</li>
-                                <li>press room</li>
-                                <li>contact us</li>
+                                <li>plocy &amp; legal</li>
+                                <li>blog</li>
+                                <li>careers</li>
                             </ul>
                         </div>
                         <div class="col-4">
-                            <h3>about</h3>
+                            <h3>follow us</h3>
                             <ul class="p-0">
                                 <li>story</li>
                                 <li>awards</li>

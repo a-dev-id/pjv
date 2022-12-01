@@ -209,7 +209,7 @@
                                         </div>
                                         <div class="form-group col-lg-6">
                                             <label>Email</label>
-                                            <input type="text" class="form-control" placeholder="Type something" name="address_text" value="{{ $setting->address_text }}">
+                                            <input type="email" class="form-control" placeholder="Type something" name="email_text" value="{{ $setting->email_text }}">
                                         </div>
 
                                         <div class="form-group col-lg-6">

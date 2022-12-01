@@ -109,6 +109,15 @@
                                             <label>Description</label>
                                             <textarea id="description" name="description"></textarea>
                                         </div>
+                                        <div class="form-group">
+                                            <label for="image">Image</label>
+                                            <div class="input-group mb-3">
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="image" name="image">
+                                                    <label class="custom-file-label" for="image">Choose file</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">

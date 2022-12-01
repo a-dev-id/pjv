@@ -1,13 +1,90 @@
+@section('home_address')
+<section class="py-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 text-center">
+                <span class="d-block">
+                    <h2>Private Jet Villa</h2>
+                </span>
+                <span class="d-block">
+                    {{ $contact->address_text }}
+                </span>
+            </div>
+            <div class="col-6 text-center">
+                <span class="d-block">
+                    <h2>Reservations</h2>
+                </span>
+                <span class="d-block">
+                    Reservations Direct: {{ $contact->phone_no}}
+                </span>
+                <span class="d-block">
+                    Email: {{ $contact->email_text }}
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+@endsection
+@section('meta')
+<meta name="title" content="{{ $setting->title }}">
+<meta name="description" content="{{$setting->excerpt}}">
+<title>{{ $setting->title }}</title>
+<meta property="og:url" content="{{ route('index') }}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ $setting->title }}" />
+<meta property="og:description" content="{{ $setting->excerpt }}" />
+<meta property="og:image" content="{{ asset($setting->image) }}" />
+@endsection
 @push('css')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
-    .item {
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+    .slider2-wrapper {
+        width: 455px;
+    }
+
+    .slider2-image {
+        height: 680px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .slider2-arrow {
+        position: absolute;
+        z-index: 2;
+        top: calc(50% - 20px);
+        left: 0;
         width: 100%;
-        height: 100%;
+        overflow: hidden;
+        padding: 0 25px;
+    }
+
+    .slick-arrow {
+        width: 40px;
+        height: 40px;
+        background-color: #6c471d;
+        color: #fff;
+        border: none;
+    }
+
+    .bg-image-fixed {
+        background: url("{{ asset($villa->banner_image) }}") no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+        height: 900px;
+        margin-bottom: 90px;
+    }
+
+    .section1-wrapper {
+        width: 100%;
+    }
+
+    .section1-image {
+        height: auto;
+        object-fit: cover;
+        object-position: center;
     }
 
 </style>
@@ -39,7 +116,15 @@
         centerPadding: '0px',
         speed: 500,
         variableWidth: true,
-        arrows: true
+        arrows: true,
+        appendArrows: ".slider2-arrow",
+        prevArrow: "<div class='float-start rounded-circle border border-secondary d-flex align-items-center justify-content-center' role='button' tabindex='0'><i class='fas fa-chevron-left'></i></div>",
+        nextArrow: "<div class='float-end rounded-circle border border-secondary d-flex align-items-center justify-content-center' role='button' tabindex='0'><i class='fas fa-chevron-right'></i></div>",
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnDotsHover: false,
+        pauseOnHover: false,
+        pauseOnFocus: false,
         });
         
 </script>
@@ -47,13 +132,7 @@
 <x-p-j-v>
     <section class="slider-section">
         <div class="vh-100 overflow-hidden position-relative">
-            <img src="https://via.placeholder.com/1920x1080/000" class="h-100 w-100 object-fit-cover object-position-center">
-        </div>
-        <div class="vh-100 overflow-hidden position-relative">
-            <img src="https://via.placeholder.com/1920x1080/0f0" class="h-100 w-100 object-fit-cover object-position-center">
-        </div>
-        <div class="vh-100 overflow-hidden position-relative">
-            <img src="https://via.placeholder.com/1920x1080" class="h-100 w-100 object-fit-cover object-position-center">
+            <img src="{{ asset($setting->banner_image) }}" class="h-100 w-100 object-fit-cover object-position-center">
         </div>
     </section>
 
@@ -61,35 +140,33 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-6 text-center">
-                    <h1 class="mb-3"><i>Donec convallis nisl</i></h1>
-                    <p>Ut arcu metus, consectetur vel massa in, pellentesque aliquet arcu. Aliquam
-                        vitae elit eu orci laoreet vulputate. Nulla vel eros sed augue euismod feugiat.
-                        Praesent semper purus ex, sit amet tristique diam mattis sed.</p>
+                    <h1 class="mb-3"><i>{{ $setting->title }}</i></h1>
+                    <div>
+                        {{ $setting->excerpt }}
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-image-fixed" style="height:900px">
+    <section class="bg-image-fixed">
     </section>
 
-    <section class="py-90">
+    <section class="py-90" style="margin-bottom:90px;">
         <div class="container">
-            <div class="slider slider-center">
-                <div>
-                    <img src="https://via.placeholder.com/455x680" />
+            <div class="position-relative">
+                <div class="slider slider-center">
+                    @foreach ($villa->images as $data)
+                    <div class="slider2-wrapper">
+                        <img src="{{ asset($data->image) }}" alt="{{ $data->title }}" class="slider2-image w-100" />
+                    </div>
+                    @endforeach
                 </div>
-                <div>
-                    <img src="https://via.placeholder.com/455x680" />
-                </div>
-                <div>
-                    <img src="https://via.placeholder.com/455x680" />
-                </div>
-                <div>
-                    <img src="https://via.placeholder.com/455x680" />
-                </div>
-                <div>
-                    <img src="https://via.placeholder.com/455x680" />
+                <div class="slider2-arrow"></div>
+            </div>
+            <div class="row justify-content-center pt-90">
+                <div class="col-lg-8 text-center">
+                    {!! $setting->description !!}
                 </div>
             </div>
         </div>
@@ -99,24 +176,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <img src="https://via.placeholder.com/715x900" class="w-100 h-100 object-fit-cover object-position-center">
+
+                    <div class="section1-wrapper">
+                        <img src="{{ asset($villa->image) }}" alt="{{ $villa->title }}" class="section1-image w-100" />
+                    </div>
                 </div>
                 <div class="col-6 p-5">
-                    <h2 class="mb-3"><i>Donec convallis nisl</i></h2>
+                    <h2 class="mb-5">Facilities</h2>
                     <ul style="list-style-type:disc">
-                        <li class="mb-3">Private plunge pool in four of the eight suites</li>
-                        <li class="mb-3">Private terrace overlooking the Indian Ocean or resort gardens with two daybeds</li>
-                        <li class="mb-3">King-size bed</li>
-                        <li class="mb-3">Open plan sitting area with desk</li>
-                        <li class="mb-3">Large bathroom with twin basins, circular bath, separate rain shower, with outdoor rain shower</li>
-                        <li class="mb-3">Personal Bar with Nespresso coffee machine</li>
-                        <li class="mb-3">Hair dryer</li>
-                        <li class="mb-3">Bathroom scales</li>
-                        <li class="mb-3">Unpacking and packing service (as per guest request)</li>
-                        <li class="mb-3">Daily laundry (excluding dry cleaning)</li>
-                        <li class="mb-3">High-speed WiFi and international calling</li>
-                        <li class="mb-3">Netflix, Apple TV, and Apple Music</li>
-                        <li class="mb-3">Suitable for guests with accessibility needs with seamless ramp addition</li>
+                        @foreach ($villa_feature as $data)
+                        @foreach (\App\Models\Feature::where('id', '=', $data->feature_id)->get() as $data_feature)
+                        <li class="mb-3">{{ $data_feature->title }}</li>
+                        @endforeach
+                        @endforeach
                     </ul>
                 </div>
             </div>

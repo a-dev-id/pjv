@@ -3,6 +3,10 @@
 namespace App\Http\Controllers\Pjv;
 
 use App\Http\Controllers\Controller;
+use App\Models\ContactUsSetting;
+use App\Models\VillaSetting;
+use App\Models\Villa;
+use App\Models\VillaFeature;
 use Illuminate\Http\Request;
 
 class AccommodationController extends Controller
@@ -14,7 +18,11 @@ class AccommodationController extends Controller
      */
     public function index()
     {
-        return view('pjv.accommodation');
+        $contact = ContactUsSetting::where('id', '1')->first();
+        $setting = VillaSetting::where('id', '1')->first();
+        $villa = Villa::where('id', '1')->first();
+        $villa_feature = VillaFeature::where('villa_id', '1')->get();
+        return view('pjv.accommodation')->with(compact('contact','setting','villa', 'villa_feature'));
     }
 
     /**

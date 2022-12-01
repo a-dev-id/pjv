@@ -3,6 +3,10 @@
 namespace App\Http\Controllers\Pjv;
 
 use App\Http\Controllers\Controller;
+use App\Models\ContactUsSetting;
+use App\Models\RestaurantSetting;
+use App\Models\Restaurant;
+use App\Models\RestaurantImage;
 use Illuminate\Http\Request;
 
 class DiningController extends Controller
@@ -14,7 +18,11 @@ class DiningController extends Controller
      */
     public function index()
     {
-        return view('pjv.dining');
+        $contact = ContactUsSetting::where('id', '1')->first();
+        $setting = RestaurantSetting::where('id', '1')->first();
+        $restaurant = Restaurant::where('status', '1')->get();
+        $restaurant_images = RestaurantImage::all();
+        return view('pjv.dining')->with(compact('contact', 'setting', 'restaurant', 'restaurant_images'));
     }
 
     /**

@@ -198,7 +198,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Excerpt</label>
-                                        <textarea id="excerpt" name="excerpt">{{ $setting->excerpt }}</textarea>
+                                        <textarea class="form-control" name="excerpt">{{ $setting->excerpt }}</textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>Description</label>
@@ -252,7 +252,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Meta Description</label>
-                                        <textarea id="metadescription" name="meta_description">{{ $setting->meta_description }}</textarea>
+                                        <textarea class="form-control" name="meta_description">{{ $setting->meta_description }}</textarea>
                                     </div>
                                 </div>
                             </div>

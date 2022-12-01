@@ -617,16 +617,6 @@ p.leftline:before {
     color: #fff;
 }
 
-.bg-image-fixed {
-    background: url("https://via.placeholder.com/1920x1080") no-repeat center
-        center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    height: 850px;
-}
-
 ul {
     list-style-type: none;
 }

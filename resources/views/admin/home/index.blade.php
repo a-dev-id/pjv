@@ -43,23 +43,9 @@
 <script src="{{ asset('js/tinymce/tinymce.min.js') }}" referrerpolicy="origin"></script>
 <script>
     tinymce.init({
-            selector: 'textarea#excerpt',
+            selector: 'textarea#descriptions',
             plugins: 'code table lists',
-            toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
-        });
-</script>
-<script>
-    tinymce.init({
-            selector: 'textarea#description',
-            plugins: 'code table lists',
-            toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
-        });
-</script>
-<script>
-    tinymce.init({
-            selector: 'textarea#metadescription',
-            plugins: 'code table lists',
-            toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
+            toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table',
         });
 </script>
 <script>
@@ -133,11 +119,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Excerpt</label>
-                                        <textarea id="excerpt" name="excerpt">{{ $setting->excerpt }}</textarea>
+                                        <textarea id="excerpt" name="excerpt" class="form-control">{{ $setting->excerpt }}</textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>Description</label>
-                                        <textarea id="description" name="description">{{ $setting->description }}</textarea>
+                                        <textarea id="descriptions" name="description">{{ $setting->description }}</textarea>
                                     </div>
                                     <div class="form-group">
                                         <label for="image">Image</label>
@@ -168,6 +154,34 @@
                                             <input type="hidden" name="old_image1" value="{{ $setting->image1 }}">
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Title 1</label>
+                                        <input type="text" class="form-control" placeholder="Type something" name="title1" value="{{ $setting->title1 }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Excerpt 1</label>
+                                        <textarea id="excerpt" name="excerpt1" class="form-control">{{ $setting->excerpt1 }}</textarea>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <label>Title 2</label>
+                                        <input type="text" class="form-control" placeholder="Type something" name="title2" value="{{ $setting->title2 }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Excerpt 2</label>
+                                        <textarea id="excerpt" name="excerpt2" class="form-control">{{ $setting->excerpt2 }}</textarea>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <label>Title 3</label>
+                                        <input type="text" class="form-control" placeholder="Type something" name="title3" value="{{ $setting->title3 }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Excerpt 3</label>
+                                        <textarea id="excerpt" name="excerpt3" class="form-control">{{ $setting->excerpt3 }}</textarea>
+                                    </div>
 
                                     <div class="form-group">
                                         <label for="image2">Image 2</label>
@@ -197,35 +211,6 @@
                                             <img src="{{ asset($setting->image3) }}" style="width: 100%">
                                             <input type="hidden" name="old_image3" value="{{ $setting->image3 }}">
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label>Title 1</label>
-                                        <input type="text" class="form-control" placeholder="Type something" name="title1" value="{{ $setting->title1 }}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Excerpt 1</label>
-                                        <textarea id="excerpt" name="excerpt1">{{ $setting->excerpt1 }}</textarea>
-                                    </div>
-                                    <hr>
-                                    <div class="form-group">
-                                        <label>Title 2</label>
-                                        <input type="text" class="form-control" placeholder="Type something" name="title2" value="{{ $setting->title2 }}">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Excerpt 2</label>
-                                        <textarea id="excerpt" name="excerpt2">{{ $setting->excerpt2 }}</textarea>
-                                    </div>
-                                    <hr>
-                                    <div class="form-group">
-                                        <label>Title 3</label>
-                                        <input type="text" class="form-control" placeholder="Type something" name="title3" value="{{ $setting->title3 }}">
-                                    </div>
-                                    <hr>
-                                    <div class="form-group">
-                                        <label>Excerpt 3</label>
-                                        <textarea id="excerpt" name="excerpt3">{{ $setting->excerpt3 }}</textarea>
                                     </div>
                                 </div>
                             </div>

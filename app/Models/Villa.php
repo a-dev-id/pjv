@@ -16,6 +16,7 @@ class Villa extends Model
         'excerpt',
         'description',
         'banner_image',
+        'image',
         'meta_title',
         'meta_description',
         'button_text',

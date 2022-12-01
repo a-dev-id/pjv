@@ -1,13 +1,39 @@
+@section('home_address')
+<section class="py-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 text-center">
+                <span class="d-block">
+                    <h2>Private Jet Villa</h2>
+                </span>
+                <span class="d-block">
+                    {{ $contact->address_text }}
+                </span>
+            </div>
+            <div class="col-6 text-center">
+                <span class="d-block">
+                    <h2>Reservations</h2>
+                </span>
+                <span class="d-block">
+                    Reservations Direct: {{ $contact->phone_no}}
+                </span>
+                <span class="d-block">
+                    Email: {{ $contact->email_text }}
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+@endsection
 @section('meta')
-<meta name="title" content="A hidden gem is found in the middle of mystical ubud jungle">
-<meta name="description" content="Hanging Gardens of Bali is located between Ayung River and ancient Dalem Segara temple. The resort stands on the edge of a stunning valley, surrounded by a picturesque rain forest.">
-<title>A hidden gem is found in the middle of mystical ubud jungle | Hanging Gardens of Bali</title>
-<meta name="facebook-domain-verification" content="vsrtk1q9nopkeyn6my9m9ldvdb172i" />
-<meta property="og:url" content="https://hanginggardensofbali.com" />
+<meta name="title" content="{{ $setting->title. " ".$setting->subtitle }}">
+<meta name="description" content="{{$setting->excerpt}}">
+<title>{{ $setting->title. " ".$setting->subtitle }}</title>
+<meta property="og:url" content="{{ route('index') }}" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="A hidden gem is found in the middle of mystical ubud jungle | Hanging Gardens of Bali" />
-<meta property="og:description" content="Hanging Gardens of Bali is located between Ayung River and ancient Dalem Segara temple. The resort stands on the edge of a stunning valley, surrounded by a picturesque rain forest." />
-<meta property="og:image" content="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/header-home.jpg" />
+<meta property="og:title" content="{{ $setting->title }}" />
+<meta property="og:description" content="{{ $setting->excerpt }}" />
+<meta property="og:image" content="{{ asset($setting->image) }}" />
 @endsection
 @push('css')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,6 +47,24 @@
         height: 680px;
         object-fit: cover;
         object-position: center;
+    }
+
+    .slider2-arrow {
+        position: absolute;
+        z-index: 2;
+        top: calc(50% - 20px);
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        padding: 0 25px;
+    }
+
+    .slick-arrow {
+        width: 40px;
+        height: 40px;
+        background-color: #6c471d;
+        color: #fff;
+        border: none;
     }
 
     .section1-wrapper {
@@ -49,6 +93,15 @@
 
     .section3-content-wrapper {
         height: 700px !important;
+    }
+
+    .bg-image-fixed {
+        background: url("{{ asset($setting->image3) }}") no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+        height: 850px;
     }
 
 </style>
@@ -81,6 +134,9 @@
         speed: 500,
         variableWidth: true,
         arrows: true,
+        appendArrows: ".slider2-arrow",
+        prevArrow: "<div class='float-start rounded-circle border border-secondary d-flex align-items-center justify-content-center' role='button' tabindex='0'><i class='fas fa-chevron-left'></i></div>",
+        nextArrow: "<div class='float-end rounded-circle border border-secondary d-flex align-items-center justify-content-center' role='button' tabindex='0'><i class='fas fa-chevron-right'></i></div>",
         autoplay: true,
         autoplaySpeed: 5000,
         pauseOnDotsHover: false,
@@ -94,7 +150,7 @@
     <section class="slider-section">
         @foreach ($sliders as $data)
         <div class="vh-100 overflow-hidden position-relative">
-            <img src="{{ asset($data->image) }}" class="h-100 w-100 object-fit-cover object-position-center" alt="{!! $data->title !!}">
+            <img src="{{ asset($data->image) }}" class="h-100 w-100 object-fit-cover object-position-center" alt="{{ $data->title }}">
         </div>
         @endforeach
     </section>
@@ -117,13 +173,18 @@
                     <h2 class="mb-3"><i>{{ $setting->title1 }}</i></h2>
                 </div>
             </div>
-            <div class="slider slider-center">
-                @foreach ($sliders2 as $data)
-                <div class="slider2-wrapper">
-                    <img src="{{ asset($data->image) }}" alt="{{ $data->title }}" class="slider2-image w-100" />
+
+            <div class="position-relative">
+                <div class="slider slider-center">
+                    @foreach ($sliders2 as $data)
+                    <div class="slider2-wrapper">
+                        <img src="{{ asset($data->image) }}" alt="{{ $data->title }}" class="slider2-image w-100" />
+                    </div>
+                    @endforeach
                 </div>
-                @endforeach
+                <div class="slider2-arrow"></div>
             </div>
+
             <div class="row pt-5 justify-content-center">
                 <div class="col-6 text-center">
                     <div>{!! $setting->excerpt1 !!}</div>
@@ -210,6 +271,6 @@
     </section>
     <div class="py-90"></div>
     <section>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d19732.80105663574!2d115.093741!3d-8.837301!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x82cc528e4e7bd43d!2sMandala%20Airlines%20PK-RII!5e1!3m2!1sen!2sus!4v1667971356357!5m2!1sen!2sus" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        {!! $contact->google_map !!}
     </section>
 </x-p-j-v>

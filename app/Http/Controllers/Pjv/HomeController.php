@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Pjv;
 
 use App\Http\Controllers\Controller;
+use App\Models\ContactUsSetting;
 use App\Models\HomeSetting;
 use App\Models\HomeSlider;
 use App\Models\HomeSlider2;
@@ -17,10 +18,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $contact = ContactUsSetting::where('id', '1')->first();
         $setting = HomeSetting::where('id', '1')->first();
         $sliders = HomeSlider::all();
         $sliders2 = HomeSlider2::all();
-        return view('pjv.index')->with(compact('sliders', 'setting', 'sliders2'));
+        return view('pjv.index')->with(compact('sliders', 'setting', 'sliders2', 'contact'));
     }
 
     /**

@@ -48,6 +48,12 @@ class VillaController extends Controller
             $banner_image = $request->file('banner_image')->store('images/villa/list', 'public');
         }
 
+        if (empty($request->file('image'))) {
+            $image = null;
+        } else {
+            $image = $request->file('image')->store('images/villa/list', 'public');
+        }
+
         Villa::create([
             'title' => $request->title,
             'subtitle' => $request->subtitle,
@@ -55,6 +61,7 @@ class VillaController extends Controller
             'excerpt' => $request->excerpt,
             'description' => $request->description,
             'banner_image' => $banner_image,
+            'image' => $image,
             'meta_title' => $request->meta_title,
             'meta_description' => $request->meta_description,
             'status' => $request->status,
@@ -100,6 +107,12 @@ class VillaController extends Controller
             $banner_image = $request->file('banner_image')->store('images/villa/list', 'public');
         }
 
+        if (empty($request->file('image'))) {
+            $image = $request->old_image;
+        } else {
+            $image = $request->file('image')->store('images/villa/list', 'public');
+        }
+
         $data = Villa::find($id);
 
         $data->title = $request->title;
@@ -108,6 +121,7 @@ class VillaController extends Controller
         $data->excerpt = $request->excerpt;
         $data->description = $request->description;
         $data->banner_image = $banner_image;
+        $data->image = $image;
         $data->meta_title = $request->meta_title;
         $data->meta_description = $request->meta_description;
         $data->status = $request->status;

@@ -109,6 +109,20 @@
                                             <label>Description</label>
                                             <textarea id="description" name="description">{{ $edit_data->description }}</textarea>
                                         </div>
+                                        <div class="form-group">
+                                            <label for="image">Image</label>
+                                            <div class="input-group mb-3">
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="image" name="image">
+                                                    <label class="custom-file-label" for="image">Choose file</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="d-block">Current Image</label>
+                                                <img src="{{ asset($edit_data->image) }}" style="width: 100%">
+                                                <input type="hidden" name="old_image" value="{{ $edit_data->image }}">
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
