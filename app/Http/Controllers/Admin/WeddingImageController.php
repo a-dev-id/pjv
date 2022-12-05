@@ -1,15 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Pjv;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\ContactUsSetting;
-use App\Models\Wedding;
 use App\Models\WeddingImage;
-use App\Models\WeddingSetting;
 use Illuminate\Http\Request;
 
-class WeddingController extends Controller
+class WeddingImageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,11 +15,7 @@ class WeddingController extends Controller
      */
     public function index()
     {
-        $contact = ContactUsSetting::where('id', '1')->first();
-        $setting = WeddingSetting::where('id', '1')->first();
-        $weddings = Wedding::where('status', '1')->get();
-        $wedding_images = WeddingImage::where('status', '1')->get();
-        return view('pjv.wedding')->with(compact('contact', 'setting', 'weddings', 'wedding_images'));
+        //
     }
 
     /**
@@ -43,7 +36,19 @@ class WeddingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (empty($request->file('image'))) {
+            $image = null;
+        } else {
+            $image = $request->file('image')->store('images/wedding/image', 'public');
+        }
+
+        WeddingImage::create([
+            'wedding_id' => $request->wedding_id,
+            'title' => $request->title,
+            'image' => $image,
+            'status' => $request->status,
+        ]);
+        return redirect()->route('wedding-list.index')->with('message', 'Item added Successfully');
     }
 
     /**
@@ -88,6 +93,8 @@ class WeddingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = WeddingImage::find($id);
+        $data->delete();
+        return redirect()->route('wedding-list.index')->with('message', 'Item Deleted Successfully');
     }
 }

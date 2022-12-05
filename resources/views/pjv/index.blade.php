@@ -104,6 +104,20 @@
         height: 850px;
     }
 
+    .header-image img {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .header-iframe-youtube {
+        width: 102%;
+        height: 120%;
+        top: -10%;
+        left: -1%;
+        position: absolute;
+        pointer-events: none;
+    }
+
 </style>
 @endpush
 @push('js')
@@ -147,19 +161,25 @@
 </script>
 @endpush
 <x-p-j-v>
-    <section class="slider-section">
+    {{-- <section class="slider-section">
         @foreach ($sliders as $data)
         <div class="vh-100 overflow-hidden position-relative">
             <img src="{{ asset($data->image) }}" class="h-100 w-100 object-fit-cover object-position-center" alt="{{ $data->title }}">
         </div>
         @endforeach
+    </section> --}}
+
+    <section class="header-image vh-100 overflow-hidden position-relative">
+        {{-- <iframe src="https://www.youtube.com/embed/9RA48trBz24?autoplay=1&mute=1&controls=0&loop=1&rel=0&showinfo=0&iv_load_policy=3&playlist=9RA48trBz24" class="header-iframe-youtube"></iframe> --}}
+        <iframe src="https://www.youtube.com/embed/forSx74dkMw?autoplay=1&mute=1&controls=0&loop=1&rel=0&showinfo=0&iv_load_policy=3&list=PLw8fGZ6fiQLA6TnBP_Le72OSgk-bL4qQ0" class="header-iframe-youtube"></iframe>
     </section>
 
     <section class="py-90">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-6 text-center">
-                    <h1 class="mb-3"><i>{{ $setting->title }}</i></h1>
+                    <h1 class="mb-1"><i>{{ $setting->title }}</i></h1>
+                    <p class="mb-3"><i>{{ $setting->subtitle }}</i></p>
                     <div>{!! $setting->description !!}</div>
                 </div>
             </div>

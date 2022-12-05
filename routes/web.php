@@ -60,6 +60,7 @@ Route::middleware(['auth', 'verified'])->prefix('panel/admin')->group(function (
 
     Route::resource('wedding-list', App\Http\Controllers\Admin\WeddingController::class);
     Route::resource('wedding-setting', App\Http\Controllers\Admin\WeddingSettingController::class);
+    Route::resource('wedding-image', App\Http\Controllers\Admin\WeddingImageController::class);
 
     Route::resource('gallery-list', App\Http\Controllers\Admin\GalleryController::class);
     Route::resource('gallery-setting', App\Http\Controllers\Admin\GallerySettingController::class);

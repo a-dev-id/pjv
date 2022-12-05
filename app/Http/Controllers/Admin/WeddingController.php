@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Wedding;
+use App\Models\WeddingImage;
 use App\Models\WeddingSetting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -19,7 +20,8 @@ class WeddingController extends Controller
     {
         $weddings = Wedding::all();
         $setting = WeddingSetting::find(1);
-        return view('admin.wedding.index')->with(compact('weddings', 'setting'));
+        $wedding_images = WeddingImage::where('wedding_id', $setting->id)->get();
+        return view('admin.wedding.index')->with(compact('weddings', 'setting', 'wedding_images'));
     }
 
     /**

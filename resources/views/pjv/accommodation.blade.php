@@ -29,7 +29,7 @@
 <meta name="title" content="{{ $setting->title }}">
 <meta name="description" content="{{$setting->excerpt}}">
 <title>{{ $setting->title }}</title>
-<meta property="og:url" content="{{ route('index') }}" />
+<meta property="og:url" content="{{ route('accommodation.index') }}" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{{ $setting->title }}" />
 <meta property="og:description" content="{{ $setting->excerpt }}" />

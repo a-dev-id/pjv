@@ -29,7 +29,7 @@
 <meta name="title" content="{{ $setting->title }}">
 <meta name="description" content="{{$setting->excerpt}}">
 <title>{{ $setting->title }}</title>
-<meta property="og:url" content="{{ route('index') }}" />
+<meta property="og:url" content="{{ route('dining.index') }}" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{{ $setting->title }}" />
 <meta property="og:description" content="{{ $setting->excerpt }}" />
@@ -168,22 +168,6 @@
     @php $c = 0; @endphp
     @endif
     @endforeach
-    {{-- <section class="container py-90">
-        <div class="row align-items-center">
-            <div class="col-6 p-5">
-                <h2 class="mb-3"><i>Donec convallis nisl</i></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia fugiat cum inventore voluptatum officia est aliquam. Consequatur eius facilis aliquid suscipit. Deleniti, non ut? Laborum, eum voluptates eaque pariatur fugit, nobis quae optio adipisci debitis cum culpa perferendis id quas necessitatibus tenetur sit, nihil nostrum voluptas explicabo odit ipsam.</p><br>
-                <p> Itaque consectetur ipsa fuga! Asperiores quae nisi blanditiis ullam earum voluptatum ea animi! Facere, atque assumenda. Sapiente blanditiis cumque veniam repellat, dolorem tempore ut itaque cum? Voluptate incidunt autem adipisci enim maxime harum deleniti, eum architecto. Dicta dolore non ratione natus ullam explicabo at fugit dolores velit corporis, repellat tenetur porro.</p>
-                <div class="mt-4">
-                    <button class="btn btn-primary rounded-0 px-5">Button text</button>
-                </div>
-            </div>
-            <div class="col-6">
-                <img src="https://via.placeholder.com/715x900" class="w-100 h-100 object-fit-cover object-position-center">
-            </div>
-        </div>
-    </section> --}}
-
     <section class="bg-light-gray py-90">
         <div class="container-fluid">
             <div class="row justify-content-center">

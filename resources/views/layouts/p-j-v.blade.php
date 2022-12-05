@@ -25,7 +25,7 @@
                         <li class="nav-item"><a href="{{ route('dining.index') }}" class="nav-link text-white px-2 px-xl-3">Dining</a></li>
                     </ul>
                     <a href="" class="navbar-brand mx-2">
-                        <img src="https://elevatebali.com/storage/app/uploads/public/635/b7e/636/635b7e636bd05089688966.png" class="navlogo fade-in">
+                        <img src="{{ asset('images/logo/logo.png') }}" class="navlogo fade-in">
                     </a>
                     <ul class="navbar-nav align-items-center">
                         {{-- <li class="nav-item"><a href="{{ route('spa.index') }}" class="nav-link text-white px-2 px-xl-3">Spa</a></li> --}}
@@ -105,7 +105,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-4">
-                    <img src="https://via.placeholder.com/400x200" style="width: 100%">
+                    <img src="{{ asset('images/logo/logo.png') }}" style="width: 100%">
                 </div>
                 <div class="col-8 px-5">
                     <div class="row">
