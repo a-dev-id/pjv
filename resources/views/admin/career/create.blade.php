@@ -101,7 +101,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Excerpt</label>
-                                        <textarea id="excerpt" name="excerpt"></textarea>
+                                        <textarea class="form-control" name="excerpt" rows="5"></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>Description</label>

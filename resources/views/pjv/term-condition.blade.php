@@ -27,46 +27,32 @@
 </section>
 @endsection
 @section('meta')
-<meta name="title" content="{{ $setting->title }}">
-<meta name="description" content="{{$setting->excerpt}}">
-<title>{{ $setting->title }}</title>
-<meta property="og:url" content="{{ route('dining.index') }}" />
+<meta name="title" content="{{ $data->title }}">
+<meta name="description" content="{{$data->excerpt}}">
+<title>{{ $data->title }}</title>
+<meta property="og:url" content="{{ route('wedding.index') }}" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="{{ $setting->title }}" />
-<meta property="og:description" content="{{ $setting->excerpt }}" />
-<meta property="og:image" content="{{ asset($setting->image) }}" />
+<meta property="og:title" content="{{ $data->title }}" />
+<meta property="og:description" content="{{ $data->excerpt }}" />
+<meta property="og:image" content="{{ asset($data->image) }}" />
 @endsection
-@push('css')
-@endpush
-@push('js')
-@endpush
 <x-p-j-v>
     <section class="slider-section">
         <div class="vh-100 overflow-hidden position-relative">
-            <img src="{{ asset($setting->banner_image) }}" class="h-100 w-100 object-fit-cover object-position-center">
+            <img src="{{ asset($data->banner_image) }}" class="h-100 w-100 object-fit-cover object-position-center">
         </div>
     </section>
 
     <section class="py-90">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-7 text-center">
-                    <h1 class="mb-3 text-uppercase"><i>{{ $setting->title }}</i></h1>
-                    {{-- <div>
-                        {{ $setting->excerpt }}
-                    </div> --}}
+                <div class="col-12">
+                    <h1 class="mb-3 text-uppercase text-center pb-3"><i>{{ $data->title }}</i></h1>
+                    <div>
+                        {!! $data->description !!}
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="container pb-90">
-        <div class="row align-items-center">
-            @foreach ($galleries as $data)
-            <div class="col-6 pb-5">
-                <img src="{{ asset($data->thumbnail_image) }}" alt="{{ $data->title }}" class="w-100 h-100 object-fit-cover object-position-center">
-            </div>
-            @endforeach
         </div>
     </section>
 

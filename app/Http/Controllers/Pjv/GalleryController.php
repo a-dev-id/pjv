@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Pjv;
 
 use App\Http\Controllers\Controller;
+use App\Models\ContactUsSetting;
+use App\Models\Gallery;
+use App\Models\GallerySetting;
 use Illuminate\Http\Request;
 
 class GalleryController extends Controller
@@ -14,7 +17,10 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        return view('pjv.gallery');
+        $contact = ContactUsSetting::where('id', '1')->first();
+        $setting = GallerySetting::where('id', '1')->first();
+        $galleries = Gallery::all();
+        return view('pjv.gallery')->with(compact('contact','setting','galleries'));
     }
 
     /**

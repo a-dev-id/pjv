@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Pjv;
 
 use App\Http\Controllers\Controller;
+use App\Models\ContactUsSetting;
 use Illuminate\Http\Request;
 
 class ContactUsController extends Controller
@@ -14,7 +15,8 @@ class ContactUsController extends Controller
      */
     public function index()
     {
-        return view('pjv.contact-us');
+        $contact = ContactUsSetting::where('id', '1')->first();
+        return view('pjv.contact-us')->with(compact('contact'));
     }
 
     /**

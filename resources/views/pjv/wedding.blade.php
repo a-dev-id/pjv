@@ -4,7 +4,8 @@
         <div class="row">
             <div class="col-6 text-center">
                 <span class="d-block">
-                    <h2>Private Jet Villa</h2>
+                    <h2 class="p-0 m-0 text-uppercase">Private Jet Villa</h2>
+                    <p class="fw-bold text-uppercase"><i>by Hanging Gardens</i></p>
                 </span>
                 <span class="d-block">
                     {{ $contact->address_text }}
@@ -12,7 +13,7 @@
             </div>
             <div class="col-6 text-center">
                 <span class="d-block">
-                    <h2>Reservations</h2>
+                    <h2 class="text-uppercase">Reservations</h2>
                 </span>
                 <span class="d-block">
                     Reservations Direct: {{ $contact->phone_no}}
@@ -29,7 +30,7 @@
 <meta name="title" content="{{ $setting->title }}">
 <meta name="description" content="{{$setting->excerpt}}">
 <title>{{ $setting->title }}</title>
-<meta property="og:url" content="{{ route('dining.index') }}" />
+<meta property="og:url" content="{{ route('wedding.index') }}" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{{ $setting->title }}" />
 <meta property="og:description" content="{{ $setting->excerpt }}" />
@@ -39,6 +40,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
+    .item-wrapper {
+        width: 630px;
+    }
+
+    .item-image {
+        height: 700px;
+        object-fit: cover;
+        object-position: center;
+    }
+
     .slider2-wrapper {
         width: 455px;
     }
@@ -103,17 +114,17 @@
     <section class="py-90">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-6 text-center">
-                    <h1 class="mb-3"><i>{{ $setting->title }}</i></h1>
+                <div class="col-7 text-center">
+                    <h1 class="mb-3 text-uppercase"><i>{{ $setting->title }}</i></h1>
                     <div>
-                        {{ $setting->excerpt }}
+                        {!! $setting->description !!}
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-90">
+    <section class="py-90 bg-light-gray">
         <div class="container">
             <div class="position-relative">
                 <div class="slider slider-center">
@@ -136,14 +147,17 @@
     <section class="container py-90">
         <div class="row align-items-center">
             <div class="col-6 p-5">
-                <h2 class="mb-3"><i>{{ $data->title }}</i></h2>
+                <h2 class="mb-1 text-uppercase"><i>{{ $data->title }}</i></h2>
+                <div class="mb-2 fw-bold"><i>{{ $data->price }}</i></div>
                 <div>{!! $data->description !!}</div>
                 <div class="mt-4">
                     <button class="btn btn-primary rounded-0 px-5">Button text</button>
                 </div>
             </div>
             <div class="col-6">
-                <img src="{{ asset($data->image) }}" class="w-100 h-100 object-fit-cover object-position-center">
+                <div class="item-wrapper">
+                    <img src="{{ asset($data->image) }}" class="item-image w-100">
+                </div>
             </div>
         </div>
     </section>
@@ -153,10 +167,13 @@
     <section class="container py-90">
         <div class="row align-items-center">
             <div class="col-6">
-                <img src="{{ asset($data->image) }}" class="w-100 h-100 object-fit-cover object-position-center">
+                <div class="item-wrapper">
+                    <img src="{{ asset($data->image) }}" class="item-image w-100">
+                </div>
             </div>
             <div class="col-6 p-5">
-                <h2 class="mb-3"><i>{{ $data->title }}</i></h2>
+                <h2 class="mb-1 text-uppercase"><i>{{ $data->title }}</i></h2>
+                <div class="mb-2 fw-bold"><i>{{ $data->price }}</i></div>
                 <div>{!! $data->description !!}</div>
                 <div class="mt-4">
                     <button class="btn btn-primary rounded-0 px-5">Button text</button>
@@ -168,7 +185,7 @@
     @php $c = 0; @endphp
     @endif
     @endforeach
-    <section class="bg-light-gray py-90">
+    {{-- <section class="bg-light-gray py-90">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-8 text-center">
@@ -177,5 +194,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 </x-p-j-v>

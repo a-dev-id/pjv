@@ -23,6 +23,11 @@ Route::resource('/event', App\Http\Controllers\Pjv\EventController::class);
 Route::resource('/wedding', App\Http\Controllers\Pjv\WeddingController::class);
 Route::resource('/gallery', App\Http\Controllers\Pjv\GalleryController::class);
 Route::resource('/contact-us', App\Http\Controllers\Pjv\ContactUsController::class);
+Route::resource('/story', App\Http\Controllers\Pjv\StoryController::class);
+Route::resource('/terms-conditions', App\Http\Controllers\Pjv\TermConditionController::class);
+Route::resource('/awards', App\Http\Controllers\Pjv\AwardController::class);
+Route::resource('/press-room', App\Http\Controllers\Pjv\PressRoomController::class);
+Route::resource('/careers', App\Http\Controllers\Pjv\CareerController::class);
 
 require __DIR__.'/auth.php';
 

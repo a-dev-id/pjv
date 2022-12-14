@@ -24,7 +24,7 @@
                         {{-- <li class="nav-item"><a href="{{ route('activities.index') }}" class="nav-link text-white px-2 px-xl-3">Activities</a></li> --}}
                         <li class="nav-item"><a href="{{ route('dining.index') }}" class="nav-link text-white px-2 px-xl-3">Dining</a></li>
                     </ul>
-                    <a href="" class="navbar-brand mx-2">
+                    <a href="{{ route('index') }}" class="navbar-brand mx-2">
                         <img src="{{ asset('images/logo/logo.png') }}" class="navlogo fade-in">
                     </a>
                     <ul class="navbar-nav align-items-center">
@@ -99,6 +99,7 @@
 
     {{ $slot }}
 
+    <div class="w-100 border-top border-light"></div>
     @yield('home_address')
 
     <footer class="py-90 bg-light">
@@ -110,24 +111,24 @@
                 <div class="col-8 px-5">
                     <div class="row">
                         <div class="col-4">
-                            <h3>about</h3>
+                            <h3 class="text-uppercase">about</h3>
                             <ul class="p-0">
-                                <li>story</li>
-                                <li>awards</li>
-                                <li>press room</li>
-                                <li>contact us</li>
+                                <li><a href="{{ route('story.index') }}" class="link text-black text-uppercase text-decoration-none">story</a></li>
+                                <li><a href="{{ route('awards.index') }}" class="link text-black text-uppercase text-decoration-none">awards</a></li>
+                                <li><a href="{{ route('press-room.index') }}" class="link text-black text-uppercase text-decoration-none">press room</a></li>
+                                <li><a href="{{ route('contact-us.index') }}" class="link text-black text-uppercase text-decoration-none">contact us</a></li>
                             </ul>
                         </div>
                         <div class="col-4">
-                            <h3>others</h3>
+                            <h3 class="text-uppercase">others</h3>
                             <ul class="p-0">
-                                <li>plocy &amp; legal</li>
+                                <li><a href="{{ route('terms-conditions.index') }}" class="link text-black text-uppercase text-decoration-none">Terms &amp; Conditions</a></li>
                                 <li>blog</li>
-                                <li>careers</li>
+                                <li><a href="{{ route('careers.index') }}" class="link text-black text-uppercase text-decoration-none">careers</a></li>
                             </ul>
                         </div>
                         <div class="col-4">
-                            <h3>follow us</h3>
+                            <h3 class="text-uppercase">follow us</h3>
                             <ul class="p-0">
                                 <li>story</li>
                                 <li>awards</li>

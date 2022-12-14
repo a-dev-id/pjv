@@ -102,7 +102,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Excerpt</label>
-                                        <textarea id="excerpt" name="excerpt">{{ $edit_data->excerpt }}</textarea>
+                                        <textarea class="form-control" name="excerpt" placeholder="Type something">{{ $edit_data->excerpt }}</textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>Description</label>

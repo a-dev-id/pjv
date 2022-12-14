@@ -198,7 +198,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Excerpt</label>
-                                        <textarea id="excerpt" name="excerpt">{{ $setting->excerpt }}</textarea>
+                                        <textarea name="excerpt" class="form-control">{{ $setting->excerpt }}</textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>Description</label>

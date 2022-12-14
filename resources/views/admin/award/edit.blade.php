@@ -102,7 +102,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Excerpt</label>
-                                        <textarea id="excerpt" name="excerpt">{{ $edit_data->excerpt }}</textarea>
+                                        <textarea class="form-control" name="excerpt" rows="5">{{ $edit_data->excerpt }}</textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>Description</label>
@@ -119,7 +119,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="d-block">Current Banner Image</label>
+                                            <label class="d-block">Current Image</label>
                                             <img src="{{ asset($edit_data->image) }}" style="width: 100%">
                                             <input type="hidden" name="old_image" value="{{ $edit_data->image }}">
                                         </div>

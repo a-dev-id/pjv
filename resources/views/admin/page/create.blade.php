@@ -101,7 +101,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Excerpt</label>
-                                        <textarea id="excerpt" name="excerpt"></textarea>
+                                        <textarea class="form-control" placeholder="Type something" name="excerpt"></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>Description</label>
@@ -110,11 +110,11 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="bannet_image">Banner Image</label>
+                                        <label for="banner_image">Banner Image</label>
                                         <div class="input-group mb-3">
                                             <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="bannet_image" name="bannet_image">
-                                                <label class="custom-file-label" for="bannet_image">Choose file</label>
+                                                <input type="file" class="custom-file-input" id="banner_image" name="banner_image">
+                                                <label class="custom-file-label" for="banner_image">Choose file</label>
                                             </div>
                                         </div>
                                     </div>

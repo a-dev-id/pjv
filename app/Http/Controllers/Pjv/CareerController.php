@@ -3,16 +3,12 @@
 namespace App\Http\Controllers\Pjv;
 
 use App\Http\Controllers\Controller;
+use App\Models\Career;
+use App\Models\CareerSetting;
 use App\Models\ContactUsSetting;
-use App\Models\HomeSetting;
-use App\Models\HomeSlider;
-use App\Models\HomeSlider2;
-use App\Models\RestaurantSetting;
-use App\Models\VillaSetting;
-use App\Models\WeddingSetting;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class CareerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,13 +18,9 @@ class HomeController extends Controller
     public function index()
     {
         $contact = ContactUsSetting::where('id', '1')->first();
-        $setting = HomeSetting::where('id', '1')->first();
-        $sliders = HomeSlider::all();
-        $sliders2 = HomeSlider2::all();
-        $dining = RestaurantSetting::where('id', '1')->first();
-        $accommodation = VillaSetting::where('id', '1')->first();
-        $wedding = WeddingSetting::where('id', '1')->first();
-        return view('pjv.index')->with(compact('sliders', 'setting', 'sliders2', 'contact', 'dining', 'accommodation', 'wedding'));
+        $setting = CareerSetting::where('id', '1')->first();
+        $careers = Career::all();
+        return view('pjv.career')->with(compact('contact', 'careers', 'setting'));
     }
 
     /**

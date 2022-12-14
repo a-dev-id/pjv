@@ -4,7 +4,8 @@
         <div class="row">
             <div class="col-6 text-center">
                 <span class="d-block">
-                    <h2>Private Jet Villa</h2>
+                    <h2 class="p-0 m-0 text-uppercase">Private Jet Villa</h2>
+                    <p class="fw-bold text-uppercase"><i>by Hanging Gardens</i></p>
                 </span>
                 <span class="d-block">
                     {{ $contact->address_text }}
@@ -12,7 +13,7 @@
             </div>
             <div class="col-6 text-center">
                 <span class="d-block">
-                    <h2>Reservations</h2>
+                    <h2 class="text-uppercase">Reservations</h2>
                 </span>
                 <span class="d-block">
                     Reservations Direct: {{ $contact->phone_no}}
@@ -140,7 +141,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-6 text-center">
-                    <h1 class="mb-3"><i>{{ $setting->title }}</i></h1>
+                    <h1 class="mb-3 text-uppercase"><i>{{ $setting->title }}</i></h1>
                     <div>
                         {{ $setting->excerpt }}
                     </div>
@@ -182,7 +183,7 @@
                     </div>
                 </div>
                 <div class="col-6 p-5">
-                    <h2 class="mb-5">Facilities</h2>
+                    <h2 class="mb-5 text-uppercase">Facilities</h2>
                     <ul style="list-style-type:disc">
                         @foreach ($villa_feature as $data)
                         @foreach (\App\Models\Feature::where('id', '=', $data->feature_id)->get() as $data_feature)

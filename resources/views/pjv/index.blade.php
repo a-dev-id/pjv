@@ -4,7 +4,8 @@
         <div class="row">
             <div class="col-6 text-center">
                 <span class="d-block">
-                    <h2>Private Jet Villa</h2>
+                    <h2 class="p-0 m-0 text-uppercase">Private Jet Villa</h2>
+                    <p class="fw-bold text-uppercase"><i>by Hanging Gardens</i></p>
                 </span>
                 <span class="d-block">
                     {{ $contact->address_text }}
@@ -12,7 +13,7 @@
             </div>
             <div class="col-6 text-center">
                 <span class="d-block">
-                    <h2>Reservations</h2>
+                    <h2 class="text-uppercase">Reservations</h2>
                 </span>
                 <span class="d-block">
                     Reservations Direct: {{ $contact->phone_no}}
@@ -45,6 +46,16 @@
 
     .slider2-image {
         height: 680px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .discover-wrapper {
+        width: 250px;
+    }
+
+    .discover-image {
+        height: 350px;
         object-fit: cover;
         object-position: center;
     }
@@ -171,15 +182,17 @@
 
     <section class="header-image vh-100 overflow-hidden position-relative">
         {{-- <iframe src="https://www.youtube.com/embed/9RA48trBz24?autoplay=1&mute=1&controls=0&loop=1&rel=0&showinfo=0&iv_load_policy=3&playlist=9RA48trBz24" class="header-iframe-youtube"></iframe> --}}
-        <iframe src="https://www.youtube.com/embed/forSx74dkMw?autoplay=1&mute=1&controls=0&loop=1&rel=0&showinfo=0&iv_load_policy=3&list=PLw8fGZ6fiQLA6TnBP_Le72OSgk-bL4qQ0" class="header-iframe-youtube"></iframe>
+        {{-- <iframe src="https://www.youtube.com/embed/forSx74dkMw?autoplay=1&mute=1&controls=0&loop=1&rel=0&showinfo=0&iv_load_policy=3&list=PLw8fGZ6fiQLA6TnBP_Le72OSgk-bL4qQ0" class="header-iframe-youtube"></iframe> --}}
+        <iframe src="https://www.youtube.com/embed/3p9zfYpT-44?autoplay=1&mute=1&controls=0&loop=1&rel=0&showinfo=0&iv_load_policy=3&list=PLw8fGZ6fiQLCTYMLATF1apmqDaTouajnN" class="header-iframe-youtube"></iframe>
+
     </section>
 
     <section class="py-90">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-6 text-center">
-                    <h1 class="mb-1"><i>{{ $setting->title }}</i></h1>
-                    <p class="mb-3"><i>{{ $setting->subtitle }}</i></p>
+                <div class="col-7 text-center">
+                    <h1 class="mb-1"><i>{{ strtoupper($setting->title) }}</i></h1>
+                    <p class="mb-3"><i>{{ strtoupper($setting->subtitle) }}</i></p>
                     <div>{!! $setting->description !!}</div>
                 </div>
             </div>
@@ -190,7 +203,7 @@
         <div class="container">
             <div class="row pb-5 justify-content-center">
                 <div class="col-6 text-center">
-                    <h2 class="mb-3"><i>{{ $setting->title1 }}</i></h2>
+                    <h2 class="mb-3"><i>{{ strtoupper($setting->title1) }}</i></h2>
                 </div>
             </div>
 
@@ -209,7 +222,7 @@
                 <div class="col-6 text-center">
                     <div>{!! $setting->excerpt1 !!}</div>
                     <div class="mt-4">
-                        <button class="btn btn-primary rounded-0 px-5">Button text</button>
+                        <a href="#" class="btn btn-primary rounded-0 px-5">BOOK NOW</a>
                     </div>
                 </div>
             </div>
@@ -222,7 +235,7 @@
                 <div class="col-10">
                     <div class="row">
                         <div class="col-7 px-4">
-                            <h2 class="mb-5"><i>{{ $setting->title2 }}</i></h2>
+                            <h2 class="mb-5"><i>{{ strtoupper($setting->title2) }}</i></h2>
                             <div class="section1-wrapper">
                                 <img src="{{ asset($setting->image1) }}" alt="{{ $data->title }}" class="section1-image w-100" />
                             </div>
@@ -247,39 +260,45 @@
                 <div class="col-9 bg-white">
                     <div class="row justify-content-center align-items-center px-5 section3-content-wrapper pb-5">
                         <div class="col-4 text-center pe-5">
-                            <h2 class="mb-3"><i>{{ $setting->title3 }}</i></h2>
+                            <h2 class="mb-3"><i>{{ strtoupper($setting->title3) }}</i></h2>
                             <div>{!! $setting->excerpt3 !!}</div>
                         </div>
                         <div class="col-8">
                             <div class="row">
-                                <div class="col-4">
-                                    <img src="https://via.placeholder.com/295x395" style="width: 100%">
-                                    <h3 class="my-2"><i>Maecenas auctor facilisis rutrum</i></h3>
-                                    <div class="py-2">
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                <div class="col-4 p-4">
+                                    <div class="discover-wrapper pb-2">
+                                        <img src="{{ asset($accommodation->banner_image) }}" alt="{{ $data->title }}" class="discover-image w-100" />
                                     </div>
-                                    <div>
-                                        <button class="btn btn-primary px-5 rounded-0">DISCOVER</button>
+                                    <h3 class="my-2 fs-5"><i>{{ strtoupper($accommodation->title) }}</i></h3>
+                                    <div class="py-2">
+                                        <p>{{ Str::limit($accommodation->excerpt, 100) }}</p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a href="{{ route('accommodation.index') }}" class="btn btn-primary px-5 rounded-0">DISCOVER</a>
                                     </div>
                                 </div>
-                                <div class="col-4">
-                                    <img src="https://via.placeholder.com/295x395" style="width: 100%">
-                                    <h3 class="my-2"><i>Maecenas auctor facilisis rutrum</i></h3>
-                                    <div class="py-2">
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                <div class="col-4 p-4">
+                                    <div class="discover-wrapper pb-2">
+                                        <img src="{{ asset($dining->banner_image) }}" alt="{{ $data->title }}" class="discover-image w-100" />
                                     </div>
-                                    <div>
-                                        <button class="btn btn-primary px-5 rounded-0">DISCOVER</button>
+                                    <h3 class="my-2 fs-5"><i>{{ strtoupper($dining->title) }}</i></h3>
+                                    <div class="py-2">
+                                        <p>{{ Str::limit($dining->excerpt, 100) }}</p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a href="{{ route('dining.index') }}" class="btn btn-primary px-5 rounded-0">DISCOVER</a>
                                     </div>
                                 </div>
-                                <div class="col-4">
-                                    <img src="https://via.placeholder.com/295x395" style="width: 100%">
-                                    <h3 class="my-2"><i>Maecenas auctor facilisis rutrum</i></h3>
-                                    <div class="py-2">
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                <div class="col-4 p-4">
+                                    <div class="discover-wrapper pb-2">
+                                        <img src="{{ asset($wedding ->banner_image) }}" alt="{{ $data->title }}" class="discover-image w-100" />
                                     </div>
-                                    <div>
-                                        <button class="btn btn-primary px-5 rounded-0">DISCOVER</button>
+                                    <h3 class="my-2 fs-5"><i>{{ strtoupper($wedding->title) }}</i></h3>
+                                    <div class="py-2">
+                                        <p>{{ Str::limit($wedding->excerpt, 100) }}</p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <a href="{{ route('wedding.index') }}" class="btn btn-primary px-5 rounded-0">DISCOVER</a>
                                     </div>
                                 </div>
                             </div>
