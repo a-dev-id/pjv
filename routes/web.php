@@ -28,6 +28,8 @@ Route::resource('/terms-conditions', App\Http\Controllers\Pjv\TermConditionContr
 Route::resource('/awards', App\Http\Controllers\Pjv\AwardController::class);
 Route::resource('/press-room', App\Http\Controllers\Pjv\PressRoomController::class);
 Route::resource('/careers', App\Http\Controllers\Pjv\CareerController::class);
+Route::resource('/blog', App\Http\Controllers\Pjv\BlogController::class);
+Route::get('/blog/{slug}', [App\Http\Controllers\Pjv\BlogController::class, 'show']);
 
 require __DIR__.'/auth.php';
 

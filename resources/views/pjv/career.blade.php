@@ -134,7 +134,7 @@
                                             {!! $data->description !!}
                                         </div>
                                         <div class="modal-footer">
-                                            <a href="http://wa.me/628113800988" target="_blank" class="btn btn-sm btn-success text-uppercase py-2 px-3 rounded-0 me-2">Chat with Us</a>
+                                            <a href="http://wa.me/628113800988" target="_blank" class="btn btn-sm btn-success text-uppercase py-2 px-3 rounded-0 me-2"><i class="fa-brands fa-whatsapp pe-1"></i> Chat with Us</a>
                                             <button type="button" class="btn btn-sm btn-outline-secondary text-uppercase py-2 px-3 rounded-0" data-bs-dismiss="modal">Close</button>
                                         </div>
                                     </div>
