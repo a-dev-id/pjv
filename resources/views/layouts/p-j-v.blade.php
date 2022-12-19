@@ -5,6 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @yield('meta')
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
@@ -43,13 +48,14 @@
             <div class="booking-inner">
                 <div class="booking-form-wrapper">
                     <div class="booking-form-wrapper-inner">
-                        <form class="d-flex h-100" action="https://book-directonline.com/properties/privatejetvillahanginggardensdirect?locale=en&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=IDR&trackPage=yes" method="get" target="_blank">
+                        <form class="d-flex h-100" action="https://book-directonline.com/properties/privatejetvillahanginggardensdirect?locale=en&trackPage=yes" method="get" target="_blank">
                             <input type="hidden" name="id" value="2583">
                             <div class="col px-1 position-relative h-100">
                                 <label class="booking-field-text">Arrival</label>
                                 <input type="text" class="form-control booking-field-input h-100 w-100 datepicker" id="fromDate" value="{{ \Carbon\Carbon::now()->format('d-m-Y') }}" readonly="true">
                                 <i class="fa fa-calendar booking-field-icon"></i>
                                 <input type="hidden" name="checkInDate" class="datepicker-input" value="{{ \Carbon\Carbon::now()->format('d-m-Y') }}">
+                                <input type="hidden" name="currency" value="USD">
                             </div>
                             <div class="col px-1 position-relative h-100">
                                 <label class="booking-field-text">Departure</label>
@@ -83,9 +89,9 @@
             </div>
         </div>
 
-        {{-- <div class="special-offers-link">
+        <div class="special-offers-link">
             <div>
-                <a href="https://elevatebali.com/offers" class="btn btn-primary rounded-pill text-uppercase px-3 w-100">
+                <a href="{{ route('offers.index') }}" class="btn btn-primary rounded-pill text-uppercase px-3 w-100">
                     <small class="fw-bold"><i class="fa fa-gift me-2"></i> Special Offers</small>
                 </a>
                 <div class="mt-2 offers-link-hover opacity-0">
@@ -94,7 +100,7 @@
                     </div>
                 </div>
             </div>
-        </div> --}}
+        </div>
 
     </header>
 
@@ -112,24 +118,24 @@
                 <div class="col-8 px-5">
                     <div class="row">
                         <div class="col-4">
-                            <h3 class="text-uppercase">about</h3>
+                            <h3 class="text-uppercase fw-bold mb-3">about</h3>
                             <ul class="p-0">
-                                <li><a href="{{ route('story.index') }}" class="link text-black text-uppercase text-decoration-none">story</a></li>
-                                <li><a href="{{ route('awards.index') }}" class="link text-black text-uppercase text-decoration-none">awards</a></li>
-                                <li><a href="{{ route('press-room.index') }}" class="link text-black text-uppercase text-decoration-none">press room</a></li>
-                                <li><a href="{{ route('contact-us.index') }}" class="link text-black text-uppercase text-decoration-none">contact us</a></li>
+                                <li class="mt-2"><a href="{{ route('story.index') }}" class="link text-black text-uppercase text-decoration-none">story</a></li>
+                                <li class="mt-2"><a href="{{ route('awards.index') }}" class="link text-black text-uppercase text-decoration-none">awards</a></li>
+                                <li class="mt-2"><a href="{{ route('press-room.index') }}" class="link text-black text-uppercase text-decoration-none">press room</a></li>
+                                <li class="mt-2"><a href="{{ route('contact-us.index') }}" class="link text-black text-uppercase text-decoration-none">contact us</a></li>
                             </ul>
                         </div>
                         <div class="col-4">
-                            <h3 class="text-uppercase">others</h3>
+                            <h3 class="text-uppercase fw-bold mb-3">others</h3>
                             <ul class="p-0">
-                                <li><a href="{{ route('terms-conditions.index') }}" class="link text-black text-uppercase text-decoration-none">Terms &amp; Conditions</a></li>
-                                <li><a href="{{ route('blog.index') }}" class="link text-black text-uppercase text-decoration-none">blog</a></li>
-                                <li><a href="{{ route('careers.index') }}" class="link text-black text-uppercase text-decoration-none">careers</a></li>
+                                <li class="mt-2"><a href="{{ route('terms-conditions.index') }}" class="link text-black text-uppercase text-decoration-none">Terms &amp; Conditions</a></li>
+                                <li class="mt-2"><a href="{{ route('blog.index') }}" class="link text-black text-uppercase text-decoration-none">blog</a></li>
+                                <li class="mt-2"><a href="{{ route('careers.index') }}" class="link text-black text-uppercase text-decoration-none">careers</a></li>
                             </ul>
                         </div>
                         <div class="col-4">
-                            <h3 class="text-uppercase">follow us</h3>
+                            <h3 class="text-uppercase fw-bold mb-3">follow us</h3>
                             <nav class="nav flex-row">
                                 <a href="https://www.instagram.com/" class="nav-link social-media-share social-media-share-instagram me-2"><i class="fab fa-instagram"></i></a>
                                 <a href="https://www.facebook.com/" class="nav-link social-media-share social-media-share-facebook me-2"><i class="fab fa-facebook-f"></i></a>
@@ -143,7 +149,7 @@
         </div>
     </footer>
 
-    <footer class="py-3 bg-secondary">
+    <footer class="py-3" style="background-color: #6c471d">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">

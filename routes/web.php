@@ -16,11 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('/', App\Http\Controllers\Pjv\HomeController::class);
 Route::resource('/accommodation', App\Http\Controllers\Pjv\AccommodationController::class);
-Route::resource('/activities', App\Http\Controllers\Pjv\ActivityController::class);
+// Route::resource('/activities', App\Http\Controllers\Pjv\ActivityController::class);
 Route::resource('/dining', App\Http\Controllers\Pjv\DiningController::class);
-Route::resource('/spa', App\Http\Controllers\Pjv\SpaController::class);
-Route::resource('/event', App\Http\Controllers\Pjv\EventController::class);
+// Route::resource('/spa', App\Http\Controllers\Pjv\SpaController::class);
+// Route::resource('/event', App\Http\Controllers\Pjv\EventController::class);
 Route::resource('/wedding', App\Http\Controllers\Pjv\WeddingController::class);
+Route::resource('/offers', App\Http\Controllers\Pjv\OfferController::class);
 Route::resource('/gallery', App\Http\Controllers\Pjv\GalleryController::class);
 Route::resource('/contact-us', App\Http\Controllers\Pjv\ContactUsController::class);
 Route::resource('/story', App\Http\Controllers\Pjv\StoryController::class);
@@ -30,6 +31,25 @@ Route::resource('/press-room', App\Http\Controllers\Pjv\PressRoomController::cla
 Route::resource('/careers', App\Http\Controllers\Pjv\CareerController::class);
 Route::resource('/blog', App\Http\Controllers\Pjv\BlogController::class);
 Route::get('/blog/{slug}', [App\Http\Controllers\Pjv\BlogController::class, 'show']);
+
+
+// Route::prefix('m')->group(function () {
+// Route::resource('/', App\Http\Controllers\Pjv\HomeController::class);
+// Route::resource('/accommodation', App\Http\Controllers\Pjv\AccommodationController::class);
+// Route::resource('/dining', App\Http\Controllers\Pjv\DiningController::class);
+// Route::resource('/wedding', App\Http\Controllers\Pjv\WeddingController::class);
+// Route::resource('/gallery', App\Http\Controllers\Pjv\GalleryController::class);
+// Route::resource('/contact-us', App\Http\Controllers\Pjv\ContactUsController::class);
+// Route::resource('/story', App\Http\Controllers\Pjv\StoryController::class);
+// Route::resource('/terms-conditions', App\Http\Controllers\Pjv\TermConditionController::class);
+// Route::resource('/awards', App\Http\Controllers\Pjv\AwardController::class);
+// Route::resource('/press-room', App\Http\Controllers\Pjv\PressRoomController::class);
+// Route::resource('/careers', App\Http\Controllers\Pjv\CareerController::class);
+// Route::resource('/blog', App\Http\Controllers\Pjv\BlogController::class);
+// Route::get('/blog/{slug}', [App\Http\Controllers\Pjv\BlogController::class, 'show']);
+// });
+
+
 
 require __DIR__.'/auth.php';
 

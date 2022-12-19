@@ -4,16 +4,16 @@
         <div class="row">
             <div class="col-6 text-center">
                 <span class="d-block">
-                    <h2 class="p-0 m-0 text-uppercase">Private Jet Villa</h2>
-                    <p class="fw-bold text-uppercase"><i>by Hanging Gardens</i></p>
+                    <h2 class="p-0 m-0 text-uppercase fw-bold">Private Jet Villa</h2>
+                    <p class="fw-bold text-uppercase">by Hanging Gardens</p>
                 </span>
-                <span class="d-block">
+                <span class="d-block mt-2">
                     {{ $contact->address_text }}
                 </span>
             </div>
             <div class="col-6 text-center">
                 <span class="d-block">
-                    <h2 class="text-uppercase">Reservations</h2>
+                    <h2 class="text-uppercase fw-bold">Reservations</h2>
                 </span>
                 <span class="d-block">
                     Reservations Direct: {{ $contact->phone_no}}
@@ -141,7 +141,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-6 text-center">
-                    <h1 class="mb-3 text-uppercase"><i>{{ $setting->title }}</i></h1>
+                    <h1 class="mb-3 text-uppercase fw-bold">{{ $setting->title }}</h1>
                     <div>
                         {{ $setting->excerpt }}
                     </div>
@@ -183,7 +183,7 @@
                     </div>
                 </div>
                 <div class="col-6 p-5">
-                    <h2 class="mb-5 text-uppercase">Facilities</h2>
+                    <h2 class="mb-5 text-uppercase fw-bold">Facilities</h2>
                     <ul style="list-style-type:disc">
                         @foreach ($villa_feature as $data)
                         @foreach (\App\Models\Feature::where('id', '=', $data->feature_id)->get() as $data_feature)

@@ -4,16 +4,16 @@
         <div class="row">
             <div class="col-6 text-center">
                 <span class="d-block">
-                    <h2 class="p-0 m-0 text-uppercase">Private Jet Villa</h2>
-                    <p class="fw-bold text-uppercase"><i>by Hanging Gardens</i></p>
+                    <h2 class="p-0 m-0 text-uppercase fw-bold">Private Jet Villa</h2>
+                    <p class="fw-bold text-uppercase">by Hanging Gardens</p>
                 </span>
-                <span class="d-block">
+                <span class="d-block mt-2">
                     {{ $contact->address_text }}
                 </span>
             </div>
             <div class="col-6 text-center">
                 <span class="d-block">
-                    <h2 class="text-uppercase">Reservations</h2>
+                    <h2 class="text-uppercase fw-bold">Reservations</h2>
                 </span>
                 <span class="d-block">
                     Reservations Direct: {{ $contact->phone_no}}
@@ -192,8 +192,8 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-7 text-center">
-                    <h1 class="mb-1"><i>{{ strtoupper($setting->title) }}</i></h1>
-                    <p class="mb-3"><i>{{ strtoupper($setting->subtitle) }}</i></p>
+                    <h1 class="mb-1 fw-bold">{{ strtoupper($setting->title) }}</h1>
+                    <p class="mb-3 fw-bold">{{ strtoupper($setting->subtitle) }}</p>
                     <div>{!! $setting->description !!}</div>
                 </div>
             </div>
@@ -204,7 +204,7 @@
         <div class="container">
             <div class="row pb-5 justify-content-center">
                 <div class="col-6 text-center">
-                    <h2 class="mb-3"><i>{{ strtoupper($setting->title1) }}</i></h2>
+                    <h2 class="mb-3 fw-bold">{{ strtoupper($setting->title1) }}</h2>
                 </div>
             </div>
 
@@ -223,7 +223,7 @@
                 <div class="col-6 text-center">
                     <div>{!! $setting->excerpt1 !!}</div>
                     <div class="mt-4">
-                        <a href="#" class="btn btn-primary rounded-0 px-5">BOOK NOW</a>
+                        <a href="#" class="btn btn-primary rounded-0 px-5 fw-bold">BOOK NOW</a>
                     </div>
                 </div>
             </div>
@@ -236,7 +236,7 @@
                 <div class="col-10">
                     <div class="row">
                         <div class="col-7 px-4">
-                            <h2 class="mb-5"><i>{{ strtoupper($setting->title2) }}</i></h2>
+                            <h2 class="mb-5 fw-bold">{{ strtoupper($setting->title2) }}</h2>
                             <div class="section1-wrapper">
                                 <img src="{{ asset($setting->image1) }}" alt="{{ $data->title }}" class="section1-image w-100" />
                             </div>
@@ -245,7 +245,7 @@
                             <div class="section2-wrapper">
                                 <img src="{{ asset($setting->image2) }}" alt="{{ $data->title }}" class="section2-image w-100" />
                             </div>
-                            <div class="mt-4">
+                            <div class="mt-5">
                                 {!! $setting->excerpt2 !!}
                             </div>
                         </div>
@@ -261,7 +261,7 @@
                 <div class="col-9 bg-white">
                     <div class="row justify-content-center align-items-center px-5 section3-content-wrapper pb-5">
                         <div class="col-4 text-center pe-5">
-                            <h2 class="mb-3"><i>{{ strtoupper($setting->title3) }}</i></h2>
+                            <h2 class="mb-3 fw-bold">{{ strtoupper($setting->title3) }}</h2>
                             <div>{!! $setting->excerpt3 !!}</div>
                         </div>
                         <div class="col-8">
@@ -270,7 +270,7 @@
                                     <div class="discover-wrapper pb-2">
                                         <img src="{{ asset($accommodation->banner_image) }}" alt="{{ $data->title }}" class="discover-image w-100" />
                                     </div>
-                                    <h3 class="my-2 fs-5"><i>{{ strtoupper($accommodation->title) }}</i></h3>
+                                    <h3 class="my-2 fs-5 fw-bold">{{ strtoupper($accommodation->title) }}</h3>
                                     <div class="py-2">
                                         <p>{{ Str::limit($accommodation->excerpt, 100) }}</p>
                                     </div>
@@ -282,7 +282,7 @@
                                     <div class="discover-wrapper pb-2">
                                         <img src="{{ asset($dining->banner_image) }}" alt="{{ $data->title }}" class="discover-image w-100" />
                                     </div>
-                                    <h3 class="my-2 fs-5"><i>{{ strtoupper($dining->title) }}</i></h3>
+                                    <h3 class="my-2 fs-5 fw-bold">{{ strtoupper($dining->title) }}</h3>
                                     <div class="py-2">
                                         <p>{{ Str::limit($dining->excerpt, 100) }}</p>
                                     </div>
@@ -294,7 +294,7 @@
                                     <div class="discover-wrapper pb-2">
                                         <img src="{{ asset($wedding ->banner_image) }}" alt="{{ $data->title }}" class="discover-image w-100" />
                                     </div>
-                                    <h3 class="my-2 fs-5"><i>{{ strtoupper($wedding->title) }}</i></h3>
+                                    <h3 class="my-2 fs-5 fw-bold">{{ strtoupper($wedding->title) }}</h3>
                                     <div class="py-2">
                                         <p>{{ Str::limit($wedding->excerpt, 100) }}</p>
                                     </div>

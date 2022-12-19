@@ -4,16 +4,16 @@
         <div class="row">
             <div class="col-6 text-center">
                 <span class="d-block">
-                    <h2 class="p-0 m-0 text-uppercase">Private Jet Villa</h2>
-                    <p class="fw-bold text-uppercase"><i>by Hanging Gardens</i></p>
+                    <h2 class="p-0 m-0 text-uppercase fw-bold">Private Jet Villa</h2>
+                    <p class="fw-bold text-uppercase">by Hanging Gardens</p>
                 </span>
-                <span class="d-block">
+                <span class="d-block mt-2">
                     {{ $contact->address_text }}
                 </span>
             </div>
             <div class="col-6 text-center">
                 <span class="d-block">
-                    <h2 class="text-uppercase">Reservations</h2>
+                    <h2 class="text-uppercase fw-bold">Reservations</h2>
                 </span>
                 <span class="d-block">
                     Reservations Direct: {{ $contact->phone_no}}
@@ -114,8 +114,8 @@
     <section class="py-90">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-7 text-center">
-                    <h1 class="mb-3 text-uppercase"><i>{{ $setting->title }}</i></h1>
+                <div class="col-8 text-center">
+                    <h1 class="mb-3 text-uppercase fw-bold">{{ $setting->title }}</h1>
                     <div>
                         {!! $setting->description !!}
                     </div>
@@ -147,11 +147,11 @@
     <section class="container py-90">
         <div class="row align-items-center">
             <div class="col-6 p-5">
-                <h2 class="mb-1 text-uppercase"><i>{{ $data->title }}</i></h2>
-                <div class="mb-2 fw-bold"><i>{{ $data->price }}</i></div>
+                <h2 class="mb-1 text-uppercase fw-bold">{{ $data->title }}</h2>
+                <div class="mb-2 fw-bold">{{ $data->price }}</div>
                 <div>{!! $data->description !!}</div>
                 <div class="mt-4">
-                    <button class="btn btn-primary rounded-0 px-5">Button text</button>
+                    <a href="{{ $data->button_link }}" class="btn btn-primary rounded-0 px-5 fw-bold">{{ $data->button_text }}</a>
                 </div>
             </div>
             <div class="col-6">
@@ -172,11 +172,11 @@
                 </div>
             </div>
             <div class="col-6 p-5">
-                <h2 class="mb-1 text-uppercase"><i>{{ $data->title }}</i></h2>
-                <div class="mb-2 fw-bold"><i>{{ $data->price }}</i></div>
+                <h2 class="mb-1 text-uppercase fw-bold">{{ $data->title }}</h2>
+                <div class="mb-2 fw-bold">{{ $data->price }}</div>
                 <div>{!! $data->description !!}</div>
                 <div class="mt-4">
-                    <button class="btn btn-primary rounded-0 px-5">Button text</button>
+                    <a href="{{ $data->button_link }}" class="btn btn-primary rounded-0 px-5 fw-bold">{{ $data->button_text }}</a>
                 </div>
             </div>
         </div>
