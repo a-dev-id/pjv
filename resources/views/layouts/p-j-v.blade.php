@@ -2,6 +2,18 @@
 <html lang="en">
 
 <head>
+    <script type="text/javascript">
+        if (screen.width < 768) {
+    			let url = "/";
+    			if (url == '/thank-you-newsletter') {
+    				window.location = "{{ route('m.index') }}/thank-you-enquiry";
+    			} else if (url == '/thank-you-enquiry') {
+    				window.location = "{{ route('m.index') }}/thank-you-enquiry";
+    			} else {
+    				window.location = "{{ route('m.index') }}";
+    			}
+    		}
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @yield('meta')
@@ -212,8 +224,6 @@
 
 
     <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
-
-
 
     @stack('js')
 </body>

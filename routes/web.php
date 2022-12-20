@@ -33,8 +33,8 @@ Route::resource('/blog', App\Http\Controllers\Pjv\BlogController::class);
 Route::get('/blog/{slug}', [App\Http\Controllers\Pjv\BlogController::class, 'show']);
 
 
-// Route::prefix('m')->group(function () {
-// Route::resource('/', App\Http\Controllers\Pjv\HomeController::class);
+
+Route::resource('/m', App\Http\Controllers\Mobile\IndexController::class);
 // Route::resource('/accommodation', App\Http\Controllers\Pjv\AccommodationController::class);
 // Route::resource('/dining', App\Http\Controllers\Pjv\DiningController::class);
 // Route::resource('/wedding', App\Http\Controllers\Pjv\WeddingController::class);
@@ -47,7 +47,7 @@ Route::get('/blog/{slug}', [App\Http\Controllers\Pjv\BlogController::class, 'sho
 // Route::resource('/careers', App\Http\Controllers\Pjv\CareerController::class);
 // Route::resource('/blog', App\Http\Controllers\Pjv\BlogController::class);
 // Route::get('/blog/{slug}', [App\Http\Controllers\Pjv\BlogController::class, 'show']);
-// });
+
 
 
 
