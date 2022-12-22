@@ -1,3 +1,4 @@
+@section('home_active', 'active')
 <x-mobile>
 
 
@@ -106,14 +107,14 @@
                 <div class="col-xs-7 col-image-masonry p-l-5">
                     <div class="row">
                         <div class="col-xs-12">
-                            <a href="https://hanginggardensofbali.com/m/accommodation" class="d-block">
+                            <a href="{{ route('mobile.accommodation') }}" class="d-block">
                                 <div style=" background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(https://hanginggardensofbali.com/storage/app/uploads/public/629/472/c16/629472c16d6a7654497780.jpg) center no-repeat" class="villas-image-mry">
                                     <h4 class="title-mry">Accommodation</h4>
                                 </div>
                             </a>
                         </div>
                         <div class="col-xs-6 p-r-2_5 p-t-5">
-                            <a href="https://hanginggardensofbali.com/m/hidden-palace" class="d-block">
+                            <a href="{{ route('mobile.dining') }}" class="d-block">
                                 <div style=" background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(https://hanginggardensofbali.com/storage/app/uploads/public/629/473/75e/62947375ebe94992651318.jpeg) center no-repeat" class="info-hotel-image-mry">
                                     <h4 class="title-mry">Dinning</h4>
                                 </div>
@@ -160,64 +161,6 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
-
-
-
-
-
-
-
-        <div class="container-fluid container-fixed-menu">
-            <a href="https://book-directonline.com/properties/hanginggardensofbalidirect" class="book-mobile-fixed" target="_blank">
-                <i class="fa fa-calendar"></i>Check Availability
-                <i class="fa fa-angle-right pull-right angle-right-fixed"></i>
-            </a>
-            <a href="https://hanginggardensofbali.com/m" class="menu-box">
-                <div class="menu-box-item active">
-                    <i class="fa fa-home"></i>
-                    <p>Home</p>
-                </div>
-            </a>
-            <a href="https://hanginggardensofbali.com/m/accommodation" class="menu-box">
-                <div class="menu-box-item ">
-                    <i class="fa fa-bed"></i>
-                    <p>Accommodation</p>
-                </div>
-            </a>
-            <a href="https://hanginggardensofbali.com/m/offer" class="menu-box">
-                <div class="menu-box-item ">
-                    <i class="fa fa-tags"></i>
-                    <p>Offers</p>
-                </div>
-            </a>
-            <a href="https://hanginggardensofbali.com/m/gallery" class="menu-box">
-                <div class="menu-box-item ">
-                    <i class="fa fa-image"></i>
-                    <p>Gallery</p>
-                </div>
-            </a>
-            <a href="javascript:void(0)" id="contact-us-menu" class="menu-box">
-                <div class="menu-box-item ">
-                    <i class="fa fa-envelope"></i>
-                    <p>Contact Us</p>
-                </div>
-            </a>
-            <div class="contact-us-box">
-                <ul>
-                    <li>
-                        <div class="items">
-                            <a href="tel:+62 361 982 700" class="items-contact-us"><i class="fa fa-phone"></i></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="items">
-                            <a href="https://api.whatsapp.com/send/?phone=628113800988&text" class="items-contact-us"><i class="fab fa-whatsapp" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
             </div>
         </div>
 

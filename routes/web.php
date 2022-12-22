@@ -34,8 +34,10 @@ Route::get('/blog/{slug}', [App\Http\Controllers\Pjv\BlogController::class, 'sho
 
 
 
-Route::resource('/m', App\Http\Controllers\Mobile\IndexController::class);
-// Route::resource('/accommodation', App\Http\Controllers\Pjv\AccommodationController::class);
+Route::get('/m', [App\Http\Controllers\Mobile\IndexController::class, 'index'])->name('mobile.home');
+Route::get('/m/accommodation', [App\Http\Controllers\Mobile\AccommodationController::class, 'index'])->name('mobile.accommodation');
+Route::get('/m/dining', [App\Http\Controllers\Mobile\DiningController::class, 'index'])->name('mobile.dining');
+Route::get('/m/offers', [App\Http\Controllers\Mobile\OfferController::class, 'index'])->name('mobile.offer');
 // Route::resource('/dining', App\Http\Controllers\Pjv\DiningController::class);
 // Route::resource('/wedding', App\Http\Controllers\Pjv\WeddingController::class);
 // Route::resource('/gallery', App\Http\Controllers\Pjv\GalleryController::class);

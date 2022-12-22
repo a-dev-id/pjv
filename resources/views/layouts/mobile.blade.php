@@ -26,7 +26,7 @@
     <script type="text/javascript">
         <!--
         if (screen.width > 768) {
-            window.location = "{{ route('index') }}";
+            window.location = "{{ route('mobile.home') }}";
           }
           //
         -->
@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
-    <link href="https://hanginggardensofbali.com/combine/63472fc6028683ec3e78380b1b61a189-1664421365" rel="stylesheet">
+    <link href="{{asset('css/mobile.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
     <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
@@ -339,6 +339,7 @@
         }
 
     </style>
+    @stack('css')
 
     <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,300i" rel="stylesheet" async> -->
 
@@ -424,6 +425,44 @@
         </div>
     </div>
     {{ $slot }}
+
+    <div class="container-fluid container-fixed-menu">
+        <a href="https://book-directonline.com/properties/hanginggardensofbalidirect" class="book-mobile-fixed" target="_blank">
+            <i class="fa fa-calendar"></i>Check Availability
+            <i class="fa fa-angle-right pull-right angle-right-fixed"></i>
+        </a>
+        <a href="{{route('mobile.home')}}" class="menu-box">
+            <div class="menu-box-item @yield('home_active')">
+                <i class="fa fa-home"></i>
+                <p>Home</p>
+            </div>
+        </a>
+        <a href="{{route('mobile.accommodation')}}" class="menu-box">
+            <div class="menu-box-item @yield('accommodation_active')">
+                <i class="fa fa-bed"></i>
+                <p>Accommodation</p>
+            </div>
+        </a>
+        <a href="{{route('mobile.offer')}}" class="menu-box">
+            <div class="menu-box-item @yield('offer_active')">
+                <i class="fa fa-tags"></i>
+                <p>Offers</p>
+            </div>
+        </a>
+        <a href="https://hanginggardensofbali.com/m/offer" class="menu-box">
+            <div class="menu-box-item @yield('dining_active')">
+                {{-- <i class="fa fa-tags"></i> --}}
+                <i class="fas fa-utensils"></i>
+                <p>Dining</p>
+            </div>
+        </a>
+        <a href="https://hanginggardensofbali.com/m/gallery" class="menu-box">
+            <div class="menu-box-item @yield('gallery_active')">
+                <i class="fa fa-image"></i>
+                <p>Gallery</p>
+            </div>
+        </a>
+    </div>
 
     <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -584,6 +623,7 @@
       }(document, 'script', 'facebook-jssdk'));
     </script>
 
+    @stack('js')
 </body>
 
 </html>

@@ -6,11 +6,11 @@
         if (screen.width < 768) {
     			let url = "/";
     			if (url == '/thank-you-newsletter') {
-    				window.location = "{{ route('m.index') }}/thank-you-enquiry";
+    				window.location = "{{ route('mobile.home') }}/thank-you-enquiry";
     			} else if (url == '/thank-you-enquiry') {
-    				window.location = "{{ route('m.index') }}/thank-you-enquiry";
+    				window.location = "{{ route('mobile.home') }}/thank-you-enquiry";
     			} else {
-    				window.location = "{{ route('m.index') }}";
+    				window.location = "{{ route('mobile.home') }}";
     			}
     		}
     </script>
