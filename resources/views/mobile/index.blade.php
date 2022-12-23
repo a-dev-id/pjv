@@ -1,7 +1,13 @@
 @section('home_active', 'active')
+@section('meta')
+<title>Hanging Garden of Bali | Homepage</title>
+<meta name="description" content="">
+<meta property="og:title" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hanginggardensofbali.com/m" />
+<meta property="og:image" content="" />
+@endsection
 <x-mobile>
-
-
 
     <section class="slider relative">
         <div class="mdi-header-carousel owl-carousel owl-theme">
@@ -18,7 +24,7 @@
 
 
     <!-- Modal -->
-    <div class="modal fade" id="BannerPopUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    {{-- <div class="modal fade" id="BannerPopUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content" style="background-color: white; border-radius: 0px!important;">
                 <div class="modal-body mb-5 pb-5">
@@ -42,50 +48,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
-    <!-- Modal -->
-    <div class="modal fade" id="myassist" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">NEEED ASSISTANCE</h4>
-                </div>
-                <div class="modal-body">
-                    <p>SHOULD YOU NEED FURTHER ASSISTANCE FOR THE OFFERS OR YOU WANT TO ARRANGE A COSTUMISED BOOKING, OUR RESERVATION WILL HELP YOU. PLEASE SUBMIT YOUR ENQUIRY BY CLICKING THE BUTTON BELOW </p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://hanginggardensofbali.com/m/enquire" class="btn-default">
-                        <span>CREATE ENQUIRY</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="myterm" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Term of Condition</h4>
-                </div>
-                <div class="modal-body">
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div> --}}
 
     <div id="main">
 

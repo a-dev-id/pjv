@@ -1,4 +1,12 @@
 @section('accommodation_active', 'active')
+@section('meta')
+<title>Hanging Garden of Bali | Homepage</title>
+<meta name="description" content="">
+<meta property="og:title" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hanginggardensofbali.com/m" />
+<meta property="og:image" content="" />
+@endsection
 @push('css')
 <style type="text/css">
     .room-view .panel-body .room-amn ul {
@@ -67,28 +75,6 @@
     	  });
     	});
 </script>
-<script type="text/javascript">
-    $('.read-more-mobile').click(function(event) {
-        $('.intro-less-box').hide();
-        $('.intro-more-box').show();
-      });
-    
-      $('.read-less-mobile').click(function(event) {
-        $('.intro-more-box').hide();
-        $('.intro-less-box').show();
-      });
-</script>
-<script type="text/javascript">
-    $('#contact-us-menu').click(function(event) {
-    		$('.contact-us-box').toggle();
-    	});
-    	$('.items-contact-us').click(function(event) {
-    		$('.contact-us-box').toggle();
-    	});
-    	$('.tawk-btn').click(function(event) {
-    		$('.container-fixed-menu').css('z-index', 10);
-    	});
-</script>
 @endpush
 <x-mobile>
 
@@ -99,9 +85,6 @@
             <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/25d/62948925d7857710753313.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
             <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/267/629489267a275681246185.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
             <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/270/6294892702481298017608.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
-            <!--<div class="header-bg relative" style="background: linear-gradient(180deg, transparent 60%, #fff), url('http://192.232.245.124/~hanginggarden/storage/app/uploads/public/613/051/a0c/613051a0c4174243205494.jpg') no-repeat;background-size: cover;background-position: bottom;"></div>-->
-            <!--<div class="header-bg relative" style="background: linear-gradient(180deg, transparent 60%, #fff), url('http://192.232.245.124/~hanginggarden/storage/app/uploads/public/613/052/b3b/613052b3b21c6573181726.jpg') no-repeat;background-size: cover;background-position: bottom;"></div>-->
-            <!--<div class="header-bg relative" style="background: linear-gradient(180deg, transparent 60%, #fff), url('http://192.232.245.124/~hanginggarden/storage/app/uploads/public/613/052/b46/613052b467015654965026.jpg') no-repeat;background-size: cover;background-position: bottom;"></div>-->
         </div>
         <a target="_blank" class="mdi-map-btn" href="https://g.page/hanginggardensofbali?share"><i class="fa fa-map-marker"></i> MAP</a>
         <a class="mdi-share-btn" href="javascript:void(0)" data-toggle="modal" data-target="#shareModal"><i class="fa fa-share-alt"></i></a>
@@ -166,23 +149,7 @@
                 <div class="row">
                     <div style="padding: 0px 6px;" class="col-xs-12">
                         <div style="color: black;" class="panel-group" id="accordion0">
-                            <!-- <div class="panel panel-default">
-					      	<div class="panel-heading">
-					        	<h4 class="panel-title">
-					          		<a data-toggle="collapse" data-parent="#accordion0" href="#collapse10">VIEW ROOM <span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-					        	</h4>
-					      	</div>
-					      	<div id="collapse10" class="panel-collapse collapse in">
-					        	<div class="panel-body">
-					        							        	</div>
-					      	</div>
-					    </div> -->
                             <div class="panel panel-default">
-                                <!-- <div class="panel-heading">
-					        	<h4 class="panel-title">
-					          		<a data-toggle="collapse" data-parent="#accordion0" href="#collapse20">ROOM AMENITIES <span><i class="fa fa-angle-right" style="font-size: 25px;margin-top: -4px;" aria-hidden="true"></i></span></a>
-					        	</h4>
-					      	</div> -->
                                 <div id="collapse20" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <div class="col-xs-12 room-amn m-b-20">
@@ -223,12 +190,6 @@
 
                                         </div>
 
-                                        <!-- <div class="col-xs-12 room-amn">
-					        			<h4>Villa Benefits</h4>
-					        			<ul class="fa-ul">
-					        									        		</ul>
-					        		</div> -->
-
                                         <div class="clr-bth"></div>
                                         <hr>
                                         <div class="container-price">
@@ -238,73 +199,9 @@
                                             </div>
                                             <div class="contain-asis">
                                                 <div class="intro-less-box">
-                                                    <!-- <div>
-													<p>Villa Size:  | Bed Type:  | Occupancy: </p>
-												</div>
-												<div class="amenities__container--room" style="margin: 15px 0;">
-																										<div class="amenities__container--list-item">
-														<img src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/icon/.png" class="amenities--icon--room" />
-														<span class="amenities--text heading2">
-															
-														</span>
-													</div>
-																										<div class="amenities__container--list-item">
-														<img src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/icon/.png" class="amenities--icon--room" />
-														<span class="amenities--text heading2">
-															
-														</span>
-													</div>
-																										<div class="amenities__container--list-item">
-														<img src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/icon/.png" class="amenities--icon--room" />
-														<span class="amenities--text heading2">
-															
-														</span>
-													</div>
-																										<div class="amenities__container--list-item">
-														<img src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/icon/.png" class="amenities--icon--room" />
-														<span class="amenities--text heading2">
-															
-														</span>
-													</div>
-																									</div> -->
-                                                    <!-- These luxurious villas take full advantage of the peace and tranquility of the surrounding jungle, combined with the rhythmic... <a href="javascript:void(0);" class="read-more-mobile">Read More</a> -->
                                                     <p>These luxurious villas take full advantage of the peace and tranquility of the surrounding jungle, combined with the rhythmic sound of Ayung river and its cascading waterfalls below.<br />Designed in an authentic Balinese style, Riverside Villas are perched high on wooden pillars. Their expansive decks feature a private infinity pool, poolside gazebo and dining table – the ideal place to unwind and soak up the sights and sounds of the surrounding jungle.</p>
-                                                </div>
-                                                <div class="intro-more-box" style="display: none;">
-                                                    <!-- <div>
-					        						<p>Villa Size:  | Bed Type:  | Occupancy: </p>
-					        					</div>
-					        					<div class="amenities__container--room" style="margin: 15px 0;">
-																										<div class="amenities__container--list-item">
-														<img src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/icon/.png" class="amenities--icon--room" />
-														<span class="amenities--text heading2">
-															
-														</span>
-													</div>
-																										<div class="amenities__container--list-item">
-														<img src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/icon/.png" class="amenities--icon--room" />
-														<span class="amenities--text heading2">
-															
-														</span>
-													</div>
-																										<div class="amenities__container--list-item">
-														<img src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/icon/.png" class="amenities--icon--room" />
-														<span class="amenities--text heading2">
-															
-														</span>
-													</div>
-																										<div class="amenities__container--list-item">
-														<img src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/icon/.png" class="amenities--icon--room" />
-														<span class="amenities--text heading2">
-															
-														</span>
-													</div>
-																									</div> -->
-                                                    <p>These luxurious villas take full advantage of the peace and tranquility of the surrounding jungle, combined with the rhythmic sound of Ayung river and its cascading waterfalls below.<br />Designed in an authentic Balinese style, Riverside Villas are perched high on wooden pillars. Their expansive decks feature a private infinity pool, poolside gazebo and dining table – the ideal place to unwind and soak up the sights and sounds of the surrounding jungle.</p>
-                                                    <a href="#" class="read-less-mobile">Read Less</a>
                                                 </div>
                                             </div>
-                                            <!-- <a href="https://hanginggardensofbali.com/m/enquire" class="btn-default">SUBMIT ENQUIRY</a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -318,4 +215,26 @@
 
     </div>
 
+
+    <!-- Modal -->
+    <div class="modal fade" id="myassist" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">NEED ASSISTANCE</h4>
+                </div>
+                <div class="modal-body">
+                    <p>SHOULD YOU NEED FURTHER ASSISTANCE FOR THE OFFERS OR YOU WANT TO ARRANGE A COSTUMISED BOOKING, OUR RESERVATION WILL HELP YOU. PLEASE SUBMIT YOUR ENQUIRY BY CLICKING THE BUTTON BELOW </p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://api.whatsapp.com/send/?phone=628113800988&text&app_absent=0" class="btn-default">
+                        <span>CHAT WITH US</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </x-mobile>

@@ -38,17 +38,9 @@ Route::get('/m', [App\Http\Controllers\Mobile\IndexController::class, 'index'])-
 Route::get('/m/accommodation', [App\Http\Controllers\Mobile\AccommodationController::class, 'index'])->name('mobile.accommodation');
 Route::get('/m/dining', [App\Http\Controllers\Mobile\DiningController::class, 'index'])->name('mobile.dining');
 Route::get('/m/offers', [App\Http\Controllers\Mobile\OfferController::class, 'index'])->name('mobile.offer');
-// Route::resource('/dining', App\Http\Controllers\Pjv\DiningController::class);
-// Route::resource('/wedding', App\Http\Controllers\Pjv\WeddingController::class);
-// Route::resource('/gallery', App\Http\Controllers\Pjv\GalleryController::class);
-// Route::resource('/contact-us', App\Http\Controllers\Pjv\ContactUsController::class);
-// Route::resource('/story', App\Http\Controllers\Pjv\StoryController::class);
-// Route::resource('/terms-conditions', App\Http\Controllers\Pjv\TermConditionController::class);
-// Route::resource('/awards', App\Http\Controllers\Pjv\AwardController::class);
-// Route::resource('/press-room', App\Http\Controllers\Pjv\PressRoomController::class);
-// Route::resource('/careers', App\Http\Controllers\Pjv\CareerController::class);
-// Route::resource('/blog', App\Http\Controllers\Pjv\BlogController::class);
-// Route::get('/blog/{slug}', [App\Http\Controllers\Pjv\BlogController::class, 'show']);
+Route::get('/m/gallery', [App\Http\Controllers\Mobile\GalleryController::class, 'index'])->name('mobile.gallery');
+Route::get('/m/blog', [App\Http\Controllers\Mobile\BlogController::class, 'index'])->name('mobile.blog');
+Route::get('/m/blog/{slug}', [App\Http\Controllers\Mobile\BlogController::class, 'show'])->name('mobile.blog-detail');
 
 
 

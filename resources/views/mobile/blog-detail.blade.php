@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Hanging Garden of Bali | Gallery</title>
+    <title>Hanging Garden of Bali | Blog</title>
     <meta name=”description” content="">
     <meta property="og:title" content="" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://hanginggardensofbali.com/m/gallery" />
+    <meta property="og:url" content="https://hanginggardensofbali.com/m/blog/%3Aslug" />
     <meta property="og:image" content="" />
     <meta name="facebook-domain-verification" content="7gux91mjnq02ohqrs58juc6ow82uhe" />
 
@@ -45,89 +45,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
     <style type="text/css">
-        .mdi-gallery-1 {
-            height: 253px;
+        h1 {
+            font-size: 25px;
         }
 
-        .mdi-gallery-2 {
-            height: 125px;
+        .enq-button {
+            border: 1px solid #999;
+            background: #000;
+            color: #fff !important;
+            padding: 10px 20px;
+            transition: all 500ms;
+            text-transform: uppercase;
+            display: table;
+            margin: 0 auto;
         }
 
-        .mdi-gallery-3 {
-            height: 125px;
-            color: #fff;
+        .text-justify {
+            text-align: justify;
+        }
+
+        .btn-enquire {
+            width: 100%;
+            background-color: #fff;
+            color: #CC9930;
+            border: 2px solid #CC9930;
+            font-weight: 700;
+            display: inline-block;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .btn-menu {
+            width: 100%;
+            background-color: #CC9930;
+            color: #fff;
+            border: 2px solid #CC9930;
             font-weight: 700;
+            display: inline-block;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .mdi-gallery-col-1 {
-            padding-right: 3px !important;
-            padding-left: 3px !important;
-            padding-top: 3px !important;
+        .padding-top-30 {
+            padding-top: 30px !important
         }
-
-        .mdi-gallery-col-2 {
-            padding-bottom: 3px !important;
-            padding-right: 3px !important;
-            padding-top: 3px !important;
-        }
-
-        .mdi-gallery-col-3 {
-            padding-right: 3px !important;
-        }
-
-        .display-block {
-            display: block;
-        }
-
-        .contact-deral p {
-            font-size: 15px;
-            margin-bottom: 20px;
-        }
-
-        .mdi-info-contact-btn {
-            font-size: 16px;
-            color: #666 !important;
-        }
-
-        .email-btn {
-            margin-top: 20px;
-            padding-bottom: 5px;
-            text-decoration: underline;
-        }
-
-        .phone-btn {
-            margin-bottom: 20px;
-            text-decoration: underline;
-        }
-
-        .btn-view-photos {
-            display: unset;
-        }
-
-        .contact-deral h1 {
-            letter-spacing: -1px;
-        }
-
-        .mdi-info-photo-logo {
-            width: 200px;
-            margin: 20px auto;
-            display: block;
-        }
-
-    </style>
-    <style type="text/css">
-        /*.fa-angle-right{
-	  transform: rotate(0deg);
-	  transition: transform 0.25s linear;
-	}
-
-	.fa-angle-right.active{
-	  transform: rotate(90deg);
-	  transition: transform 0.25s linear;
-	}*/
 
     </style> <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,300i" rel="stylesheet" async> -->
 
@@ -160,9 +125,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T55JTBW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Modal -->
 
-    <!-- end of modal -->
 
     <a href="https://wa.me/628113800988" target="_blank" rel="noopener" class="whatsapp-floating"><img src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/whatsapp-logo.png" alt="whatsapp"></a>
     <a href="https://t.me/HGOB2022" target="_blank" rel="noopener" class="telegram-floating"><img src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/logo-telegram.png" alt="whatsapp"></a>
@@ -320,32 +283,32 @@
                         <div class="icon-container">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                         </div>
-                        <a href="javascript:void(0)" data-sharer="facebook" data-url="https://hanginggardensofbali.com/m/gallery"> Share on Facebook</a>
+                        <a href="javascript:void(0)" data-sharer="facebook" data-url="https://hanginggardensofbali.com/m/blog/%3Aslug"> Share on Facebook</a>
                     </div>
                     <div class="twitter-container social-container">
                         <div class="icon-container">
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                         </div>
-                        <a href="javascript:void(0)" data-sharer="twitter" data-url="https://hanginggardensofbali.com/m/gallery"> Share on Twitter</a>
+                        <a href="javascript:void(0)" data-sharer="twitter" data-url="https://hanginggardensofbali.com/m/blog/%3Aslug"> Share on Twitter</a>
                     </div>
                     <div class="whatsapp-container social-container">
                         <div class="icon-container">
                             <i class="fa fa-whatsapp" aria-hidden="true"></i>
                         </div>
-                        <a href="javascript:void(0)" data-sharer="whatsapp" data-title="" data-url="https://hanginggardensofbali.com/m/gallery"> Share on Whatsapp</a>
+                        <a href="javascript:void(0)" data-sharer="whatsapp" data-title="" data-url="https://hanginggardensofbali.com/m/blog/%3Aslug"> Share on Whatsapp</a>
                     </div>
                     <div class="mail-container social-container">
                         <div class="icon-container">
                             <i class="fa fa-envelope-o" aria-hidden="true"></i>
                         </div>
-                        <a href="mailto:?subject=&body=https://hanginggardensofbali.com/m/gallery"> Share on Email</a>
+                        <a href="mailto:?subject=&body=https://hanginggardensofbali.com/m/blog/%3Aslug"> Share on Email</a>
                     </div>
                     <div class="phone-container social-container">
                         <div class="icon-container">
                             <i class="fa fa-copy" aria-hidden="true"></i>
                         </div>
-                        <a onclick="copyToClipboard('#myText')" id="copyUrl" value="https://hanginggardensofbali.com/m/gallery" href="javascript:void(0)"> Copy URL to clipboard</a>
-                        <span id="myText" class="hide">https://hanginggardensofbali.com/m/gallery</span>
+                        <a onclick="copyToClipboard('#myText')" id="copyUrl" value="https://hanginggardensofbali.com/m/blog/%3Aslug" href="javascript:void(0)"> Copy URL to clipboard</a>
+                        <span id="myText" class="hide">https://hanginggardensofbali.com/m/blog/%3Aslug</span>
                     </div>
                 </div>
             </div>
@@ -495,131 +458,39 @@
 
 
 
-
-
-    <div class="container visible-xs visible-sm m-t-20">
-        <div class="row">
-            <div class="col-xs-6 p-0 mdi-gallery-col-1">
-                <div class="mdi-gallery-1" style="background: url(https://hanginggardensofbali.com/storage/app/uploads/public/613/094/5ad/6130945ad56ed890950919.jpg) no-repeat;background-size: cover;background-position: center;"></div>
+    <div class="container">
+        <div class="row dining-row-item">
+            <div class="col-xs-12">
+                <a class="d-block" href="javascript:void(0)">
+                    <div style="background: url(https://hanginggardensofbali.com/storage/app/uploads/public/636/871/f32/636871f320d4d029153364.jpg) no-repeat center; height: 350px; background-size: cover;"></div>
+                </a>
             </div>
-            <div class="col-xs-6 p-0">
-                <div class="col-xs-12 p-0 mdi-gallery-col-2">
-                    <div class="mdi-gallery-2" style="background: url(https://hanginggardensofbali.com/storage/app/uploads/public/629/47c/56e/62947c56ecee5771977247.jpg) no-repeat;background-size: cover;background-position: center;"></div>
-                </div>
-                <div class="col-xs-12 p-0 mdi-gallery-col-3">
-                    <a href="https://hanginggardensofbali.com/storage/app/uploads/public/613/094/5ad/6130945ad56ed890950919.jpg" data-fancybox="gallery" class="btn-view-photos" data-fancybox-trigger="gallery">
-                        <div class="mdi-gallery-3" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/47b/937/62947b93720c0320163935.jpg) no-repeat;background-size: cover;background-position: center;">PHOTO GALLERY</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+            <div class="col-xs-12 dining-item-description">
+                <div class="block-content">
+                    <h4>EXTRAORDINARY VALENTINE’S EXPERIENCES AT HANGING GARDENS OF BALI</h4>
+                    <p>Posted at Aug 03, 2021</p>
+                    <div class="text-justify">
+                        <p>Bali is one of the most unique and intoxicating destinations on the planet, a tropical paradise swathed in mystery, beauty and a vibrant local culture. These are only a few of the attributes that make the Indonesian island a perfect place to celebrate Valentine’s Day with your beloved.</p>
+                        <p>If you want to truly show your partner how much you treasure and adore them, book your Valentine’s Day stay at the Hanging Gardens of Bali, a luxurious resort nestled in the lush rain forest of Ubud. The Hanging Gardens of Bali has won myriad awards for its hospitality excellence, numerous dining options and once in a lifetime resort experiences. In order to make this year’s celebration one you will never forget, consider booking one of the following experiences.</p>
+                        <p><strong>ROMANTIC DINNER AT DALEM SEGARA TEMPLE</strong></p>
+                        <p>Enjoy a culinary experience you will remember for a lifetime – celebrate your love with a gourmet meal at the ancient Holy Dalem Segara Temple. This carefully crafted dining experience will transport you into the magical world of Balinese culture and ensure you spend your evening in an environment unparalleled on this planet. After a blessing by a Balinese priest, you will sip luscious local fruit cocktails and dine on a lavish spread of traditional delicacies.</p>
+                        <p><strong>EVENING UNDER THE STARS AT THE WORLD’S BEST SWIMMING POOL </strong></p>
+                        <p>Internationally renowned architectural swimming pool will be transformed into a romantic paradise this Valentine’s Day. Swathed in stunning drapes and dotted with flickering frangipani candles, the pool exudes an aura of relaxed elegance and romance as you float on a private water Bale. You are certain to rekindle your true love in this blissful setting.</p>
+                        <p><strong>LUXURIOUS SPA BY THE RIVER </strong></p>
+                        <p>Treat yourself and your love to an incomparable spa and wellness package at the Spa Collection. Located in the heart of Ubud’s jungle and perched on the banks of the holy river of Ayung, the locale is just as jaw-dropping as the treatments on offer. Surround yourself with nature and luxury as you enjoy traditional Balinese massages and treatments, leaving you feeling calm, relaxed and pampered.</p>
+                        <p><strong>ROMANTIC DINNER IN YOUR PRIVATE VILLA</strong></p>
+                        <p>Bask in the warm glow of your love as your enjoy an intimate Valentine’s Day dinner served to you in your private villa. With a vast array of culinary options available, you can surprise your partner with a delicious menu designed by our gourmet chefs, exotic bespoke cocktails, and most importantly – the privacy afforded by your own tropical jungle villa.</p>
+                        <p><strong>EXPERIENCE THE FLOATING SENSATION </strong></p>
+                        <p>For something private but truly mind blowing, you can arrange to eat your sumptuous Valentine’s Day dinner on a traditional Balinese mini-boat, floating in your villa’s own private infinity pool. There is simply nothing else on earth like the Floating Sunset Sensation – as your boat drifts hypnotically you will enjoy a feast fit for royalty.</p>
+                        <p>Whether this is your first Valentine’s Day together or your fortieth, your love will be set aflame by these one of a kind experiences at the Hanging Gardens of Bali and its Luxury Villas in Bali.</p>
+                        <p>The Hanging Gardens of Bali is the best honeymoon villa in Ubud. Experience award-winning hospitality and service as you immerse in the peace and tranquility of the surrounding landscape.</p>
+                        <!-- <a href="https://wa.link/7ejw78" target="_blank" class="btn-default text-center" style="margin-left:0; width:28% !important;">BOOK HERE</a> -->
+                    </div>
 
-    <div class="hidden">
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/613/094/4f9/6130944f9b99d177772576.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/613/094/502/6130945025b4e980926964.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/613/094/519/6130945196ee0532826247.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/613/094/538/61309453896d4142911647.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/613/094/549/613094549c9aa913718990.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/613/094/54b/61309454b8415338583091.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/613/094/561/613094561d8e3594102763.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/613/094/564/6130945641bbd776482451.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/613/094/574/6130945743349575896035.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/613/094/575/613094575855a735881041.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/613/094/587/6130945870667924798647.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/613/094/588/61309458804b2852647002.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/613/094/5c1/6130945c13536630352573.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/613/094/5d6/6130945d6cd78703553494.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/613/094/5e5/6130945e56373048974677.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47c/56e/62947c56ecee5771977247.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47c/56f/62947c56f2cc8808370809.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47c/58e/62947c58eff9c617294316.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47c/5a3/62947c5a356e7998601789.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47c/5a9/62947c5a9cce2105280966.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47c/5c7/62947c5c775f5240378759.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47c/5cb/62947c5cbf4bc591522201.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47c/5dd/62947c5dd0727033731366.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47c/5ea/62947c5eacbe7052560732.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47c/5f1/62947c5f1cf58240806283.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47c/603/62947c603d768617929757.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47d/03d/62947d03d9165081774603.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47b/937/62947b93720c0320163935.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47b/938/62947b9382953837465852.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47b/94b/62947b94b77d2069588122.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47b/960/62947b960a02a742238450.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47b/965/62947b96578cb248894884.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47b/974/62947b974e4fe396462525.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47b/984/62947b9846a3d584316577.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47b/988/62947b988a2fd264245066.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47b/997/62947b997b224487262259.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47b/99c/62947b99c5bb7086689895.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47b/9ac/62947b9ac3a7a428763093.jpg" data-fancybox="gallery"></div>
-        <div href="https://hanginggardensofbali.com/storage/app/uploads/public/629/47b/9cb/62947b9cb8b0b369727948.jpg" data-fancybox="gallery"></div>
-    </div>
-
-    <div class="container visible-xs visible-sm">
-        <div class="row">
-            <div class="col-xs-12 contact-deral">
-                <img class="mdi-info-photo-logo" src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/hanginggarden-logo.png">
-                <h1 style="margin-bottom: 5px;">Hanging Gardens of Bali</h1>
-                <!-- <p><strong>Please do not hesitate to contact us</strong></p> -->
-                <p><i class="fa fa-map-marker"></i> Buahan, Payangan, 80571, Kabupaten Gianyar - Bali</p>
-                <!-- <div style="height: 150px; width: 100%;" id="map_canvas"></div> -->
-                <iframe id="mobileMap" src="https://maps.google.com/maps?q=Hanging+Gardens+Of+Bali&amp;t=h&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="175" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                <a class="mdi-info-contact-btn email-btn display-block" href="mailto:reservations@hanginggardensofbali.com"><i class="fa fa-envelope"></i>reservations@hanginggardensofbali.com</a>
-                <a class="mdi-info-contact-btn phone-btn display-block" href="tel:+62 361 982 700"><i class="fa fa-phone"></i>+62 361 982 700</a>
-            </div>
-        </div>
-    </div>
-    <div class="container visible-xs visible-sm get-here">
-        <div class="row">
-            <div class="room-view">
-                <div style="color: black;" class="panel-group" id="accordion">
-                    <!-- <div class="panel panel-default">
-			      	<div class="panel-heading">
-			        	<h4 class="panel-title">
-			          		<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">VIEW MAP <span><i class="fa fa-angle-down" style="font-size: 25px;margin-top: -4px;" aria-hidden="true"></i></span></a>
-			        	</h4>
-			      	</div>
-			      	<div id="collapse1" class="panel-collapse collapse in">
-			        	<div class="panel-body">
-			        		<div style="height: 200px; width: 100%;" id="map_canvas"></div>
-			        		<a href="https://goo.gl/maps/RBuHHuu6zRFgp11n9" target="_blank" class="btn-default-map">
-				                Get Direction
-				            </a>
-			        	</div>
-			      	</div>
-			    </div> -->
-                    <!-- <div class="panel panel-default">
-			      	<div class="panel-heading">
-			        	<h4 class="panel-title">
-			          		<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">GETTING HERE<span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-			        	</h4>
-			      	</div>
-			      	<div id="collapse2" class="panel-collapse collapse">
-			        	<div class="panel-body">
-			        					        	</div>
-			      	</div>
-			    </div>
-			    <div class="panel panel-default">
-			      	<div class="panel-heading">
-			        	<h4 class="panel-title">
-			          		<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">HOTEL FACILITIES<span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-			        	</h4>
-			      	</div>
-			      	<div id="collapse3" class="panel-collapse collapse">
-			        	<div class="panel-body">
-			        		<div class="col-xs-12 room-amn-ph">
-			        						        		</div>
-			        	</div>
-			      	</div>
-			    </div> -->
                 </div>
             </div>
         </div>
     </div>
-
-
 
 
 
@@ -648,7 +519,7 @@
             </div>
         </a>
         <a href="https://hanginggardensofbali.com/m/gallery" class="menu-box">
-            <div class="menu-box-item active">
+            <div class="menu-box-item ">
                 <i class="fa fa-image"></i>
                 <p>Gallery</p>
             </div>
@@ -685,30 +556,6 @@
     <!-- <script src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/js/folding-content.js"></script>  -->
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
     <!-- <script src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/javascript/sharer.js"></script> -->
-    <!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
-    <script type="text/javascript">
-        $('a').on('click', function(e) {
-	  $(this).find('[class*="angle"]').toggleClass('fa-angle-down fa-angle-up')
-	});
-
-	$('.go').on('click', function(e) {
-	  $(this).css({
-	    transform: 'rotate(0deg)',
-	    transition: 'transform .5s'
-	  });
-	});
-    </script>
-    <script type="text/javascript">
-        $('.read-more-mobile').click(function(event) {
-    $('.intro-less-box').hide();
-    $('.intro-more-box').show();
-  });
-
-  $('.read-less-mobile').click(function(event) {
-    $('.intro-more-box').hide();
-    $('.intro-less-box').show();
-  });
-    </script>
     <script type="text/javascript">
         $('#contact-us-menu').click(function(event) {
 		$('.contact-us-box').toggle();
@@ -719,57 +566,6 @@
 	$('.tawk-btn').click(function(event) {
 		$('.container-fixed-menu').css('z-index', 10);
 	});
-    </script>
-    <!-- <script type="text/javascript">
-      var myCenter = new google.maps.LatLng(-8.844625399999998,115.15246400000001);
-
-      function initialize() {
-      var mapProp = {
-      center:myCenter,
-      zoom:17,
-      scrollwheel:false,
-      draggable:true,
-      mapTypeId:google.maps.MapTypeId.ROADMAP
-      };
-
-      var map = new google.maps.Map(document.getElementById("googleMap1"),mapProp);
-
-      var marker = new google.maps.Marker({
-      position:myCenter,
-      });
-
-      marker.setMap(map);
-      }
-
-      google.maps.event.addDomListener(window, 'load', initialize);
-</script> -->
-    <script type="text/javascript">
-        function initialize() {
-                var mapCanvas = document.getElementById('map_canvas');
-                var mapOptions = {
-                    center: new google.maps.LatLng('', ''),
-                    zoom: 16,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP,
-                    zoomControl: true,
-                    scaleControl: false,
-                    scrollwheel: false,
-                    disableDoubleClickZoom: true,
-                }
-                var map = new google.maps.Map(mapCanvas, mapOptions);
-                var iconBase = 'upload';
-                var image = {
-                    url: "https://hanginggardensofbali.com/themes/mindimedia-theme/assets/themes/minditheme/upload/logo.png",
-                    size: new google.maps.Size(50, 50),
-                    scaledSize: new google.maps.Size(50, 50)
-
-                };
-                var marker = new google.maps.Marker({
-                    position: map.getCenter(),
-                    map: map,
-                    title: ''
-                });
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
     </script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css">
