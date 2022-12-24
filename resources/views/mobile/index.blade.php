@@ -1,27 +1,13 @@
 @section('home_active', 'active')
 @section('meta')
-<title>Hanging Garden of Bali | Homepage</title>
-<meta name="description" content="">
-<meta property="og:title" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://hanginggardensofbali.com/m" />
-<meta property="og:image" content="" />
+    <title>Hanging Garden of Bali | Homepage</title>
+    <meta name="description" content="">
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hanginggardensofbali.com/m" />
+    <meta property="og:image" content="" />
 @endsection
 <x-mobile>
-
-    <section class="slider relative">
-        <div class="mdi-header-carousel owl-carousel owl-theme">
-            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/248/6294892483e3e767060187.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
-            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/248/62948924894a5804539231.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
-            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/25d/62948925d7857710753313.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
-            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/267/629489267a275681246185.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
-            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/270/6294892702481298017608.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
-        </div>
-        <a target="_blank" class="mdi-map-btn" href="https://g.page/hanginggardensofbali?share"><i class="fa fa-map-marker"></i> MAP</a>
-        <a class="mdi-share-btn" href="javascript:void(0)" data-toggle="modal" data-target="#shareModal"><i class="fa fa-share-alt"></i></a>
-        <img src="" class="logo-invert logo-header-mobile">
-    </section>
-
 
     <!-- Modal -->
     {{-- <div class="modal fade" id="BannerPopUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -84,7 +70,7 @@
                             </a>
                         </div>
                         <div class="col-xs-6 p-l-2_5 p-t-5">
-                            <a href="https://hanginggardensofbali.com/m/experiences" class="d-block">
+                            <a href="{{ route('mobile.wedding') }}" class="d-block">
                                 <div style=" background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(https://hanginggardensofbali.com/storage/app/uploads/public/629/475/66e/62947566e6986187151348.jpeg) center no-repeat" class="info-hotel-image-mry">
                                     <h4 class="title-mry">Weddings</h4>
                                 </div>
@@ -96,7 +82,7 @@
                 <div class="col-xs-5 col-image-masonry p-r-5">
                     <div class="row m-0">
                         <div class="col-xs-12 p-r-0 p-l-0">
-                            <a href="https://hanginggardensofbali.com/m/offer" class="d-block">
+                            <a href="{{ route('mobile.offer') }}" class="d-block">
                                 <div style=" background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(https://hanginggardensofbali.com/storage/app/uploads/public/629/47d/036/62947d0361014196666203.jpg) center no-repeat" class="info-hotel-image-mry">
                                     <h4 class="title-mry">Special Offers</h4>
                                 </div>
@@ -115,7 +101,7 @@
                 <div class="col-xs-12 col-image-masonry p-t-5 p-r-5">
                     <div class="row m-0">
                         <div class="col-xs-12 p-r-0 p-l-0">
-                            <a href="https://hanginggardensofbali.com/m/blog" class="d-block">
+                            <a href="{{ route('mobile.blog') }}" class="d-block">
                                 <div style=" background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url(https://hanginggardensofbali.com/storage/app/uploads/public/629/473/75e/62947375ebe94992651318.jpeg) center no-repeat" class="info-hotel-image-mry">
                                     <h4 class="title-mry">BLOG</h4>
                                 </div>

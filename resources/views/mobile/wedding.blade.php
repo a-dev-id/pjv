@@ -1,4 +1,3 @@
-@section('offer_active', 'active')
 @section('meta')
     <title>Hanging Garden of Bali | Homepage</title>
     <meta name="description" content="">
@@ -59,6 +58,70 @@
             margin-left: 0px;
         }
     </style>
+
+    <style type="text/css">
+        h1 {
+            font-size: 25px;
+        }
+
+        .enq-button {
+            border: 1px solid #999;
+            background: #000;
+            color: #fff !important;
+            padding: 10px 20px;
+            transition: all 500ms;
+            text-transform: uppercase;
+            display: table;
+            margin: 0 auto;
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+
+        .btn-enquire {
+            width: 100%;
+            background-color: #fff;
+            color: #CC9930;
+            border: 2px solid #CC9930;
+            font-weight: 700;
+            display: inline-block;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-menu {
+            width: 100%;
+            background-color: #CC9930;
+            color: #fff;
+            border: 2px solid #CC9930;
+            font-weight: 700;
+            display: inline-block;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .padding-top-30 {
+            padding-top: 30px !important
+        }
+
+        .reserve-modal .modal-dialog {
+            min-height: 500px;
+            width: 100%;
+        }
+
+        .reserve-modal iframe {
+            height: 680px;
+            width: 100%;
+            overflow: hidden;
+            display: block;
+            min-height: 100% !important;
+        }
+    </style>
 @endpush
 @push('js')
     <script type="text/javascript">
@@ -75,25 +138,36 @@
     </script>
 @endpush
 <x-mobile>
-    <div class="container visible-xs visible-sm">
-        <div class="row">
-            <div class="background-home">
-                <div class="col-md-12">
-                    <div class="benefit-mobile">
-                        <h1>Book Direct Benefit</h1>
-                        <ul class="fa-ul">
-                            <li><i class="fa-li fa fa-check-circle"></i>Best online rate guaranteed</li>
-                            <li><i class="fa-li fa fa-check-circle"></i>Free wi-fi in all rooms</li>
-                            <li><i class="fa-li fa fa-check-circle"></i>Secure transactions</li>
-                            <li><i class="fa-li fa fa-check-circle"></i>No hidden fees</li>
-                            <li><i class="fa-li fa fa-check-circle"></i>Instant confirmation</li>
-                        </ul>
+    <div class="container">
+        <div class="row dining-row-item">
+            <div class="col-xs-12">
+                <a class="d-block" href="javascript:void(0)">
+                    <div style="background: url('https://hanginggardensofbali.com/storage/app/media/B0035909.jpg') no-repeat center; height: 230px; background-size: cover;"></div>
+                </a>
+            </div>
+            <div class="col-xs-12 dining-item-description">
+                <div class="block-content">
+                    <a href="javascript:void(0)">
+                        <h1>The Weddings</h1>
+                    </a>
+                    <div class="text-justify">
+                        A culinary journey through the ingredients, the flavors and the seasons of Bali. Three Elements Restaurant has been awarded "World Luxury Restaurant Award 2019", and offers an à la carte selection of appetizers, entrées and desserts as well as two unique tasting menus with optional wine pairing using the highest quality products and impeccable technique to create a modern Western and Indonesian cuisine.
+                    </div>
+
+                    <div class="padding-top-30">
+                        <div class="col-xs-6">
+                            <a target="_blank" href="https://wa.me/628113800988" style="width:100%!important" class="btn-enquire">Inquire Now</a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a target="_blank" href="https://hanginggardensofbali.com/storage/app/media/Hanging%20Gardens%20of%20Bali%20All%20Day%20Dining%20Menu%202023.pdf" class="btn-menu">View Menu</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div style="margin-top: 15px;" class="room-view">
+
+    <div style="margin-top: 45px;" class="room-view">
         <div class="container">
             <div class="row">
                 <div style="padding: 0px 6px;" class="col-xs-12">

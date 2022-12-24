@@ -39,13 +39,14 @@ Route::get('/m/accommodation', [App\Http\Controllers\Mobile\AccommodationControl
 Route::get('/m/dining', [App\Http\Controllers\Mobile\DiningController::class, 'index'])->name('mobile.dining');
 Route::get('/m/offers', [App\Http\Controllers\Mobile\OfferController::class, 'index'])->name('mobile.offer');
 Route::get('/m/gallery', [App\Http\Controllers\Mobile\GalleryController::class, 'index'])->name('mobile.gallery');
+Route::get('/m/wedding', [App\Http\Controllers\Mobile\WeddingController::class, 'index'])->name('mobile.wedding');
 Route::get('/m/blog', [App\Http\Controllers\Mobile\BlogController::class, 'index'])->name('mobile.blog');
 Route::get('/m/blog/{slug}', [App\Http\Controllers\Mobile\BlogController::class, 'show'])->name('mobile.blog-detail');
 
 
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 
 // ADMIN

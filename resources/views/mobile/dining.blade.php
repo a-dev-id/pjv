@@ -1,85 +1,79 @@
+@section('dining_active', 'active')
+@section('meta')
+    <title>Hanging Garden of Bali | Homepage</title>
+    <meta name="description" content="">
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hanginggardensofbali.com/m" />
+    <meta property="og:image" content="" />
+@endsection
 @push('css')
-<style type="text/css">
-    h1 {
-        font-size: 25px;
-    }
+    <style type="text/css">
+        h1 {
+            font-size: 25px;
+        }
 
-    .enq-button {
-        border: 1px solid #999;
-        background: #000;
-        color: #fff !important;
-        padding: 10px 20px;
-        transition: all 500ms;
-        text-transform: uppercase;
-        display: table;
-        margin: 0 auto;
-    }
+        .enq-button {
+            border: 1px solid #999;
+            background: #000;
+            color: #fff !important;
+            padding: 10px 20px;
+            transition: all 500ms;
+            text-transform: uppercase;
+            display: table;
+            margin: 0 auto;
+        }
 
-    .text-justify {
-        text-align: justify;
-    }
+        .text-justify {
+            text-align: justify;
+        }
 
-    .btn-enquire {
-        width: 100%;
-        background-color: #fff;
-        color: #CC9930;
-        border: 2px solid #CC9930;
-        font-weight: 700;
-        display: inline-block;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        .btn-enquire {
+            width: 100%;
+            background-color: #fff;
+            color: #CC9930;
+            border: 2px solid #CC9930;
+            font-weight: 700;
+            display: inline-block;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .btn-menu {
-        width: 100%;
-        background-color: #CC9930;
-        color: #fff;
-        border: 2px solid #CC9930;
-        font-weight: 700;
-        display: inline-block;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        .btn-menu {
+            width: 100%;
+            background-color: #CC9930;
+            color: #fff;
+            border: 2px solid #CC9930;
+            font-weight: 700;
+            display: inline-block;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .padding-top-30 {
-        padding-top: 30px !important
-    }
+        .padding-top-30 {
+            padding-top: 30px !important
+        }
 
-    .reserve-modal .modal-dialog {
-        min-height: 500px;
-        width: 100%;
-    }
+        .reserve-modal .modal-dialog {
+            min-height: 500px;
+            width: 100%;
+        }
 
-    .reserve-modal iframe {
-        height: 680px;
-        width: 100%;
-        overflow: hidden;
-        display: block;
-        min-height: 100% !important;
-    }
-
-</style>
+        .reserve-modal iframe {
+            height: 680px;
+            width: 100%;
+            overflow: hidden;
+            display: block;
+            min-height: 100% !important;
+        }
+    </style>
 @endpush
 
 <x-mobile>
-
-    <section class="slider relative">
-        <div class="mdi-header-carousel owl-carousel owl-theme">
-            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/248/6294892483e3e767060187.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
-            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/248/62948924894a5804539231.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
-            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/25d/62948925d7857710753313.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
-            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/267/629489267a275681246185.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
-            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/270/6294892702481298017608.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
-        </div>
-        <a target="_blank" class="mdi-map-btn" href="https://g.page/hanginggardensofbali?share"><i class="fa fa-map-marker"></i> MAP</a>
-        <a class="mdi-share-btn" href="javascript:void(0)" data-toggle="modal" data-target="#shareModal"><i class="fa fa-share-alt"></i></a>
-        <img src="" class="logo-invert logo-header-mobile">
-    </section>
-
     <div class="container">
         <div class="row dining-row-item">
             <div class="col-xs-12">

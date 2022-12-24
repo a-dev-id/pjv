@@ -1,95 +1,81 @@
 @section('accommodation_active', 'active')
 @section('meta')
-<title>Hanging Garden of Bali | Homepage</title>
-<meta name="description" content="">
-<meta property="og:title" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://hanginggardensofbali.com/m" />
-<meta property="og:image" content="" />
+    <title>Hanging Garden of Bali | Homepage</title>
+    <meta name="description" content="">
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hanginggardensofbali.com/m" />
+    <meta property="og:image" content="" />
 @endsection
 @push('css')
-<style type="text/css">
-    .room-view .panel-body .room-amn ul {
-        column-gap: unset;
-        column-count: unset;
-        width: 100%;
-    }
+    <style type="text/css">
+        .room-view .panel-body .room-amn ul {
+            column-gap: unset;
+            column-count: unset;
+            width: 100%;
+        }
 
-    .room-view .panel-body .room-amn ul li {
-        display: inline;
-    }
+        .room-view .panel-body .room-amn ul li {
+            display: inline;
+        }
 
-    .amenities--icon--room {
-        width: 20px !important;
-    }
+        .amenities--icon--room {
+            width: 20px !important;
+        }
 
-    .fa-angle-right {
-        transform: rotate(0deg);
-        transition: transform 0.25s linear;
-    }
+        .fa-angle-right {
+            transform: rotate(0deg);
+            transition: transform 0.25s linear;
+        }
 
-    .fa-angle-right.active {
-        transform: rotate(90deg);
-        transition: transform 0.25s linear;
-    }
+        .fa-angle-right.active {
+            transform: rotate(90deg);
+            transition: transform 0.25s linear;
+        }
 
-    .mdi-room-info-btn {
-        border: 2px solid;
-        font-size: 9px;
-        padding: 5px 10px;
-        width: 90px;
-    }
+        .mdi-room-info-btn {
+            border: 2px solid;
+            font-size: 9px;
+            padding: 5px 10px;
+            width: 90px;
+        }
 
-    .panel.panel-default {
-        border: .5px solid transparent;
-    }
+        .panel.panel-default {
+            border: .5px solid transparent;
+        }
 
-    .mdi-room-title {
-        font-size: 20px;
-    }
-
-</style>
+        .mdi-room-title {
+            font-size: 20px;
+        }
+    </style>
 @endpush
 
 @push('js')
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
-<script src='//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js'></script>
-<script type="text/javascript">
-    $(".carousel-inner").swipe({
-            swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js'></script>
+    <script type="text/javascript">
+        $(".carousel-inner").swipe({
+            swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
                 if (direction == 'left') $(this).carousel('next');
                 if (direction == 'right') $(this).carousel('prev');
             },
-            allowPageScroll: "vertical" 
+            allowPageScroll: "vertical"
         });
-</script>
-<script type="text/javascript">
-    $('a').on('click', function(e) {
-    	  $(this).find('[class*="angle"]').toggleClass('fa-angle-down fa-angle-up')
-    	});
-    
-    	$('.go').on('click', function(e) {
-    	  $(this).css({
-    	    transform: 'rotate(0deg)',
-    	    transition: 'transform .5s'
-    	  });
-    	});
-</script>
+    </script>
+    <script type="text/javascript">
+        $('a').on('click', function(e) {
+            $(this).find('[class*="angle"]').toggleClass('fa-angle-down fa-angle-up')
+        });
+
+        $('.go').on('click', function(e) {
+            $(this).css({
+                transform: 'rotate(0deg)',
+                transition: 'transform .5s'
+            });
+        });
+    </script>
 @endpush
 <x-mobile>
-
-    <section class="slider relative">
-        <div class="mdi-header-carousel owl-carousel owl-theme">
-            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/248/6294892483e3e767060187.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
-            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/248/62948924894a5804539231.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
-            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/25d/62948925d7857710753313.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
-            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/267/629489267a275681246185.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
-            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/270/6294892702481298017608.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
-        </div>
-        <a target="_blank" class="mdi-map-btn" href="https://g.page/hanginggardensofbali?share"><i class="fa fa-map-marker"></i> MAP</a>
-        <a class="mdi-share-btn" href="javascript:void(0)" data-toggle="modal" data-target="#shareModal"><i class="fa fa-share-alt"></i></a>
-        <img src="" class="logo-invert logo-header-mobile">
-    </section>
 
     <div class="container visible-xs visible-sm">
         <div class="bck-room">

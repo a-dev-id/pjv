@@ -11,8 +11,7 @@
     <script type="text/javascript">
         if (screen.width > 768) {
             window.location = "{{ route('index') }}";
-          }
-          
+        }
     </script>
 
     <link rel="Shortcut Icon" href="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/favicon.png" type="image/x-icon" />
@@ -22,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
-    <link href="{{asset('css/mobile.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/mobile.css') }}" rel="stylesheet">
 
     @stack('css')
 
@@ -86,6 +85,20 @@
 
         </div>
     </div>
+
+    <section class="slider relative">
+        <div class="mdi-header-carousel owl-carousel owl-theme">
+            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/248/6294892483e3e767060187.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
+            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/248/62948924894a5804539231.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
+            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/25d/62948925d7857710753313.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
+            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/267/629489267a275681246185.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
+            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url(https://hanginggardensofbali.com/storage/app/uploads/public/629/489/270/6294892702481298017608.jpg) no-repeat;background-size: cover;background-position: bottom;"></div>
+        </div>
+        <a target="_blank" class="mdi-map-btn" href="https://g.page/hanginggardensofbali?share"><i class="fa fa-map-marker"></i> MAP</a>
+        <a class="mdi-share-btn" href="javascript:void(0)" data-toggle="modal" data-target="#shareModal"><i class="fa fa-share-alt"></i></a>
+        <img src="" class="logo-invert logo-header-mobile">
+    </section>
+
     {{ $slot }}
 
     <div class="container-fluid container-fixed-menu">
@@ -93,32 +106,32 @@
             <i class="fa fa-calendar"></i>Check Availability
             <i class="fa fa-angle-right pull-right angle-right-fixed"></i>
         </a>
-        <a href="{{route('mobile.home')}}" class="menu-box">
+        <a href="{{ route('mobile.home') }}" class="menu-box">
             <div class="menu-box-item @yield('home_active')">
                 <i class="fa fa-home"></i>
                 <p>Home</p>
             </div>
         </a>
-        <a href="{{route('mobile.accommodation')}}" class="menu-box">
+        <a href="{{ route('mobile.accommodation') }}" class="menu-box">
             <div class="menu-box-item @yield('accommodation_active')">
                 <i class="fa fa-bed"></i>
                 <p>Accommodation</p>
             </div>
         </a>
-        <a href="{{route('mobile.offer')}}" class="menu-box">
+        <a href="{{ route('mobile.offer') }}" class="menu-box">
             <div class="menu-box-item @yield('offer_active')">
                 <i class="fa fa-tags"></i>
                 <p>Offers</p>
             </div>
         </a>
-        <a href="{{route('mobile.dining')}}" class="menu-box">
+        <a href="{{ route('mobile.dining') }}" class="menu-box">
             <div class="menu-box-item @yield('dining_active')">
                 {{-- <i class="fa fa-tags"></i> --}}
                 <i class="fas fa-utensils"></i>
                 <p>Dining</p>
             </div>
         </a>
-        <a href="{{route('mobile.gallery')}}" class="menu-box">
+        <a href="{{ route('mobile.gallery') }}" class="menu-box">
             <div class="menu-box-item @yield('gallery_active')">
                 <i class="fa fa-image"></i>
                 <p>Gallery</p>
@@ -132,98 +145,99 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript">
         $('#contact-us-menu').click(function(event) {
-		$('.contact-us-box').toggle();
-	});
-	$('.items-contact-us').click(function(event) {
-		$('.contact-us-box').toggle();
-	});
-	$('.tawk-btn').click(function(event) {
-		$('.container-fixed-menu').css('z-index', 10);
-	});
+            $('.contact-us-box').toggle();
+        });
+        $('.items-contact-us').click(function(event) {
+            $('.contact-us-box').toggle();
+        });
+        $('.tawk-btn').click(function(event) {
+            $('.container-fixed-menu').css('z-index', 10);
+        });
     </script>
     <script type="text/javascript">
         $(document).ready(function() {
-  $('#BannerPopUp').modal('show');
-});
-
+            $('#BannerPopUp').modal('show');
+        });
     </script>
 
     <script type="text/javascript">
-        $(document).ready(function(){
-	    $("#show").click(function(){
-	        $("#hide").show(1000);
-	        $("#show").hide();
-	    });
-	});
+        $(document).ready(function() {
+            $("#show").click(function() {
+                $("#hide").show(1000);
+                $("#show").hide();
+            });
+        });
     </script>
 
     <script type="text/javascript">
         $('.read-more-mobile').click(function(event) {
-    $('.intro-less-box').hide();
-    $('.intro-more-box').show();
-  });
+            $('.intro-less-box').hide();
+            $('.intro-more-box').show();
+        });
 
-  $('.read-less-mobile').click(function(event) {
-    $('.intro-more-box').hide();
-    $('.intro-less-box').show();
-  });
+        $('.read-less-mobile').click(function(event) {
+            $('.intro-more-box').hide();
+            $('.intro-less-box').show();
+        });
     </script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-		$('.mdi-header-carousel').owlCarousel({
-			items:1,
-			nav:true,
-			dots:false,
-			loop:true,
-			autoplay:true,
-			navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
-		});
-	});
+            $('.mdi-header-carousel').owlCarousel({
+                items: 1,
+                nav: true,
+                dots: false,
+                loop: true,
+                autoplay: true,
+                navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>']
+            });
+        });
     </script>
     <script>
         function copyToClipboard(element) {
-		var $temp = $("<input>");
-		$("body").append($temp);
-		$temp.val($(element).text()).select();
-		document.execCommand("copy");
-		alert("URL copied to clipboard");
-		$temp.remove();
-	}
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            alert("URL copied to clipboard");
+            $temp.remove();
+        }
     </script>
     <script type="text/javascript">
-        $(document).ready(function(){
-	    $(".header-in").click(function(){
-	        $("#search-text").toggle();
-	    }); 
-	});
+        $(document).ready(function() {
+            $(".header-in").click(function() {
+                $("#search-text").toggle();
+            });
+        });
     </script>
     <script type="text/javascript">
         $(function() {
-        $('#nav a[href~="' + location.href + '"]').parents('li').addClass('active-item');
-    });
+            $('#nav a[href~="' + location.href + '"]').parents('li').addClass('active-item');
+        });
     </script>
 
     <script>
         jQuery.event.special.touchstart = {
-            setup: function( _, ns, handle ){
-                this.addEventListener("touchstart", handle, { passive: true });
+            setup: function(_, ns, handle) {
+                this.addEventListener("touchstart", handle, {
+                    passive: true
+                });
             }
         };
-         window.addEventListener('load',function(){
-            jQuery('a:contains("book now")').click(function(){
-                ga('send','event','button','click','mobile book now');
-             }) 
-            jQuery('a:contains("check availability")').click(function(){
-                ga('send','event','button','click','mobile check availability');
-            }) 
-            jQuery('a:contains("select offer")').click(function(){
+        window.addEventListener('load', function() {
+            jQuery('a:contains("book now")').click(function() {
+                ga('send', 'event', 'button', 'click', 'mobile book now');
+            })
+            jQuery('a:contains("check availability")').click(function() {
+                ga('send', 'event', 'button', 'click', 'mobile check availability');
+            })
+            jQuery('a:contains("select offer")').click(function() {
                 // alert('test');
-                ga('send','event','button','click','mobile select offer');
-            }) 
-         })
+                ga('send', 'event', 'button', 'click', 'mobile select offer');
+            })
+        })
     </script>
     <script type="text/javascript">
         $('.datepicker, #reserveddate').datepicker({
@@ -233,8 +247,8 @@
         });
         $('.datepicker').change(function(e) {
             let str = $(this).val();
-            var res =  str.split("-");
-            $(this).closest('.col').find('.datepicker-input').val(res[2]+'-'+res[1]+'-'+res[0]);
+            var res = str.split("-");
+            $(this).closest('.col').find('.datepicker-input').val(res[2] + '-' + res[1] + '-' + res[0]);
         });
     </script>
 
