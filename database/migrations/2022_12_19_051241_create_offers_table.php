@@ -15,6 +15,16 @@ return new class extends Migration
     {
         Schema::create('offers', function (Blueprint $table) {
             $table->id();
+            $table->string('title')->nullable();
+            $table->string('subtitle')->nullable();
+            $table->string('slug')->nullable();
+            $table->text('excerpt')->nullable();
+            $table->longText('description')->nullable();
+            $table->string('price')->nullable();
+            $table->string('image')->nullable();
+            $table->string('button_text')->nullable();
+            $table->string('button_link')->nullable();
+            $table->integer('status')->nullable();
             $table->timestamps();
         });
     }

@@ -1,27 +1,27 @@
-@section('title', 'Restaurant Edit')
-@section('restaurant_active', 'active')
+@section('title', 'Offer Edit')
+@section('offer_active', 'active')
 
 @push('js')
-<script src="{{ asset('vendors/adminlte') }}/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="{{ asset('vendors/adminlte') }}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="{{ asset('vendors/adminlte') }}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="{{ asset('vendors/adminlte') }}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="{{ asset('vendors/adminlte') }}/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="{{ asset('vendors/adminlte') }}/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="{{ asset('vendors/adminlte') }}/plugins/jszip/jszip.min.js"></script>
-<script src="{{ asset('vendors/adminlte') }}/plugins/pdfmake/pdfmake.min.js"></script>
-<script src="{{ asset('vendors/adminlte') }}/plugins/pdfmake/vfs_fonts.js"></script>
-<script src="{{ asset('vendors/adminlte') }}/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="{{ asset('vendors/adminlte') }}/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="{{ asset('vendors/adminlte') }}/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-<script src="{{ asset('vendors/adminlte') }}/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
-<script>
-    $(function() {
+    <script src="{{ asset('vendors/adminlte') }}/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('vendors/adminlte') }}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="{{ asset('vendors/adminlte') }}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="{{ asset('vendors/adminlte') }}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="{{ asset('vendors/adminlte') }}/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="{{ asset('vendors/adminlte') }}/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="{{ asset('vendors/adminlte') }}/plugins/jszip/jszip.min.js"></script>
+    <script src="{{ asset('vendors/adminlte') }}/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="{{ asset('vendors/adminlte') }}/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="{{ asset('vendors/adminlte') }}/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="{{ asset('vendors/adminlte') }}/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="{{ asset('vendors/adminlte') }}/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script src="{{ asset('vendors/adminlte') }}/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script>
+        $(function() {
             bsCustomFileInput.init();
         });
-</script>
-<script>
-    $(function() {
+    </script>
+    <script>
+        $(function() {
             $("#list").DataTable({
                 "responsive": true,
                 "lengthChange": false,
@@ -29,28 +29,28 @@
                 "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
             }).buttons().container().appendTo('#list_wrapper .col-md-6:eq(0)');
         });
-</script>
-<script src="{{ asset('js/tinymce/tinymce.min.js') }}" referrerpolicy="origin"></script>
-<script>
-    tinymce.init({
+    </script>
+    <script src="{{ asset('js/tinymce/tinymce.min.js') }}" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
             selector: 'textarea#excerpt',
             plugins: 'code table lists',
             toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
         });
-</script>
-<script>
-    tinymce.init({
+    </script>
+    <script>
+        tinymce.init({
             selector: 'textarea#description',
             plugins: 'code table lists',
             toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
         });
-</script>
+    </script>
 @endpush
 
 @push('css')
-<link rel="stylesheet" href="{{ asset('vendors/adminlte') }}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-<link rel="stylesheet" href="{{ asset('vendors/adminlte') }}/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-<link rel="stylesheet" href="{{ asset('vendors/adminlte') }}/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <link rel="stylesheet" href="{{ asset('vendors/adminlte') }}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="{{ asset('vendors/adminlte') }}/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="{{ asset('vendors/adminlte') }}/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 @endpush
 
 <x-app-layout>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{ route('restaurant-list.index') }}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('offer-list.index') }}">Home</a></li>
                         <li class="breadcrumb-item active">@yield('title')</li>
                     </ol>
                 </div>
@@ -72,7 +72,7 @@
     <div class="content">
         <div class="container-fluid">
             <div class="row">
-                <form method="POST" action="{{ route('restaurant-list.update', [$edit_data->id]) }}" enctype="multipart/form-data" class="col-lg-12">
+                <form method="POST" action="{{ route('offer-list.update', [$edit_data->id]) }}" enctype="multipart/form-data" class="col-lg-12">
                     @method('PUT')
                     @csrf
                     <div class="card card-warning card-outline">
@@ -95,7 +95,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Excerpt</label>
-                                        <textarea id="excerpt" name="excerpt">{{ $edit_data->excerpt }}</textarea>
+                                        <textarea name="excerpt" class="form-control" rows="5">{{ $edit_data->excerpt }}</textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>Description</label>

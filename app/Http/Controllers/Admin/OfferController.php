@@ -40,10 +40,10 @@ class OfferController extends Controller
      */
     public function store(Request $request)
     {
-        if (empty($request->file('banner_image'))) {
-            $banner_image = null;
+        if (empty($request->file('image'))) {
+            $image = null;
         } else {
-            $banner_image = $request->file('banner_image')->store('images/offer/list', 'public');
+            $image = $request->file('image')->store('images/offer/list', 'public');
         }
 
         Offer::create([
@@ -52,9 +52,10 @@ class OfferController extends Controller
             'slug' => Str::slug($request->title),
             'excerpt' => $request->excerpt,
             'description' => $request->description,
-            'meta_title' => $request->meta_title,
-            'meta_description' => $request->meta_description,
-            'banner_image' => $banner_image,
+            'price' => $request->price,
+            'image' => $image,
+            'button_text' => $request->button_text,
+            'button_link' => $request->button_link,
             'status' => $request->status,
         ]);
         return redirect()->route('offer-list.index')->with('message', $request->title . ' created Successfully');
@@ -92,10 +93,10 @@ class OfferController extends Controller
      */
     public function update(Request $request, $id)
     {
-        if (empty($request->file('banner_image'))) {
-            $banner_image = $request->old_banner_image;
+        if (empty($request->file('image'))) {
+            $image = $request->old_image;
         } else {
-            $banner_image = $request->file('banner_image')->store('images/offer/list', 'public');
+            $image = $request->file('image')->store('images/offer/list', 'public');
         }
 
         $data =  offer::find($id);
@@ -105,9 +106,10 @@ class OfferController extends Controller
         $data->slug = Str::slug($request->title);
         $data->excerpt = $request->excerpt;
         $data->description = $request->description;
-        $data->banner_image = $banner_image;
-        $data->meta_title = $request->meta_title;
-        $data->meta_description = $request->meta_description;
+        $data->price = $request->price;
+        $data->image = $image;
+        $data->button_text = $request->button_text;
+        $data->button_link = $request->button_link;
         $data->status = $request->status;
 
         $data->save();

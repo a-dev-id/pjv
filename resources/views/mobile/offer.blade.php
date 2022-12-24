@@ -99,89 +99,34 @@
                 <div style="padding: 0px 6px;" class="col-xs-12">
                     <div class="panel-group" id="accordion">
 
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a id="btn-k" data-toggle="collapse" data-parent="#accordion" href="#collapse10">4-NIGHT COMBINATION PACKAGE<span><i id="icon-kj" class="fa fa-angle-up  go" aria-hidden="true" style="font-size: 25px;margin-top: -4px;"></i></span></a>
-                                </h4>
-                            </div>
-                            <div id="collapse10" class="panel-collapse collapse  in ">
-                                <div class="panel-body">
-                                    <div class="slide-room">
-                                        <div id="offer0" class="carousel-fade slide carousel" data-ride="carousel">
-                                            <!-- Wrapper for slides -->
-                                            <div class="carousel-inner text-center">
-                                                <div class="item active">
-                                                    <div style="background:url(https://hanginggardensofbali.com/storage/app/uploads/public/639/adf/e5b/639adfe5bec2c473176611.jpg) no-repeat;background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-position: center;height: 100%;"></div>
-                                                </div>
+                        @foreach ($offers as $data)
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a id="btn-k" data-toggle="collapse" data-parent="#accordion" href="#collapse10">{{ $data->title }}<span><i id="icon-kj" class="fa fa-angle-up  go" aria-hidden="true" style="font-size: 25px;margin-top: -4px;"></i></span></a>
+                                    </h4>
+                                </div>
+                                <div id="collapse10" class="panel-collapse collapse  in ">
+                                    <div class="panel-body">
+                                        <div style="background: url({{ asset($data->image) }}) no-repeat center; height: 200px; background-size: cover;"></div>
+                                        <div class="clt-bth"></div>
+                                        <div class="offer-promo">
+                                            <h2></h2>
+                                            <div class="intro-less-box">
+                                                {!! $data->description !!}
                                             </div>
-                                            <!-- Controls -->
-                                            <a class="left carousel-control" href="#offer0" data-slide="prev">
-                                                <span class="glyphicon glyphicon-menu-left im-chevron-left"></span>
-                                            </a>
-                                            <a class="right carousel-control" href="#offer0" data-slide="next">
-                                                <span class="glyphicon glyphicon-menu-right im-chevron-right"></span>
-                                            </a>
+                                            <div class="str-frm">
+                                                <!-- <span>Start From</span> -->
+                                                <!-- <br> -->
+                                                <b>{{ $data->price }}</b>
+                                            </div>
+                                            <a href="{{ $data->button_link }}" class="btn-default def-promo text-uppercase" target="_blank">{{ $data->button_text }}</a>
                                         </div>
-                                    </div>
-                                    <div class="clt-bth"></div>
-                                    <div class="offer-promo">
-                                        <h2></h2>
-                                        <div class="intro-less-box">
-                                            <p><strong>Start from USD 2,492++</strong></p>
-                                            <p>Begin your stay at the award-winning hotel Hanging Gardens of Bali to experience &ldquo;The world&rsquo;s best swimming pool&rdquo;. After two days in the jungle, depart for the exclusive Elevate Bali, tucked in the Munduk mountains, surrounded by waterfalls and volcanoes. A truly enchanting experience like no other...</p>
-                                            <p><strong>PACKAGE INCLUSIONS</strong></p>
-                                            <ul>
-                                                <li>2-Night Stay at Riverside Pool Villa - Hanging Gardens of Bali - Ubud</li>
-                                                <li>2-Night Stay at Volcano Vista Villa - Elevate Bali by Hanging Gardens - Munduk</li>
-                                                <li>Daily breakfast</li>
-                                                <li>Daily sunset mocktail</li>
-                                                <li>Daily resort activities based on resorts&rsquo; schedule</li>
-                                                <li>Daily shuttle service based on resorts&rsquo; schedule</li>
-                                                <li>Complimentary transfer service between the properties</li>
-                                            </ul>
-                                            <hr />
-                                            <p><strong>TERMS AND CONDITIONS</strong></p>
-                                            <ul>
-                                                <li>Package valid for two persons</li>
-                                                <li>Package valid immediately until 31st March 2023</li>
-                                                <li>Package subject to 21% Government tax and Service Charge</li>
-                                                <li>Advance reservation required</li>
-                                            </ul>
-                                        </div>
-                                        <div class="intro-more-box" style="display: none;">
-                                            <p><strong>Start from USD 2,492++</strong></p>
-                                            <p>Begin your stay at the award-winning hotel Hanging Gardens of Bali to experience &ldquo;The world&rsquo;s best swimming pool&rdquo;. After two days in the jungle, depart for the exclusive Elevate Bali, tucked in the Munduk mountains, surrounded by waterfalls and volcanoes. A truly enchanting experience like no other...</p>
-                                            <p><strong>PACKAGE INCLUSIONS</strong></p>
-                                            <ul>
-                                                <li>2-Night Stay at Riverside Pool Villa - Hanging Gardens of Bali - Ubud</li>
-                                                <li>2-Night Stay at Volcano Vista Villa - Elevate Bali by Hanging Gardens - Munduk</li>
-                                                <li>Daily breakfast</li>
-                                                <li>Daily sunset mocktail</li>
-                                                <li>Daily resort activities based on resorts&rsquo; schedule</li>
-                                                <li>Daily shuttle service based on resorts&rsquo; schedule</li>
-                                                <li>Complimentary transfer service between the properties</li>
-                                            </ul>
-                                            <hr />
-                                            <p><strong>TERMS AND CONDITIONS</strong></p>
-                                            <ul>
-                                                <li>Package valid for two persons</li>
-                                                <li>Package valid immediately until 31st March 2023</li>
-                                                <li>Package subject to 21% Government tax and Service Charge</li>
-                                                <li>Advance reservation required</li>
-                                            </ul>
-                                            <a href="#" class="read-less-mobile">Read Less</a>
-                                        </div>
-                                        <div class="str-frm">
-                                            <!-- <span>Start From</span> -->
-                                            <!-- <br> -->
-                                            <b>US$ USD 2,492++</b><span>/ Night</span>
-                                        </div>
-                                        <a href="https://wa.me/628113800988" class="btn-default def-promo" target="_blank">BOOK NOW</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
+
                         {{-- <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">

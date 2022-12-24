@@ -631,7 +631,7 @@ a:focus {
 }
 .benefit-mobile h1 {
     font-size: 28px;
-    color: #e4c568;
+    color: #b3a59e;
     margin-top: 10px;
     margin-bottom: 5px;
 }
@@ -646,7 +646,7 @@ a:focus {
     margin-left: 26px;
 }
 ul li i {
-    color: #e4c568;
+    color: #b3a59e;
 }
 .benefit-mobile ul li {
     color: #000;
@@ -728,7 +728,7 @@ ul li i {
     border-bottom: 1px solid white;
 }
 #btn .btn-default {
-    background-color: #e4c568;
+    background-color: #b3a59e;
     border: 0 none;
     border-radius: 0px;
     color: #fff;
@@ -741,7 +741,7 @@ ul li i {
     cursor: pointer;
 }
 .btn-default {
-    background-color: #e4c568;
+    background-color: #b3a59e;
     border: 0 none;
     border-radius: 0px;
     color: #fff;
@@ -851,8 +851,8 @@ ul li i {
     border-color: transparent;
 }
 .room-view .panel-heading {
-    background-color: #e4c568;
-    border-color: #e4c568;
+    background-color: #b3a59e;
+    border-color: #b3a59e;
     color: white;
 }
 .room-view .panel-title a {
@@ -865,7 +865,7 @@ ul li i {
 .room-view .panel-body {
     padding-left: 10px;
     padding-right: 10px;
-    border-top-color: #e4c568 !important;
+    border-top-color: #b3a59e !important;
     color: #000;
 }
 .room-view .panel-body .room-amn {
@@ -930,11 +930,11 @@ ul li i {
     color: #ffa719;
 }
 .offer-promo .str-frm span {
-    color: #ffa719;
+    color: #b3a59e;
 }
 .offer-promo .str-frm b {
     font-size: 20px;
-    color: #ffa719;
+    color: #b3a59e;
 }
 .offer-promo ul {
     margin-left: 20px;

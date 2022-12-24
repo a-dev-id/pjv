@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\OfferSetting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class OfferSettingController extends Controller
 {
@@ -69,7 +71,26 @@ class OfferSettingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        if (empty($request->file('banner_image'))) {
+            $banner_image = $request->old_banner_image;
+        } else {
+            $banner_image = $request->file('banner_image')->store('images/offer/setting', 'public');
+        }
+
+        $data = OfferSetting::find($id);
+        $data->title = $request->title;
+        $data->subtitle = $request->subtitle;
+        $data->slug = Str::slug($request->title);
+        $data->excerpt = $request->excerpt;
+        $data->description = $request->description;
+        $data->banner_image = $banner_image;
+        $data->meta_title = $request->meta_title;
+        $data->meta_description = $request->meta_description;
+        $data->status = $request->status;
+
+        $data->save();
+
+        return redirect()->route('offer-list.index')->with('message', $request->title . ' updated Successfully');
     }
 
     /**

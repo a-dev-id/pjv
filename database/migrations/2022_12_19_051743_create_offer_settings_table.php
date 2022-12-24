@@ -15,6 +15,15 @@ return new class extends Migration
     {
         Schema::create('offer_settings', function (Blueprint $table) {
             $table->id();
+            $table->string('title')->nullable();
+            $table->string('subtitle')->nullable();
+            $table->string('slug')->nullable();
+            $table->text('excerpt')->nullable();
+            $table->longText('description')->nullable();
+            $table->string('banner_image')->nullable();
+            $table->string('meta_title')->nullable();
+            $table->text('meta_description')->nullable();
+            $table->integer('status')->nullable();
             $table->timestamps();
         });
     }

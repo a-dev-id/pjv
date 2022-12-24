@@ -83,13 +83,13 @@
                     <div class="row m-0">
                         <div class="col-xs-12 p-r-0 p-l-0">
                             <a href="{{ route('mobile.offer') }}" class="d-block">
-                                <div style=" background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url({{-- asset($offer_setting->banner_image) --}}) center no-repeat" class="info-hotel-image-mry">
+                                <div style=" background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url({{ asset($offer_setting->banner_image) }}) center no-repeat" class="info-hotel-image-mry">
                                     <h4 class="title-mry">Special Offers</h4>
                                 </div>
                             </a>
                         </div>
                         <div class="col-xs-12 p-t-5 p-r-0 p-l-0">
-                            <a href="https://www.google.com/maps/place/Hanging+Gardens+Of+Bali/@-8.4127016,115.2389444,15z/data=!4m2!3m1!1s0x0:0x1be2fc17d127a6b9?sa=X&ved=2ahUKEwjMqI7ow9_yAhXObSsKHTy_De4Q_BIwHnoECFoQBQ" target="_blank" class="d-block">
+                            <a href="https://goo.gl/maps/D2du1fbUWWJ2vXXi7" target="_blank" class="d-block">
                                 <div style="background: #b3a59e" class="villas-image-mry"><i class="fa fa-map-marker m-r-5"></i>
                                     <h4 class="title-mry"> Map</h4>
                                 </div>

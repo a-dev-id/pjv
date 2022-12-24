@@ -78,114 +78,68 @@
 <x-mobile>
 
     <div class="container visible-xs visible-sm">
-        <div class="bck-room">
-            <div class="room-generate">
-                <div class="row">
-                    <div class="col-xs-12 slide-room">
+        @foreach ($villas as $data)
+            <div class="bck-room">
+                <div class="room-generate">
+                    <div class="row">
+                        <div class="col-xs-12 slide-room">
 
-                        <div id="riverside-pool-villa-target" class="carousel-fade slide carousel" data-ride="carousel" data-interval="7000">
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner text-center">
-                                <div class="item active">
-                                    <div style="background:url(https://hanginggardensofbali.com/storage/app/uploads/public/638/b20/c15/638b20c159d41753781515.jpg) no-repeat; background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;background-position: center;height: 100%;"></div>
+                            <div id="riverside-pool-villa-target" class="carousel-fade slide carousel" data-ride="carousel" data-interval="7000">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner text-center">
+                                    @foreach (App\Models\VillaImage::where('villa_id', '=', $data->id)->get() as $image)
+                                        <div class="item @if ($image->id == '1') active @else @endif">
+                                            <div style="background:url({{ asset($image->image) }}) no-repeat; background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;background-position: center;height: 100%;"></div>
+                                        </div>
+                                    @endforeach
                                 </div>
-                                <div class="item ">
-                                    <div style="background:url(https://hanginggardensofbali.com/storage/app/uploads/public/638/b20/c54/638b20c540e13374689043.jpg) no-repeat; background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;background-position: center;height: 100%;"></div>
-                                </div>
-                                <div class="item ">
-                                    <div style="background:url(https://hanginggardensofbali.com/storage/app/uploads/public/638/b20/c65/638b20c65e70c328459924.jpg) no-repeat; background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;background-position: center;height: 100%;"></div>
-                                </div>
-                                <div class="item ">
-                                    <div style="background:url(https://hanginggardensofbali.com/storage/app/uploads/public/638/b20/c69/638b20c69afc1435152063.jpg) no-repeat; background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;background-position: center;height: 100%;"></div>
-                                </div>
-                                <div class="item ">
-                                    <div style="background:url(https://hanginggardensofbali.com/storage/app/uploads/public/638/b20/c7c/638b20c7cbe10569218022.jpg) no-repeat; background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;background-position: center;height: 100%;"></div>
-                                </div>
-                                <div class="item ">
-                                    <div style="background:url(https://hanginggardensofbali.com/storage/app/uploads/public/638/b20/c90/638b20c903a6d859529262.jpg) no-repeat; background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;background-position: center;height: 100%;"></div>
-                                </div>
-                                <div class="item ">
-                                    <div style="background:url(https://hanginggardensofbali.com/storage/app/uploads/public/638/b20/c99/638b20c9999be327877061.jpg) no-repeat; background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;background-position: center;height: 100%;"></div>
-                                </div>
-                                <div class="item ">
-                                    <div style="background:url(https://hanginggardensofbali.com/storage/app/uploads/public/638/b20/cb7/638b20cb78835300548632.jpg) no-repeat; background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;background-position: center;height: 100%;"></div>
-                                </div>
-                                <div class="item ">
-                                    <div style="background:url(https://hanginggardensofbali.com/storage/app/uploads/public/638/b20/cc2/638b20cc25f2e049179134.jpg) no-repeat; background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;background-position: center;height: 100%;"></div>
-                                </div>
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#riverside-pool-villa-target" data-slide="prev">
+                                    <span class="glyphicon glyphicon-menu-left im-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#riverside-pool-villa-target" data-slide="next">
+                                    <span class="glyphicon glyphicon-menu-right im-chevron-right"></span>
+                                </a>
                             </div>
-                            <!-- Controls -->
-                            <a class="left carousel-control" href="#riverside-pool-villa-target" data-slide="prev">
-                                <span class="glyphicon glyphicon-menu-left im-chevron-left"></span>
-                            </a>
-                            <a class="right carousel-control" href="#riverside-pool-villa-target" data-slide="next">
-                                <span class="glyphicon glyphicon-menu-right im-chevron-right"></span>
-                            </a>
+                        </div>
+                        <div class="col-xs-8">
+                            <h3 class="m-t-10 mdi-room-title">{{ $data->title }}</h3>
+                        </div>
+                        <div class="col-xs-4">
+                            <a class="m-t-10 mdi-room-info-btn" data-toggle="collapse" data-parent="#accordion0" href="#collapse20">ROOM INFO <span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
                         </div>
                     </div>
-                    <div class="col-xs-8">
-                        <h3 class="m-t-10 mdi-room-title">Riverside Pool Villa</h3>
-                    </div>
-                    <div class="col-xs-4">
-                        <a class="m-t-10 mdi-room-info-btn" data-toggle="collapse" data-parent="#accordion0" href="#collapse20">ROOM INFO <span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-                    </div>
                 </div>
-            </div>
-            <div class="room-view">
-                <div class="row">
-                    <div style="padding: 0px 6px;" class="col-xs-12">
-                        <div style="color: black;" class="panel-group" id="accordion0">
-                            <div class="panel panel-default">
-                                <div id="collapse20" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <div class="col-xs-12 room-amn m-b-20">
+                <div class="room-view">
+                    <div class="row">
+                        <div style="padding: 0px 6px;" class="col-xs-12">
+                            <div style="color: black;" class="panel-group" id="accordion0">
+                                <div class="panel panel-default">
+                                    <div id="collapse20" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="col-xs-12 room-amn m-b-20">
 
-                                            <h4>Villa Facilities</h4>
-                                            <p></p>
-                                            <ul style="padding-left: 0!important;">
-                                                <li style="padding-right: 0;">&#8226; 100 sqm | </li>
-                                                <li style="padding-right: 0;">&#8226;
-                                                    2 Persons | </li>
-                                                <li style="padding-right: 0;">&#8226;
-                                                    1 Bed | </li>
-                                                <li style="padding-right: 0;">&#8226;
-                                                    Infinity Private Pool | </li>
-                                                <li style="padding-right: 0;">&#8226;
-                                                    Coffee Tea Making Facilities | </li>
-                                                <li style="padding-right: 0;">&#8226;
-                                                    Home Audio &amp; Visual System | </li>
-                                                <li style="padding-right: 0;">&#8226;
-                                                    Deluxe handmade terrazzo bathtub | </li>
-                                                <li style="padding-right: 0;">&#8226;
-                                                    King Size | </li>
-                                                <li style="padding-right: 0;">&#8226;
-                                                    Minibar | </li>
-                                                <li style="padding-right: 0;">&#8226;
-                                                    Safety Box | </li>
-                                                <li style="padding-right: 0;">&#8226;
-                                                    Cotton Bathrobes &amp; Slippers | </li>
-                                                <li style="padding-right: 0;">&#8226;
-                                                    Hair Dryer | </li>
-                                                <li style="padding-right: 0;">&#8226;
-                                                    Luxurious Toiletries | </li>
-                                                <li style="padding-right: 0;">&#8226;
-                                                    Outdoor Gazebo &amp; Sunbeds | </li>
-                                                <li style="padding-right: 0;">&#8226;
-                                                    Air Conditioner </li>
-                                            </ul>
-
-                                        </div>
-
-                                        <div class="clr-bth"></div>
-                                        <hr>
-                                        <div class="container-price">
-                                            <a href="https://book-directonline.com/properties/hanginggardensofbalidirect" target="_blank" class="btn-default">BOOK THIS VILLAS</a>
-                                            <div class="assis-home">
-                                                <a style="border-bottom: 1px solid white;" data-toggle="modal" data-target="#myassist"><i class="fa fa-question-circle" aria-hidden="true"></i> CLICK HERE FOR MORE ASSISTANCE</a>
+                                                <h4>Villa Facilities</h4>
+                                                <ul style="padding-left: 0!important;">
+                                                    @foreach (App\Models\VillaFeature::where('villa_id', $data->id)->get() as $facility)
+                                                        @foreach (\App\Models\Feature::where('id', '=', $facility->feature_id)->get() as $data_feature)
+                                                            <li style="padding-right: 0;">&#8226; {{ $data_feature->title }} | </li>
+                                                        @endforeach
+                                                    @endforeach
+                                                </ul>
                                             </div>
-                                            <div class="contain-asis">
-                                                <div class="intro-less-box">
-                                                    <p>These luxurious villas take full advantage of the peace and tranquility of the surrounding jungle, combined with the rhythmic sound of Ayung river and its cascading waterfalls below.<br />Designed in an authentic Balinese style, Riverside Villas are perched high on wooden pillars. Their expansive decks feature a private infinity pool, poolside gazebo and dining table – the ideal place to unwind and soak up the sights and sounds of the surrounding jungle.</p>
+
+                                            <div class="clr-bth"></div>
+                                            <hr>
+                                            <div class="container-price">
+                                                <a href="https://book-directonline.com/properties/hanginggardensofbalidirect" target="_blank" class="btn-default">BOOK NOW</a>
+                                                <div class="assis-home">
+                                                    <a style="border-bottom: 1px solid white;" data-toggle="modal" data-target="#myassist"><i class="fa fa-question-circle" aria-hidden="true"></i> CLICK HERE FOR MORE ASSISTANCE</a>
+                                                </div>
+                                                <div class="contain-asis">
+                                                    <div class="intro-less-box">
+                                                        {!! $data->description !!}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -196,9 +150,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="clr-bth"></div>
-
+            <div class="clr-bth"></div>
+        @endforeach
     </div>
 
 

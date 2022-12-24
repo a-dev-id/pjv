@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Http\Controllers\Controller;
+use App\Models\Offer;
 use Illuminate\Http\Request;
 
 class OfferController extends Controller
@@ -14,7 +15,8 @@ class OfferController extends Controller
      */
     public function index()
     {
-        return view('mobile.offer');
+        $offers = Offer::all();
+        return view('mobile.offer')->with(compact('offers'));
     }
 
     /**
