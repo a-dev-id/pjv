@@ -48,6 +48,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ route('offer-list.index') }}" class="nav-link @yield('offer_active')">
+                                <i class="nav-icon fas fa-dollar-sign"></i>
+                                <p>Offer</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ route('villa-list.index') }}" class="nav-link @yield('villa_active')">
                                 <i class="nav-icon fas fa-house-user"></i>
                                 <p>Villa</p>

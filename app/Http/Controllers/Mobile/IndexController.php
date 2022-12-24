@@ -3,6 +3,11 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Http\Controllers\Controller;
+use App\Models\HomeSetting;
+use App\Models\OfferSetting;
+use App\Models\RestaurantSetting;
+use App\Models\VillaSetting;
+use App\Models\WeddingSetting;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -14,7 +19,13 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return view('mobile.index');
+        $setting = HomeSetting::where('id', '1')->first();
+        $accommodation_setting = VillaSetting::where('id', '1')->first();
+        $offer_setting = OfferSetting::where('id', '1')->first();
+        $dining_setting = RestaurantSetting::where('id', '1')->first();
+        $wedding_setting = WeddingSetting::where('id', '1')->first();
+        $blog_setting = WeddingSetting::where('id', '1')->first();
+        return view('mobile.index')->with(compact('setting', 'accommodation_setting', 'offer_setting', 'dining_setting', 'wedding_setting', 'blog_setting'));
     }
 
     /**
