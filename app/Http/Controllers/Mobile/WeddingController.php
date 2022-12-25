@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Http\Controllers\Controller;
+use App\Models\WeddingSetting;
 use Illuminate\Http\Request;
 
 class WeddingController extends Controller
@@ -14,7 +15,8 @@ class WeddingController extends Controller
      */
     public function index()
     {
-        return view('mobile.wedding');
+        $setting = WeddingSetting::where('id', '1')->first();
+        return view('mobile.wedding')->with(compact('setting'));
     }
 
     /**

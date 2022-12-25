@@ -82,8 +82,8 @@
         .btn-enquire {
             width: 100%;
             background-color: #fff;
-            color: #CC9930;
-            border: 2px solid #CC9930;
+            color: #b3a59e;
+            border: 2px solid #b3a59e;
             font-weight: 700;
             display: inline-block;
             height: 40px;
@@ -94,9 +94,9 @@
 
         .btn-menu {
             width: 100%;
-            background-color: #CC9930;
+            background-color: #b3a59e;
             color: #fff;
-            border: 2px solid #CC9930;
+            border: 2px solid #b3a59e;
             font-weight: 700;
             display: inline-block;
             height: 40px;
@@ -142,7 +142,7 @@
         <div class="row dining-row-item">
             <div class="col-xs-12">
                 <a class="d-block" href="javascript:void(0)">
-                    <div style="background: url('https://hanginggardensofbali.com/storage/app/media/B0035909.jpg') no-repeat center; height: 230px; background-size: cover;"></div>
+                    <div style="background: url({{ asset($setting->banner_image) }}) no-repeat center; height: 230px; background-size: cover;"></div>
                 </a>
             </div>
             <div class="col-xs-12 dining-item-description">

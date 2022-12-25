@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Http\Controllers\Controller;
+use App\Models\Restaurant;
+use App\Models\RestaurantSetting;
 use Illuminate\Http\Request;
 
 class DiningController extends Controller
@@ -14,7 +16,9 @@ class DiningController extends Controller
      */
     public function index()
     {
-        return view('mobile.dining');
+        $setting = RestaurantSetting::where('id', '1')->first();
+        $restaurants = Restaurant::all();
+        return view('mobile.dining')->with(compact('setting', 'restaurants'));
     }
 
     /**
