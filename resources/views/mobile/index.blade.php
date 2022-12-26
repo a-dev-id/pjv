@@ -1,11 +1,11 @@
 @section('home_active', 'active')
 @section('meta')
-    <title>Hanging Garden of Bali | Homepage</title>
-    <meta name="description" content="">
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://hanginggardensofbali.com/m" />
-    <meta property="og:image" content="" />
+<title>Hanging Garden of Bali | Homepage</title>
+<meta name="description" content="">
+<meta property="og:title" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hanginggardensofbali.com/m" />
+<meta property="og:image" content="" />
 @endsection
 <x-mobile>
 
@@ -42,7 +42,7 @@
             <div class="row">
                 <div class="col-xs-12 intro-mobile">
                     <div style="display: block; text-align: center;">
-                        <img style="width: 70%" src="{{ asset('images/logo/logo.png') }}">
+                        <img style="width: 50%" src="{{ asset('images/logo/logo.png') }}">
                     </div>
                     <div class="intro-less-box text-justify">
                         {!! $setting->description !!}

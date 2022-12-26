@@ -1,131 +1,133 @@
 @section('meta')
-    <title>Hanging Garden of Bali | Homepage</title>
-    <meta name="description" content="">
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://hanginggardensofbali.com/m" />
-    <meta property="og:image" content="" />
+<title>Hanging Garden of Bali | Homepage</title>
+<meta name="description" content="">
+<meta property="og:title" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hanginggardensofbali.com/m" />
+<meta property="og:image" content="" />
 @endsection
 @push('css')
-    <style type="text/css">
-        .fa-angle-right {
-            transform: rotate(0deg);
-            transition: transform 0.25s linear;
-        }
+<style type="text/css">
+    .fa-angle-right {
+        transform: rotate(0deg);
+        transition: transform 0.25s linear;
+    }
 
-        .fa-angle-right.active {
-            transform: rotate(90deg);
-            transition: transform 0.25s linear;
-        }
+    .fa-angle-right.active {
+        transform: rotate(90deg);
+        transition: transform 0.25s linear;
+    }
 
-        .term-modal .panel-heading {
-            background-color: #fff;
-            border-color: #fff;
-            color: #000;
-            padding-left: 0;
-            padding-top: 0;
-            text-decoration: underline;
-        }
+    .term-modal .panel-heading {
+        background-color: #fff;
+        border-color: #fff;
+        color: #000;
+        padding-left: 0;
+        padding-top: 0;
+        text-decoration: underline;
+    }
 
-        .term-modal .panel-body {
-            border-top: 0 !important;
-            padding-top: 0;
-        }
+    .term-modal .panel-body {
+        border-top: 0 !important;
+        padding-top: 0;
+    }
 
-        .mdi-term-btn {
-            color: #A6631B !important;
-            font-size: 16px;
-        }
+    .mdi-term-btn {
+        color: #A6631B !important;
+        font-size: 16px;
+    }
 
-        .mdi-offer-list {
-            margin-left: 23px;
-        }
+    .mdi-offer-list {
+        margin-left: 23px;
+    }
 
-        .mdi-offer-list li {
-            padding-bottom: 5px;
-        }
+    .mdi-offer-list li {
+        padding-bottom: 5px;
+    }
 
-        .mdi-offer-list li i.fa-li.fa-lg {
-            font-size: 16px;
-            top: 4px;
-        }
+    .mdi-offer-list li i.fa-li.fa-lg {
+        font-size: 16px;
+        top: 4px;
+    }
 
-        .term-modal .mdi-offer-list {
-            margin-left: 12px;
-        }
+    .term-modal .mdi-offer-list {
+        margin-left: 12px;
+    }
 
-        .offer-promo ul {
-            margin-left: 0px;
-        }
-    </style>
+    .offer-promo ul {
+        margin-left: 0px;
+    }
 
-    <style type="text/css">
-        h1 {
-            font-size: 25px;
-        }
+</style>
 
-        .enq-button {
-            border: 1px solid #999;
-            background: #000;
-            color: #fff !important;
-            padding: 10px 20px;
-            transition: all 500ms;
-            text-transform: uppercase;
-            display: table;
-            margin: 0 auto;
-        }
+<style type="text/css">
+    h1 {
+        font-size: 25px;
+    }
 
-        .text-justify {
-            text-align: justify;
-        }
+    .enq-button {
+        border: 1px solid #999;
+        background: #000;
+        color: #fff !important;
+        padding: 10px 20px;
+        transition: all 500ms;
+        text-transform: uppercase;
+        display: table;
+        margin: 0 auto;
+    }
 
-        .btn-enquire {
-            width: 100%;
-            background-color: #fff;
-            color: #b3a59e;
-            border: 2px solid #b3a59e;
-            font-weight: 700;
-            display: inline-block;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    .text-justify {
+        text-align: justify;
+    }
 
-        .btn-menu {
-            width: 100%;
-            background-color: #b3a59e;
-            color: #fff;
-            border: 2px solid #b3a59e;
-            font-weight: 700;
-            display: inline-block;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    .btn-enquire {
+        width: 100%;
+        background-color: #fff;
+        color: #b3a59e;
+        border: 2px solid #b3a59e;
+        font-weight: 700;
+        display: inline-block;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-        .padding-top-30 {
-            padding-top: 30px !important
-        }
+    .btn-menu {
+        width: 100%;
+        background-color: #b3a59e;
+        color: #fff;
+        border: 2px solid #b3a59e;
+        font-weight: 700;
+        display: inline-block;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-        .reserve-modal .modal-dialog {
-            min-height: 500px;
-            width: 100%;
-        }
+    .padding-top-30 {
+        padding-top: 30px !important
+    }
 
-        .reserve-modal iframe {
-            height: 680px;
-            width: 100%;
-            overflow: hidden;
-            display: block;
-            min-height: 100% !important;
-        }
-    </style>
+    .reserve-modal .modal-dialog {
+        min-height: 500px;
+        width: 100%;
+    }
+
+    .reserve-modal iframe {
+        height: 680px;
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        min-height: 100% !important;
+    }
+
+</style>
 @endpush
 @push('js')
-    <script type="text/javascript">
-        $('a').on('click', function(e) {
+<script type="text/javascript">
+    $('a').on('click', function(e) {
             $(this).find('[class*="angle"]').toggleClass('fa-angle-down fa-angle-up')
         });
 
@@ -135,7 +137,7 @@
                 transition: 'transform .5s'
             });
         });
-    </script>
+</script>
 @endpush
 <x-mobile>
     <div class="container">
@@ -159,7 +161,7 @@
                             <a target="_blank" href="https://wa.me/628113800988" style="width:100%!important" class="btn-enquire">Inquire Now</a>
                         </div>
                         <div class="col-xs-6">
-                            <a target="_blank" href="https://hanginggardensofbali.com/storage/app/media/Hanging%20Gardens%20of%20Bali%20All%20Day%20Dining%20Menu%202023.pdf" class="btn-menu">View Menu</a>
+                            <a target="_blank" href="https://hanginggardensofbali.com/storage/app/media/Hanging%20Gardens%20of%20Bali%20All%20Day%20Dining%20Menu%202023.pdf" class="btn-menu">View Packages</a>
                         </div>
                     </div>
                 </div>
@@ -167,7 +169,7 @@
         </div>
     </div>
 
-    <div style="margin-top: 45px;" class="room-view">
+    {{-- <div style="margin-top: 45px;" class="room-view">
         <div class="container">
             <div class="row">
                 <div style="padding: 0px 6px;" class="col-xs-12">
@@ -256,7 +258,7 @@
                                 </div>
                             </div>
                         </div>
-                        {{-- <div class="panel panel-default">
+                        <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                     <a id="btn-k" data-toggle="collapse" data-parent="#accordion" href="#collapse11">MILLIONAIRE HANGOUT<span><i id="icon-kj" class="fa fa-angle-up  go" aria-hidden="true" style="font-size: 25px;margin-top: -4px;"></i></span></a>
@@ -307,12 +309,12 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> --}}
+                        </div>
 
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 </x-mobile>
