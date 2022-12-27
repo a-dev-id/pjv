@@ -161,7 +161,7 @@
         </div>
     </footer>
 
-    <footer class="py-3" style="background-color: #6c471d">
+    <footer class="py-3" style="background-color: #b3a59e">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">

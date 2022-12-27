@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
+use App\Models\BlogSetting;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -14,7 +16,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('mobile.blog');
+        $blogs = Blog::where('status', '1')->latest()->get();
+        return view('mobile.blog')->with(compact('blogs'));
     }
 
     /**
@@ -46,7 +49,8 @@ class BlogController extends Controller
      */
     public function show($slug)
     {
-        //
+        $detail = Blog::where('status', '1')->where('slug', $slug)->first();
+        return view('mobile.blog-detail')->with(compact('detail'));
     }
 
     /**
