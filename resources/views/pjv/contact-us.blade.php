@@ -51,7 +51,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-6 text-center">
-                    <h1 class="mb-3 text-uppercase"><i>{{ $contact->title }}</i></h1>
+                    <h1 class="mb-3 text-uppercase fw-bold">{{ $contact->title }}</h1>
                     <div>
                         {{ $contact->excerpt }}
                     </div>
@@ -88,14 +88,14 @@
             <div class="col-4 text-center">
                 <a href="http://wa.me/{{ $contact->whatsapp_no }}" target="_blank" class="btn btn-primary text-uppercase rounded-0 fw-bold d-inline-flex p-0">
                     <span class="px-3 d-flex align-items-center">Chat with Us</span>
-                    <div class="px-3 py-2 text-white" style="background-color: #6c471d; border-left:1px solid #fff"><i class="fab fa-whatsapp"></i></div>
+                    <div class="px-3 py-2 text-white" style="background-color: #b3a59e; border-left:1px solid #fff"><i class="fab fa-whatsapp"></i></div>
                 </a>
             </div>
         </div>
 
         <div class="row justify-content-center pb-90">
             <div class="col-6 text-center">
-                <h1 class="my-3 text-uppercase"><i>Press & Media Partnership</i></h1>
+                <h2 class="my-3 text-uppercase fw-bold">Press & Media Partnership</h2>
                 <p>{{ $contact->general_email }}</p>
             </div>
         </div>

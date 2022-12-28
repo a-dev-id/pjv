@@ -93,7 +93,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
-                    <h1 class="mb-3 text-uppercase"><i>{{ $setting->title }}</i></h1>
+                    <h1 class="mb-3 text-uppercase fw-bold">{{ $setting->title }}</h1>
                     <div>
                         {!! $setting->description !!}
                     </div>
@@ -114,7 +114,7 @@
                                     <img src="{{ asset($data->image) }}" class="w-100 object-fit-cover object-position-center">
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text fs-5">{{ $data->title }}</p>
+                                    <h2 class="card-text fs-5 fw-bold">{{ $data->title }}</h2>
                                 </div>
                             </div>
                             @endforeach

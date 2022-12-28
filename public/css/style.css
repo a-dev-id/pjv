@@ -10,6 +10,11 @@ h4,
 h5,
 h6 {
     font-family: giveaway !important;
+    letter-spacing: 3px;
+}
+
+.ff-giveaway {
+    font-family: giveaway;
 }
 
 body {

@@ -47,7 +47,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
-                    <h1 class="mb-3 text-uppercase"><i>{{ $setting->title }}</i></h1>
+                    <h1 class="mb-3 text-uppercase fw-bold">{{ $setting->title }}</h1>
                     <div>
                         {!! $setting->description !!}
                     </div>
@@ -60,15 +60,15 @@
         <div class="row">
             @foreach ($awards as $data)
             <div class="col-12 py-4 border-bottom">
-                <h3 class="text-uppercase">{{ $data->title }}</h3>
+                <h3 class="text-uppercase fw-bold">{{ $data->title }}</h3>
                 <h5 class="text-gold">{{ $data->subtitle }}</h5>
                 <div class="d-inline-flex">
                     <img src="{{ asset($data->image) }}" class="me-4" style="width: 150px; object-position: center; object-fit: contain;">
-                    <div class="text-start">
+                    <div class="text-start mt-3">
                         {{ Str::limit($data->excerpt, 300) }}
                     </div>
                 </div>
-                <a href="#" class="float-end link-dark text-decoration-none" data-bs-toggle="modal" data-bs-target="#awards{{ $data->id }}">Read more <i class="fas fa-long-arrow-alt-right ms-2"></i></a>
+                <a href="#" class="float-end link-dark text-decoration-none fw-bold" data-bs-toggle="modal" data-bs-target="#awards{{ $data->id }}">Read more <i class="fas fa-long-arrow-alt-right ms-2"></i></a>
             </div>
 
             <div class="modal fade" id="awards{{ $data->id }}" tabindex="-1" aria-labelledby="awards{{ $data->id }}-label" aria-hidden="true">
@@ -80,7 +80,7 @@
                         </div>
                         <div class="modal-body text-center">
                             <img src="{{ asset($data->image) }}" class="mb-3" style="width: 150px; object-position: center; object-fit: contain;">
-                            <h3 class="text-uppercase">{{ $data->title }}</h3>
+                            <h3 class="text-uppercase fw-bold">{{ $data->title }}</h3>
                             <h5 class="text-gold mb-3">{{ $data->subtitle }}</h5>
                             {!! $data->description !!}
                         </div>

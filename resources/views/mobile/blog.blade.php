@@ -32,7 +32,7 @@
                 <div class="block-content">
                     <a href="javascript:void(0)">
                         <h4>{{$data->title}}</h4>
-                        <p>Posted at Dec 20, 2022</p>
+                        <p>Posted on {{date('M d, Y', strtotime($blog->created_at))}}</p>
                     </a>
                     <div class="text-justify">
                         {{ Str::limit($data->excerpt, 200) }}

@@ -31,7 +31,7 @@
             <div class="col-xs-12 dining-item-description">
                 <div class="block-content">
                     <h4>{{$detail->title}}</h4>
-                    <p>Posted at Aug 03, 2021</p>
+                    <p>Posted on {{date('M d, Y', strtotime($blog->created_at))}}</p>
                     <div class="text-justify">
                         {!! $detail->description !!}
                     </div>

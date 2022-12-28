@@ -140,7 +140,7 @@
     <section class="py-90">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-6 text-center">
+                <div class="col-8 text-center">
                     <h1 class="mb-3 text-uppercase fw-bold">{{ $setting->title }}</h1>
                     <div>
                         {{ $setting->excerpt }}

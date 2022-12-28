@@ -54,9 +54,8 @@
                         </div>
                     </div>
                     <h1 class="fs-3 fw-bold text-uppercase">{{ $blog->title }}</h1>
-                    <h6 class="text-muted mb-4">Posted on Nov 07, 2022</h6>
+                    <h6 class="text-muted mb-4">Posted on {{date('M d, Y', strtotime($blog->created_at))}}</h6>
                     {!! $blog->description !!}
-                    <!-- <a href="https://wa.link/7ejw78" target="blank" class="btn btn-gold text-uppercase py-3 fw-bold rounded-0">BOOK HERE</a> -->
                 </div>
 
 
@@ -71,10 +70,11 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-8">
-                            <h1 class="fs-6 fw-bold">
-                                <a href="{{ route('blog.show', [$data->slug]) }}" class="link-dark text-decoration-none">{{ $data->title }}</a>
-                            </h1>
-                            <h6 class="text-muted">Posted on Nov 07, 2022</h6>
+                            <h2 class="fs-6 fw-bold">
+                                <a href="{{ route('blog.show', [$data->slug]) }}" class="link-dark text-decoration-none ff-giveaway fw-bold">{{ $data->title }}</a>
+                            </h2>
+                            <h6 class="text-muted">Posted on {{date('M d, Y', strtotime($data->created_at))}}</h6>
+                            {{ Str::limit($blog->excerpt, 50) }}
                         </div>
                     </div>
                     @endforeach

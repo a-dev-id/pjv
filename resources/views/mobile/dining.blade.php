@@ -99,7 +99,7 @@
             <div class="col-xs-12 dining-item-description">
                 <div class="block-content">
                     <a href="javascript:void(0)">
-                        <h1>{{ $setting->title }}</h1>
+                        <h1 style="font-weight: bold;">{{ $setting->title }}</h1>
                     </a>
                     <div class="text-justify">
                         {!! $setting->description !!}

@@ -47,7 +47,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
-                    <h1 class="mb-3 text-uppercase"><i>{{ $data->title }}</i></h1>
+                    <h1 class="mb-3 text-uppercase fw-bold">{{ $data->title }}</h1>
                     <div>
                         {!! $data->description !!}
                     </div>

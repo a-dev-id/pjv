@@ -17,8 +17,9 @@
     <link rel="Shortcut Icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon" />
     <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" as="font" onload="this.rel='stylesheet'" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
     <link href="{{ asset('css/mobile.css') }}" rel="stylesheet">
@@ -86,7 +87,7 @@
     <section class="slider relative">
         <div class="mdi-header-carousel owl-carousel owl-theme">
             @foreach (App\Models\HomeSlider2::all() as $data)
-                <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url({{ asset($data->image) }}) no-repeat;background-size: cover;background-position: bottom;"></div>
+            <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url({{ asset($data->image) }}) no-repeat;background-size: cover;background-position: bottom;"></div>
             @endforeach
         </div>
         <a target="_blank" class="mdi-map-btn" href="https://g.page/hanginggardensofbali?share"><i class="fa fa-map-marker"></i> MAP</a>

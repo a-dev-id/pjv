@@ -1,69 +1,37 @@
-/*@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');*/
-
-/*@font-face {
-    font-family: 'MrsEaves'; 
-    src: url('../fonts/MrsEavesOT-Roman.otf'); 
-    font-display: swap;
-}*/
-
-@font-face {
-    font-family: GillSans;
-    src: url("../themes/mindimedia-theme/assets/fonts/gill_sans_light.otf");
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: GillSans;
-    src: url("../themes/mindimedia-theme/assets/fonts/gill_sans_light_italic.otf");
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: GillSans;
-    src: url("../themes/mindimedia-theme/assets/fonts/gill_sans.otf");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: GillSans;
-    src: url("../themes/mindimedia-theme/assets/fonts/gill_sans_italic.otf");
-    font-weight: 400;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: GillSans;
-    src: url("../themes/mindimedia-theme/assets/fonts/gill_sans_bold.otf");
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: GillSans;
-    src: url("../themes/mindimedia-theme/assets/fonts/gill_sans_bold_italic.otf");
-    font-weight: 700;
-    font-style: italic;
-}
-
 body {
-    font-family: "GillSans", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "giveaway";
+    src: url("../font/giveaway.ttf") format("truetype");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: giveaway !important;
+    letter-spacing: 3px;
+}
+
+.ff-giveaway {
+    font-family: giveaway;
 }
 
 body {
     background-color: white;
     color: black;
 }
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-}
+
 a {
     text-decoration: none;
     display: inline-block;

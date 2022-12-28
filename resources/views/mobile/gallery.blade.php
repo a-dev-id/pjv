@@ -1,94 +1,95 @@
 @section('gallery_active', 'active')
 @section('meta')
-    <title>Hanging Garden of Bali | Homepage</title>
-    <meta name="description" content="">
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://hanginggardensofbali.com/m" />
-    <meta property="og:image" content="" />
+<title>Hanging Garden of Bali | Homepage</title>
+<meta name="description" content="">
+<meta property="og:title" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hanginggardensofbali.com/m" />
+<meta property="og:image" content="" />
 @endsection
 
 @push('css')
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <style type="text/css">
-        .mdi-gallery-1 {
-            height: 253px;
-        }
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<style type="text/css">
+    .mdi-gallery-1 {
+        height: 253px;
+    }
 
-        .mdi-gallery-2 {
-            height: 125px;
-        }
+    .mdi-gallery-2 {
+        height: 125px;
+    }
 
-        .mdi-gallery-3 {
-            height: 125px;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-        }
+    .mdi-gallery-3 {
+        height: 125px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+    }
 
-        .mdi-gallery-col-1 {
-            padding-right: 3px !important;
-            padding-left: 3px !important;
-            padding-top: 3px !important;
-        }
+    .mdi-gallery-col-1 {
+        padding-right: 3px !important;
+        padding-left: 3px !important;
+        padding-top: 3px !important;
+    }
 
-        .mdi-gallery-col-2 {
-            padding-bottom: 3px !important;
-            padding-right: 3px !important;
-            padding-top: 3px !important;
-        }
+    .mdi-gallery-col-2 {
+        padding-bottom: 3px !important;
+        padding-right: 3px !important;
+        padding-top: 3px !important;
+    }
 
-        .mdi-gallery-col-3 {
-            padding-right: 3px !important;
-        }
+    .mdi-gallery-col-3 {
+        padding-right: 3px !important;
+    }
 
-        .display-block {
-            display: block;
-        }
+    .display-block {
+        display: block;
+    }
 
-        .contact-deral p {
-            font-size: 15px;
-            margin-bottom: 20px;
-        }
+    .contact-deral p {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
 
-        .mdi-info-contact-btn {
-            font-size: 16px;
-            color: #666 !important;
-        }
+    .mdi-info-contact-btn {
+        font-size: 16px;
+        color: #666 !important;
+    }
 
-        .email-btn {
-            margin-top: 20px;
-            padding-bottom: 5px;
-            text-decoration: underline;
-        }
+    .email-btn {
+        margin-top: 20px;
+        padding-bottom: 5px;
+        text-decoration: underline;
+    }
 
-        .phone-btn {
-            margin-bottom: 20px;
-            text-decoration: underline;
-        }
+    .phone-btn {
+        margin-bottom: 20px;
+        text-decoration: underline;
+    }
 
-        .btn-view-photos {
-            display: unset;
-        }
+    .btn-view-photos {
+        display: unset;
+    }
 
-        .contact-deral h1 {
-            letter-spacing: -1px;
-        }
+    .contact-deral h1 {
+        letter-spacing: -1px;
+    }
 
-        .mdi-info-photo-logo {
-            width: 200px;
-            margin: 20px auto;
-            display: block;
-        }
-    </style>
+    .mdi-info-photo-logo {
+        width: 200px;
+        margin: 20px auto;
+        display: block;
+    }
+
+</style>
 @endpush
 
 @push('js')
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
-    <script type="text/javascript">
-        function initialize() {
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
+<script type="text/javascript">
+    function initialize() {
             var mapCanvas = document.getElementById('map_canvas');
             var mapOptions = {
                 center: new google.maps.LatLng('', ''),
@@ -114,7 +115,7 @@
             });
         }
         google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+</script>
 @endpush
 
 
@@ -183,7 +184,8 @@
         <div class="row">
             <div class="col-xs-12 contact-deral">
                 <img class="mdi-info-photo-logo" src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/hanginggarden-logo.png">
-                <h1 style="margin-bottom: 5px;">Hanging Gardens of Bali</h1>
+                <h1 style="margin-bottom: 5px; font-weight:bold;">Private Jet Villa</h1>
+                <span style="font-weight:bold; margon-bottom:10px;">By Hanging Gardens of Bali</span>
                 <!-- <p><strong>Please do not hesitate to contact us</strong></p> -->
                 <p><i class="fa fa-map-marker"></i> Buahan, Payangan, 80571, Kabupaten Gianyar - Bali</p>
                 <!-- <div style="height: 150px; width: 100%;" id="map_canvas"></div> -->

@@ -58,21 +58,21 @@
                         <div class="col-xs-12">
                             <a href="{{ route('mobile.accommodation') }}" class="d-block">
                                 <div style=" background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url({{ asset($accommodation_setting->banner_image) }}) center no-repeat" class="villas-image-mry">
-                                    <h4 class="title-mry">Accommodation</h4>
+                                    <h4 class="title-mry" style="font-weight: bold;">Accommodation</h4>
                                 </div>
                             </a>
                         </div>
                         <div class="col-xs-6 p-r-2_5 p-t-5">
                             <a href="{{ route('mobile.dining') }}" class="d-block">
                                 <div style=" background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url({{ asset($dining_setting->banner_image) }}) center no-repeat" class="info-hotel-image-mry">
-                                    <h4 class="title-mry">Dinning</h4>
+                                    <h4 class="title-mry" style="font-weight: bold;">Dinning</h4>
                                 </div>
                             </a>
                         </div>
                         <div class="col-xs-6 p-l-2_5 p-t-5">
                             <a href="{{ route('mobile.wedding') }}" class="d-block">
                                 <div style=" background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url({{ asset($wedding_setting->banner_image) }}) center no-repeat" class="info-hotel-image-mry">
-                                    <h4 class="title-mry">Weddings</h4>
+                                    <h4 class="title-mry" style="font-weight: bold;">Weddings</h4>
                                 </div>
                             </a>
                         </div>
@@ -84,14 +84,14 @@
                         <div class="col-xs-12 p-r-0 p-l-0">
                             <a href="{{ route('mobile.offer') }}" class="d-block">
                                 <div style=" background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url({{ asset($offer_setting->banner_image) }}) center no-repeat" class="info-hotel-image-mry">
-                                    <h4 class="title-mry">Special Offers</h4>
+                                    <h4 class="title-mry" style="font-weight: bold;">Special Offers</h4>
                                 </div>
                             </a>
                         </div>
                         <div class="col-xs-12 p-t-5 p-r-0 p-l-0">
                             <a href="https://goo.gl/maps/D2du1fbUWWJ2vXXi7" target="_blank" class="d-block">
                                 <div style="background: #b3a59e" class="villas-image-mry"><i class="fa fa-map-marker m-r-5"></i>
-                                    <h4 class="title-mry"> Map</h4>
+                                    <h4 class="title-mry" style="font-weight: bold;"> Map</h4>
                                 </div>
                             </a>
                         </div>
@@ -103,7 +103,7 @@
                         <div class="col-xs-12 p-r-0 p-l-0">
                             <a href="{{ route('mobile.blog') }}" class="d-block">
                                 <div style=" background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ),url({{ asset($blog_setting->banner_image) }}) center no-repeat" class="info-hotel-image-mry">
-                                    <h4 class="title-mry">BLOG</h4>
+                                    <h4 class="title-mry" style="font-weight: bold;">BLOG</h4>
                                 </div>
                             </a>
                         </div>

@@ -92,8 +92,8 @@
     <section class="py-90">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <h1 class="mb-3 text-uppercase"><i>{{ $setting->title }}</i></h1>
+                <div class="col-8 text-center">
+                    <h1 class="mb-3 text-uppercase fw-bold">{{ $setting->title }}</h1>
                     <div>
                         {!! $setting->description !!}
                     </div>
@@ -117,7 +117,7 @@
                                         <p class="card-text">{{ $data->excerpt }}</p>
                                     </div>
                                     <div class="mt-1">
-                                        <a href="#" class="float-end link-dark text-decoration-none" data-bs-toggle="modal" data-bs-target="#careers{{ $data->id }}">Read more <i class="fas fa-long-arrow-alt-right ms-2"></i></a>
+                                        <a href="#" class="float-end link-dark text-decoration-none fw-bold" data-bs-toggle="modal" data-bs-target="#careers{{ $data->id }}">Read more <i class="fas fa-long-arrow-alt-right ms-2"></i></a>
                                     </div>
                                 </div>
                             </div>
