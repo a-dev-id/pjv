@@ -3,6 +3,10 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Http\Controllers\Controller;
+use App\Models\Gallery;
+use App\Models\HomeSetting;
+use App\Models\RestaurantSetting;
+use App\Models\VillaSetting;
 use Illuminate\Http\Request;
 
 class GalleryController extends Controller
@@ -14,7 +18,12 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        return view('mobile.gallery');
+        $villa_setting = VillaSetting::where('id', '1')->first();
+        $restaurant_setting = RestaurantSetting::where('id', '1')->first();
+        $home_setting = HomeSetting::where('id', '1')->first();
+        $galleries = Gallery::all();
+        $gallery = Gallery::where('id', '3')->first();
+        return view('mobile.gallery')->with(compact('villa_setting', 'restaurant_setting', 'home_setting', 'galleries', 'gallery'));
     }
 
     /**
