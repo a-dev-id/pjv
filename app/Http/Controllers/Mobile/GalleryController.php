@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Http\Controllers\Controller;
+use App\Models\ContactUsSetting;
 use App\Models\Gallery;
 use App\Models\HomeSetting;
 use App\Models\RestaurantSetting;
@@ -23,7 +24,8 @@ class GalleryController extends Controller
         $home_setting = HomeSetting::where('id', '1')->first();
         $galleries = Gallery::all();
         $gallery = Gallery::where('id', '3')->first();
-        return view('mobile.gallery')->with(compact('villa_setting', 'restaurant_setting', 'home_setting', 'galleries', 'gallery'));
+        $contact_us_setting = ContactUsSetting::where('id', '1')->first();
+        return view('mobile.gallery')->with(compact('villa_setting', 'restaurant_setting', 'home_setting', 'galleries', 'gallery', 'contact_us_setting'));
     }
 
     /**

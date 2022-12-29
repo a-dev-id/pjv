@@ -165,7 +165,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <p class="fw-bold text-white">Copyright © 2022 Private Jet Villa</p>
+                    <p class="fw-bold text-white">Copyright © {{ now()->year }} Private Jet Villa</p>
                 </div>
             </div>
         </div>

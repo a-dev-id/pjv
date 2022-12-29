@@ -148,14 +148,14 @@
         <div class="row">
             <div class="col-xs-12 contact-deral">
                 <img class="mdi-info-photo-logo" src="{{ asset('images/logo/logo.png') }}">
-                <h1 style="font-weight:bold; padding-bottom:5px;">Private Jet Villa</h1>
-                <span style="font-weight:bold;">By Hanging Gardens of Bali</span>
+                <h1 style="font-weight:bold; padding-bottom:5px; text-transform: uppercase; letter-spacing: 1px;">{{$home_setting->title}}</h1>
+                <span style="font-weight:bold;">{{$home_setting->subtitle}}</span>
                 <!-- <p><strong>Please do not hesitate to contact us</strong></p> -->
-                <p style="margin-top:10px;"><i class="fa fa-map-marker"></i> Pecatu, Kecamatan Kuta Selatan, Kabupaten Badung, Bali</p>
+                <p style="margin-top:10px;"><i class="fa fa-map-marker"></i> {{$contact_us_setting->address_text}}</p>
                 <!-- <div style="height: 150px; width: 100%;" id="map_canvas"></div> -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6976.594655309069!2d115.09404716237573!3d-8.837515676739628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd251f0fa4af799%3A0x82cc528e4e7bd43d!2sMandala%20Airlines%20PK-RII!5e1!3m2!1sen!2sid!4v1672286938409!5m2!1sen!2sid" width="100%" height="175" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <a class="mdi-info-contact-btn email-btn display-block" href="mailto:reservations@hanginggardensofbali.com"><i class="fa fa-envelope"></i>reservations@hanginggardensofbali.com</a>
-                <a class="mdi-info-contact-btn phone-btn display-block" href="tel:+62 361 982 700"><i class="fa fa-phone"></i>+62 361 982 700</a>
+                <a class="mdi-info-contact-btn email-btn display-block" href="mailto:{{$contact_us_setting->email_text}}"><i class="fa fa-envelope"></i> {{$contact_us_setting->email_text}}</a>
+                <a class="mdi-info-contact-btn phone-btn display-block" href="tel:{{$contact_us_setting->phone_no}}"><i class="fa fa-phone"></i> {{$contact_us_setting->phone_no}}</a>
             </div>
         </div>
     </div>
