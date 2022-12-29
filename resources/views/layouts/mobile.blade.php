@@ -33,9 +33,9 @@
 
 
     <!--<a data-toggle="modal" data-target="#promoBanner" href="javascript:void(0)" class="promo-banner-trigger"><i class="fa fa-tags"></i></a>-->
-    <a href="https://wa.me/628113800988" target="_blank" rel="noopener" class="whatsapp-floating"><img src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/whatsapp-logo.png" alt="whatsapp"></a>
+    {{-- <a href="https://wa.me/628113800988" target="_blank" rel="noopener" class="whatsapp-floating"><img src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/whatsapp-logo.png" alt="whatsapp"></a>
     <a href="https://t.me/HGOB2022" target="_blank" rel="noopener" class="telegram-floating"><img src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/logo-telegram.png" alt="whatsapp"></a>
-    <a href="https://www.tripadvisor.com/Hotel_Review-g608492-d583286-Reviews-Hanging_Gardens_of_Bali-Payangan_Gianyar_Regency_Bali.html" target="_blank" rel="noopener" class="trip-floating"><img src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/trip.png" alt="whatsapp"></a>
+    <a href="https://www.tripadvisor.com/Hotel_Review-g608492-d583286-Reviews-Hanging_Gardens_of_Bali-Payangan_Gianyar_Regency_Bali.html" target="_blank" rel="noopener" class="trip-floating"><img src="https://hanginggardensofbali.com/themes/mindimedia-theme/assets/images/trip.png" alt="whatsapp"></a> --}}
 
 
     <div id="shareModal" class="modal fade" role="dialog">
