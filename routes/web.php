@@ -44,6 +44,10 @@ Route::get('/m/blog', [App\Http\Controllers\Mobile\BlogController::class, 'index
 Route::get('/m/blog/{slug}', [App\Http\Controllers\Mobile\BlogController::class, 'show'])->name('mobile.blog-detail');
 
 
+Route::get('optimize-all', function () {
+    \Artisan::call('optimize:clear');
+    dd("Cache is cleared");
+});
 
 
 require __DIR__ . '/auth.php';
