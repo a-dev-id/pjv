@@ -149,10 +149,10 @@
                         <div class="col-4">
                             <h3 class="text-uppercase fw-bold mb-3">follow us</h3>
                             <nav class="nav flex-row">
-                                <a href="https://www.instagram.com/" class="nav-link social-media-share social-media-share-instagram me-2"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.facebook.com/" class="nav-link social-media-share social-media-share-facebook me-2"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://twitter.com/" class="nav-link social-media-share social-media-share-twitter me-2"><i class="fab fa-twitter"></i></a>
-                                <a href="https://www.youtube.com/" class="nav-link social-media-share social-media-share-youtube me-2"><i class="fab fa-youtube"></i></a>
+                                <a href="https://www.instagram.com/privatejetvilla/" class="nav-link social-media-share social-media-share-instagram me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/privatejetvilla/" class="nav-link social-media-share social-media-share-facebook me-2"><i class="fab fa-facebook-f"></i></a>
+                                {{-- <a href="https://twitter.com/" class="nav-link social-media-share social-media-share-twitter me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.youtube.com/" class="nav-link social-media-share social-media-share-youtube me-2"><i class="fab fa-youtube"></i></a> --}}
                             </nav>
                         </div>
                     </div>
