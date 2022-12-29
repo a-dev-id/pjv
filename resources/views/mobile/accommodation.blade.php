@@ -107,7 +107,7 @@
                         <h3 class="m-t-10 mdi-room-title" style="font-weight: bold;">{{ $data->title }}</h3>
                     </div>
                     <div class="col-xs-4">
-                        <a class="m-t-10 mdi-room-info-btn" data-toggle="collapse" data-parent="#accordion0" href="#collapse20">ROOM INFO <span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                        <a class="m-t-10 mdi-room-info-btn" data-toggle="collapse" data-parent="#accordion0" href="#collapse20" style="font-weight:bold">ROOM INFO <span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
                     </div>
                 </div>
             </div>
