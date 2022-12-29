@@ -3,9 +3,8 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Http\Controllers\Controller;
+use App\Models\ContactUsSetting;
 use App\Models\Villa;
-use App\Models\VillaFeature;
-use App\Models\VillaImage;
 use App\Models\VillaSetting;
 use Illuminate\Http\Request;
 
@@ -20,7 +19,8 @@ class AccommodationController extends Controller
     {
         $villas = Villa::all();
         $setting = VillaSetting::where('id', '1')->first();
-        return view('mobile.accommodation')->with(compact('setting', 'villas'));
+        $contact_us_setting = ContactUsSetting::where('id', '1')->first();
+        return view('mobile.accommodation')->with(compact('setting', 'villas', 'contact_us_setting'));
     }
 
     /**
