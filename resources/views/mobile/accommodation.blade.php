@@ -133,7 +133,7 @@
                                         <div class="clr-bth"></div>
                                         <hr>
                                         <div class="container-price">
-                                            <a href="https://book-directonline.com/properties/hanginggardensofbalidirect" target="_blank" class="btn-default">BOOK NOW</a>
+                                            <a href="https://book-directonline.com/properties/privatejetvillahanginggardensdirect?currency=USD" target="_blank" class="btn-default">BOOK NOW</a>
                                             <div class="assis-home">
                                                 <a style="border-bottom: 1px solid white;" data-toggle="modal" data-target="#myassist"><i class="fa fa-question-circle" aria-hidden="true"></i> CLICK HERE FOR MORE ASSISTANCE</a>
                                             </div>
