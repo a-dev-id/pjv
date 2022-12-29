@@ -130,7 +130,7 @@
                     <div class="mdi-gallery-2" style="background: url({{ asset($restaurant_setting->banner_image) }}) no-repeat;background-size: cover;background-position: center;"></div>
                 </div>
                 <div class="col-xs-12 p-0 mdi-gallery-col-3">
-                    <a href="{{ asset($gallery->thumbnail_image) }}" data-fancybox="gallery" class="btn-view-photos" data-fancybox-trigger="gallery">
+                    <a href="{{ asset($gallery->thumbnail_image) }}" data-fancybox="gallery" class="btn-view-photos ff-giveaway" data-fancybox-trigger="gallery">
                         <div class="mdi-gallery-3" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url({{ asset($home_setting->image) }}) no-repeat;background-size: cover;background-position: center;">PHOTO GALLERY</div>
                     </a>
                 </div>
