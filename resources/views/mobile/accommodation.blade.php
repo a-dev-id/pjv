@@ -170,7 +170,7 @@
                     <p>SHOULD YOU NEED FURTHER ASSISTANCE FOR THE OFFERS OR YOU WANT TO ARRANGE A COSTUMISED BOOKING, OUR RESERVATION WILL HELP YOU. PLEASE SUBMIT YOUR ENQUIRY BY CLICKING THE BUTTON BELOW </p>
                 </div>
                 <div class="modal-footer">
-                    <a href="https://api.whatsapp.com/send/?phone={{$contact_us_setting->whatsapp_no}}&text&app_absent=0" class="btn-default">
+                    <a href="https://api.whatsapp.com/send/?phone={{$contact_us_setting->phone_no}}&text&app_absent=0" class="btn-default">
                         <span>CHAT WITH US</span>
                     </a>
                 </div>
