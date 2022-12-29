@@ -86,7 +86,7 @@
 
     <section class="slider relative">
         <div class="mdi-header-carousel owl-carousel owl-theme">
-            @foreach (App\Models\HomeSlider2::all() as $data)
+            @foreach (App\Models\HomeSlider2::orderBy('id')->get() as $data)
             <div class="header-bg relative" style="background: linear-gradient(180deg, transparent 90%, #fff), url({{ asset($data->image) }}) no-repeat;background-size: cover;background-position: bottom;"></div>
             @endforeach
         </div>
