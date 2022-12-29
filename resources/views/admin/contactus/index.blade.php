@@ -232,7 +232,7 @@
                                         </div>
                                         <div class="form-group col-lg-12">
                                             <label>Whatsapp Text</label>
-                                            <input type="text" class="form-control" placeholder="Type something" name="whatsapp_no" value="{{ $setting->whatsapp_no }}">
+                                            <input type="text" class="form-control" placeholder="Type something" name="whatsapp_text" value="{{ $setting->whatsapp_text }}">
                                         </div>
 
                                         <div class="form-group col-lg-6">
