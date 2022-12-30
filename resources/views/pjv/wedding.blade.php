@@ -149,9 +149,31 @@
             <div class="col-6 p-5">
                 <h2 class="mb-1 text-uppercase fw-bold">{{ $data->title }}</h2>
                 <div class="mb-2 fw-bold">{{ $data->price }}</div>
-                <div>{!! $data->description !!}</div>
+                <div>{!! $data->excerpt !!}</div>
                 <div class="mt-4">
-                    <a href="{{ $data->button_link }}" class="btn btn-primary rounded-0 px-5 fw-bold">{{ $data->button_text }}</a>
+                    <div class="d-flex">
+                        <button type="button" class="btn rounded-0 btn-outline-secondary px-3 fw-bold text-uppercase me-3" data-bs-toggle="modal" data-bs-target="#viewDetails{{ $data->id }}">view details</button>
+                        <a href="{{ $data->button_link }}" class="btn btn-primary rounded-0 px-3 fw-bold">{{ $data->button_text }}</a>
+
+                        <div class="modal fade" id="viewDetails{{ $data->id }}" tabindex="-1" aria-labelledby="viewDetails{{ $data->id }}Label" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title fw-bold text-uppercase" id="viewDetails{{ $data->id }}Label">{{ $data->title }}</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="mb-2 fw-bold">Starts from {{ $data->price }}</div>
+                                        {!! $data->description !!}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <div class="col-6">
@@ -176,7 +198,14 @@
                 <div class="mb-2 fw-bold">{{ $data->price }}</div>
                 <div>{!! $data->description !!}</div>
                 <div class="mt-4">
-                    <a href="{{ $data->button_link }}" class="btn btn-primary rounded-0 px-5 fw-bold">{{ $data->button_text }}</a>
+                    <div class="row">
+                        <div class="col-4">
+                            <a href="{{ $data->button_link }}" class="btn btn-primary rounded-0 px-3 fw-bold">{{ $data->button_text }}</a>
+                        </div>
+                        <div class="col-4">
+                            <a href="{{ $data->button_link }}" class="btn rounded-0 btn-outline-secondary px-3 fw-bold text-uppercase">view details</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
