@@ -245,7 +245,7 @@
                             <div class="section2-wrapper">
                                 <img src="{{ asset($setting->image2) }}" alt="{{ $data->title }}" class="section2-image w-100" />
                             </div>
-                            <div class="mt-5">
+                            <div class="mt-3">
                                 {!! $setting->excerpt2 !!}
                             </div>
                         </div>
