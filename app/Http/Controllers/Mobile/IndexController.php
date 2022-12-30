@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Http\Controllers\Controller;
+use App\Models\BlogSetting;
 use App\Models\HomeSetting;
 use App\Models\OfferSetting;
 use App\Models\RestaurantSetting;
