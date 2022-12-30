@@ -16,8 +16,9 @@ class BlogController extends Controller
      */
     public function index()
     {
+        $setting = BlogSetting::where('id', '1')->first();
         $blogs = Blog::where('status', '1')->latest()->get();
-        return view('mobile.blog')->with(compact('blogs'));
+        return view('mobile.blog')->with(compact('blogs', 'setting'));
     }
 
     /**
