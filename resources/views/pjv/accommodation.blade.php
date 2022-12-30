@@ -143,7 +143,7 @@
                 <div class="col-8 text-center">
                     <h1 class="mb-3 text-uppercase fw-bold">{{ $setting->title }}</h1>
                     <div>
-                        {{ $setting->excerpt }}
+                        {!! $setting->description !!}
                     </div>
                 </div>
             </div>
@@ -165,11 +165,11 @@
                 </div>
                 <div class="slider2-arrow"></div>
             </div>
-            <div class="row justify-content-center pt-90">
+            {{-- <div class="row justify-content-center pt-90">
                 <div class="col-lg-8 text-center">
                     {!! $setting->description !!}
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 
