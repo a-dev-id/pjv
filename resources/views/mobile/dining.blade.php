@@ -107,10 +107,11 @@
 
                     <div class="padding-top-30">
                         <div class="col-xs-6">
-                            <a target="_blank" href="#reserveRestaurant" data-toggle="modal" style="width:100%!important" class="btn-enquire">Reserve Now</a>
+                            {{-- <a target="_blank" href="#reserveRestaurant" data-toggle="modal" style="width:100%!important" class="btn-enquire">Reserve Now</a> --}}
+                            <a target="_blank" href="https://wa.me/+79685401861" class="btn-enquire">Reserve Now</a>
                         </div>
                         <div class="col-xs-6">
-                            <a target="_blank" href="https://hanginggardensofbali.com/storage/app/media/Hanging%20Gardens%20of%20Bali%20All%20Day%20Dining%20Menu%202023.pdf" class="btn-menu">View Menu</a>
+                            <a target="_blank" href="{{ $setting->button_link }}" class="btn-menu">{{ $setting->button_text }}</a>
                         </div>
                     </div>
                 </div>
@@ -118,13 +119,13 @@
         </div>
     </div>
 
-    <div class="modal fade" id="reserveRestaurant" tabindex="-1" aria-labelledby="reserveRestaurant" aria-hidden="true">
+    {{-- <div class="modal fade" id="reserveRestaurant" tabindex="-1" aria-labelledby="reserveRestaurant" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered reserve-modal">
             <div class="modal-content">
                 <iframe src="https://bookv5.chope.co/booking?rid=threeelements2203bal&source=rest_threeelementsrestaurant.com"></iframe>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     {{-- <div style="margin-top: 45px;" class="room-view">
         <div class="container">
