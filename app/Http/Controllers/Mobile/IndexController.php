@@ -24,7 +24,7 @@ class IndexController extends Controller
         $offer_setting = OfferSetting::where('id', '1')->first();
         $dining_setting = RestaurantSetting::where('id', '1')->first();
         $wedding_setting = WeddingSetting::where('id', '1')->first();
-        $blog_setting = WeddingSetting::where('id', '1')->first();
+        $blog_setting = BlogSetting::where('id', '1')->first();
         return view('mobile.index')->with(compact('setting', 'accommodation_setting', 'offer_setting', 'dining_setting', 'wedding_setting', 'blog_setting'));
     }
 
