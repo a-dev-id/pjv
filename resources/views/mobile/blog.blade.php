@@ -1,10 +1,11 @@
 @section('meta')
-<title>Hanging Garden of Bali | Homepage</title>
-<meta name="description" content="">
-<meta property="og:title" content="" />
+<title>Private jet Villa | {{ $setting->title }}</title>
+<meta name="description" content="{{ $setting->excerpt }}">
+<meta property="og:title" content="{{ $setting->title }}" />
+<meta property="og:description" content="{{ $setting->excerpt }}" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://hanginggardensofbali.com/m" />
-<meta property="og:image" content="" />
+<meta property="og:url" content="{{ route('mobile.blog') }}" />
+<meta property="og:image" content="{{ asset($setting->banner_image) }}" />
 @endsection
 
 @push('css')

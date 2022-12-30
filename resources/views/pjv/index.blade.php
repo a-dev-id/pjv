@@ -220,7 +220,7 @@
             </div>
 
             <div class="row pt-5 justify-content-center">
-                <div class="col-6 text-center">
+                <div class="col-8 text-center">
                     <div>{!! $setting->excerpt1 !!}</div>
                     <div class="mt-4">
                         <a href="#" class="btn btn-primary rounded-0 px-5 fw-bold">BOOK NOW</a>
