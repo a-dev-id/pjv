@@ -168,7 +168,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <a href="{{ $data->button_link }}" class="btn btn-primary rounded-0 px-3 fw-bold">{{ $data->button_text }}</a>
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary rounded-0" data-bs-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             </div>
