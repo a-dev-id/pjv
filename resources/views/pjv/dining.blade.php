@@ -156,7 +156,7 @@
             </div>
             <div class="col-6">
                 <div class="item-wrapper">
-                    <img src="{{ asset($data->image) }}" class="item-image w-100">
+                    <img src="{{ asset($data->image) }}" class="item-image" style="width:100%">
                 </div>
             </div>
         </div>
@@ -168,7 +168,7 @@
         <div class="row align-items-center">
             <div class="col-6">
                 <div class="item-wrapper">
-                    <img src="{{ asset($data->image) }}" class="item-image w-100">
+                    <img src="{{ asset($data->image) }}" class="item-image" style="width:100%">
                 </div>
             </div>
             <div class="col-6 p-5">
