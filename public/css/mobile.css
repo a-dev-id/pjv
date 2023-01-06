@@ -754,7 +754,7 @@ ul li i {
     margin-top: 15px;
 }
 .bck-room .room-view {
-    border-bottom: 1px solid;
+    /* border-bottom: 1px solid; */
 }
 .carousel-fade .carousel-inner .item {
     opacity: 0;
