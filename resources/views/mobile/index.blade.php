@@ -41,8 +41,8 @@
         <div class="container" style="margin-bottom: 30px;">
             <div class="row">
                 <div class="col-xs-12 intro-mobile">
-                    <div style="display: block; text-align: center;">
-                        <img style="width: 50%" src="{{ asset('images/logo/logo.png') }}">
+                    <div style="display: block; text-align: center; padding-top:20px; padding-bottom:20px;">
+                        <img style="width: 50%" src="{{ asset('images/logo/private-jet-villa-logo.png') }}">
                     </div>
                     <div class="intro-less-box text-justify">
                         {!! $setting->description !!}
