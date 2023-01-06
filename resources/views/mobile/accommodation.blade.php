@@ -10,7 +10,7 @@
 @endsection
 @push('css')
 <style type="text/css">
-    .room-view .panel-body .room-amn ul {
+    /* .room-view .panel-body .room-amn ul {
         column-gap: unset;
         column-count: unset;
         width: 100%;
@@ -18,7 +18,7 @@
 
     .room-view .panel-body .room-amn ul li {
         display: inline;
-    }
+    } */
 
     .amenities--icon--room {
         width: 20px !important;
@@ -122,10 +122,10 @@
                                         <div class="col-xs-12 room-amn m-b-20">
 
                                             <h4>Villa Facilities</h4>
-                                            <ul style="padding-left: 0!important;">
+                                            <ul>
                                                 @foreach (App\Models\VillaFeature::where('villa_id', $data->id)->get() as $facility)
                                                 @foreach (\App\Models\Feature::where('id', '=', $facility->feature_id)->get() as $data_feature)
-                                                <li style="padding-right: 0;">&#8226; {{ $data_feature->title }} | </li>
+                                                <li>{{ $data_feature->title }}</li>
                                                 @endforeach
                                                 @endforeach
                                             </ul>
