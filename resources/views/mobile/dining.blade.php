@@ -108,7 +108,7 @@
                     <div class="padding-top-30">
                         <div class="col-xs-6">
                             {{-- <a target="_blank" href="#reserveRestaurant" data-toggle="modal" style="width:100%!important" class="btn-enquire">Reserve Now</a> --}}
-                            <a target="_blank" href="https://wa.me/+79685401861" class="btn-enquire">Reserve Now</a>
+                            <a target="_blank" href="https://wa.me/{{ $setting->contact_phone }}" class="btn-enquire">Reserve Now</a>
                         </div>
                         <div class="col-xs-6">
                             <a target="_blank" href="{{ $setting->button_link }}" class="btn-menu">{{ $setting->button_text }}</a>
