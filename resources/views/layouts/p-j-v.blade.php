@@ -43,7 +43,7 @@
                         <li class="nav-item"><a href="{{ route('dining.index') }}" class="nav-link text-white px-2 px-xl-3">Dining</a></li>
                     </ul>
                     <a href="{{ route('index') }}" class="navbar-brand mx-2">
-                        <img src="{{ asset('images/logo/logo.png') }}" class="navlogo fade-in">
+                        <img src="{{ asset('images/logo/private-jet-villa-logo.png') }}" class="navlogo fade-in">
                     </a>
                     <ul class="navbar-nav align-items-center">
                         {{-- <li class="nav-item"><a href="{{ route('spa.index') }}" class="nav-link text-white px-2 px-xl-3">Spa</a></li> --}}
@@ -125,7 +125,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-4">
-                    <img src="{{ asset('images/logo/logo.png') }}" style="width: 100%">
+                    <img src="{{ asset('images/logo/private-jet-villa-logo.png') }}" style="width: 80%">
                 </div>
                 <div class="col-8 px-5">
                     <div class="row">

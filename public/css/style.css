@@ -312,12 +312,13 @@ p.leftline:before {
     width: auto;
     height: 80px !important;
     transition: all cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.7s;
+    padding: 5px;
 }
 
 .grow-menu .navlogo {
     /*width: 260px!important;*/
     width: auto;
-    height: 120px !important;
+    height: 90px !important;
     filter: brightness(0) invert(1);
 }
 
