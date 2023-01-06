@@ -79,7 +79,7 @@
     }
 
     .section1-wrapper {
-        width: 595px;
+        width: 100%;
     }
 
     .section1-image {
@@ -89,7 +89,7 @@
     }
 
     .section2-wrapper {
-        width: 410px;
+        width: 100%;
     }
 
     .section2-image {

@@ -709,10 +709,6 @@ p {
 }
 
 @media screen and (max-width: 1700px) {
-    .section1-wrapper {
-        width: 520px !important;
-    }
-
     .discover-wrapper {
         width: 185px !important;
     }
